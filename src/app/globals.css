@@ -32,3 +32,77 @@ body {
   touch-action: none;
   -webkit-overflow-scrolling: none;
 }
+/* Shimmer Animation */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.animate-shimmer {
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes border-trace {
+  0%, 100% { clip-path: inset(0 0 98% 0); }
+  25% { clip-path: inset(0 98% 0 0); }
+  50% { clip-path: inset(98% 0 0 0); }
+  75% { clip-path: inset(0 0 0 98%); }
+}
+
+.animate-border-trace {
+  position: absolute;
+  inset: -1px;
+  border: 1px solid #dc2626;
+  animation: border-trace 4s linear infinite;
+  z-index: 1;
+}
+
+@keyframes levitate {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 15px rgba(220, 38, 38, 0.2); }
+  50% { box-shadow: 0 0 35px rgba(220, 38, 38, 0.5); }
+}
+
+.animate-levitate {
+  animation: levitate 3s infinite ease-in-out;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s infinite ease-in-out;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.premium-border-wrap {
+  position: relative;
+  padding: 1px;
+  background: rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.premium-border-wrap::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg, transparent 0%, #dc2626 25%, transparent 50%, #dc2626 75%, transparent 100%);
+  animation: rotate 4s linear infinite;
+}
+
+.premium-border-inner {
+  position: relative;
+  background: #000;
+  border-radius: 3px;
+  z-index: 1;
+}

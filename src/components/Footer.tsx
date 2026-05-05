@@ -153,6 +153,55 @@ export default function Footer() {
         </div>
 
       </div>
+
+      {/* ── AGENCY ATTRIBUTION BAR ── */}
+      <div className="bg-[#030303] border-t border-white/[0.03] py-16 relative overflow-hidden">
+        {/* Background Ambient Glows */}
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-red-600/5 rounded-full blur-[120px] pointer-events-none"></div>
+        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-red-600/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div className="max-w-[1400px] mx-auto px-6 flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-24 relative z-10">
+          
+          <div className="flex items-center gap-8 group">
+            <div className="flex flex-col items-end">
+              <span className="text-white text-[10px] uppercase tracking-[0.6em] font-black leading-none mb-1">Designed</span>
+              <span className="text-zinc-600 text-[8px] uppercase tracking-[0.4em] font-medium leading-none">with excellence</span>
+            </div>
+            
+            <div className="w-px h-10 bg-gradient-to-b from-transparent via-white/20 to-transparent"></div>
+            
+            <img 
+              src="/inex.png" 
+              alt="Inex Labs" 
+              className="h-9 w-auto brightness-125"
+            />
+          </div>
+
+          <div className="premium-border-wrap animate-levitate animate-pulse-glow">
+            <div className="premium-border-inner">
+              <Link 
+                href="https://www.inexlabs.com/contact" 
+                className="group relative px-12 py-5 bg-black rounded-sm flex items-center gap-6"
+              >
+                <div className="relative z-10 flex items-center gap-6">
+                  <span className="text-[12px] font-black tracking-[0.4em] uppercase text-white group-hover:text-red-500 transition-colors duration-500">
+                    Claim This Website
+                  </span>
+                  <div className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-red-600 group-hover:border-red-600 transition-all duration-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-4 h-4 text-white">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                    </svg>
+                  </div>
+                </div>
+
+                {/* Subtle Inner Glow */}
+                <div className="absolute inset-0 bg-red-600/0 group-hover:bg-red-600/5 transition-colors duration-500"></div>
+              </Link>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </footer>
   );
 }
