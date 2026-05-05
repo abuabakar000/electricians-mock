@@ -99,24 +99,23 @@ export default function ProcessSection() {
         </div>
 
         {/* Timeline Grid */}
-        <div className="relative w-full flex flex-col xl:flex-row justify-between mt-12 gap-8 xl:gap-0">
-          {/* Dashed line (desktop) */}
+        <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-7 gap-y-12 gap-x-4 md:gap-x-6 xl:gap-0 mt-12 relative">
+          {/* Dashed line (desktop only) */}
           <div className="hidden xl:block absolute top-[36px] left-[5%] right-[5%] h-[1px] border-t border-dashed border-zinc-700/80 z-0"></div>
           
-          {/* Dashed line (mobile vertical) */}
-          <div className="xl:hidden absolute top-[36px] bottom-[36px] left-[36px] w-[1px] border-l border-dashed border-zinc-700/80 z-0"></div>
-          
           {steps.map((step, index) => (
-            <div key={index} className="flex flex-row xl:flex-col items-center xl:w-[14%] relative z-10 text-left xl:text-center group gap-5 xl:gap-0">
+            <div key={index} className="flex flex-col items-center relative z-10 text-center group">
               
-              <div className="w-[72px] h-[72px] shrink-0 rounded-full border border-zinc-700/60 bg-[#111318] flex items-center justify-center text-amber-500 mb-0 xl:mb-5 group-hover:border-amber-500/50 group-hover:shadow-[0_0_20px_rgba(245,158,11,0.15)] transition-all duration-300">
-                {step.icon}
+              <div className="w-[64px] h-[64px] md:w-[72px] md:h-[72px] shrink-0 rounded-full border border-zinc-700/60 bg-[#111318] flex items-center justify-center text-amber-500 mb-4 group-hover:border-amber-500/50 group-hover:shadow-[0_0_20px_rgba(245,158,11,0.15)] transition-all duration-300">
+                <div className="scale-90 md:scale-100">
+                  {step.icon}
+                </div>
               </div>
               
-              <div className="flex flex-col xl:items-center">
-                <span className="text-amber-500 text-[10px] font-bold tracking-widest mb-1 xl:mb-2">{step.num}</span>
+              <div className="flex flex-col items-center px-2">
+                <span className="text-amber-500 text-[10px] font-bold tracking-widest mb-1">{step.num}</span>
                 <h4 className="text-white text-[13px] font-semibold mb-1">{step.title}</h4>
-                <p className="text-zinc-500 text-[10px] leading-relaxed max-w-[180px] xl:px-2">{step.desc}</p>
+                <p className="text-zinc-500 text-[10px] leading-relaxed max-w-[150px]">{step.desc}</p>
               </div>
               
             </div>

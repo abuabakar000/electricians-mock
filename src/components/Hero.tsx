@@ -19,7 +19,7 @@ export default function Hero() {
 
 
       {/* Hero Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center mt-20 md:mt-0">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center pt-24 pb-20">
         <div className="w-full md:w-2/3 max-w-3xl text-left">
           <div className="inline-block mb-4 px-3 py-1 border border-zinc-700 rounded-full bg-zinc-800/50 backdrop-blur-md">
             <span className="text-xs uppercase tracking-[0.2em] text-zinc-300">Premium Plumbing Boutique</span>

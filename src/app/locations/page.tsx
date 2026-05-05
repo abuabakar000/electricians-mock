@@ -42,32 +42,32 @@ export default function LocationsPage() {
     <main className="flex min-h-screen flex-col bg-zinc-950 pt-24">
       
       {/* ── HERO SECTION ── */}
-      <section className="relative h-[45vh] min-h-[400px] flex items-center justify-center overflow-hidden border-b border-zinc-800/60">
+      <section className="relative min-h-[55vh] flex items-center justify-center overflow-hidden border-b border-zinc-800/60">
         <div className="absolute inset-0 z-0 pointer-events-none">
           <Image 
             src="/locations-hero.png"
             fill
             alt="Cityscape Service Areas"
-            className="object-cover object-center opacity-30 mix-blend-screen grayscale-[10%]"
+            className="object-cover object-center opacity-20 mix-blend-overlay"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#06070a] via-[#06070a]/50 to-zinc-950"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/80 via-zinc-950/40 to-zinc-950"></div>
           <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent"></div>
         </div>
 
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-10">
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <div className="w-8 h-[1px] bg-amber-500/50" />
-            <span className="text-[11px] font-bold tracking-[0.2em] text-amber-500 uppercase">
-              Where We Operate
-            </span>
-            <div className="w-8 h-[1px] bg-amber-500/50" />
+        <div className="relative z-10 text-center px-6 max-w-5xl mx-auto pt-24 pb-12">
+          <div className="flex items-center justify-center gap-4 mb-8">
+            <div className="w-12 h-[1px] bg-amber-500/50"></div>
+            <span className="text-[11px] uppercase tracking-[0.4em] text-amber-500 font-bold">Our Locations</span>
+            <div className="w-12 h-[1px] bg-amber-500/50"></div>
           </div>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-light text-white tracking-tight leading-[1.1] mb-6">
-            Premium Service. <br />
-            <span className="font-medium text-amber-500">Local Expertise.</span>
+          
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-light text-white tracking-tighter leading-[1.05] mb-8">
+            Expert Service. <br className="hidden md:block" />
+            <span className="font-medium text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-amber-500">Local Presence.</span>
           </h1>
-          <p className="text-zinc-400 text-base md:text-lg font-light tracking-wide max-w-2xl mx-auto leading-relaxed">
+          
+          <p className="text-zinc-400 text-lg md:text-xl font-light tracking-wide max-w-2xl mx-auto leading-relaxed">
             We bring our high-end, master plumbing services directly to your doorstep across the entire metropolitan region and surrounding counties.
           </p>
         </div>

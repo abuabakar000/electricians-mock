@@ -13,30 +13,34 @@ export default function ContactPage() {
     <main className="flex min-h-screen flex-col bg-zinc-950 pt-24">
       
       {/* ── HERO SECTION ── */}
-      <section className="relative h-[40vh] min-h-[350px] flex items-center justify-center overflow-hidden border-b border-zinc-800/60">
+      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden border-b border-zinc-800/60">
         <div className="absolute inset-0 z-0 pointer-events-none">
           <Image 
             src="/contact-hero.png"
             fill
             alt="Schedule Plumbing Service"
-            className="object-cover object-center opacity-30 mix-blend-screen grayscale-[20%]"
+            className="object-cover object-center opacity-20 mix-blend-overlay"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#06070a] via-[#06070a]/60 to-zinc-950"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/80 via-zinc-950/40 to-zinc-950"></div>
           <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent"></div>
         </div>
 
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-10">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-8 h-[1px] bg-amber-500/50" />
-            <span className="text-[11px] font-bold tracking-[0.2em] text-amber-500 uppercase">
-              Get In Touch
-            </span>
-            <div className="w-8 h-[1px] bg-amber-500/50" />
+        <div className="relative z-10 text-center px-6 max-w-5xl mx-auto pt-24 pb-12">
+          <div className="flex items-center justify-center gap-4 mb-8">
+            <div className="w-12 h-[1px] bg-amber-500/50"></div>
+            <span className="text-[11px] uppercase tracking-[0.4em] text-amber-500 font-bold">Get In Touch</span>
+            <div className="w-12 h-[1px] bg-amber-500/50"></div>
           </div>
-          <h1 className="text-5xl md:text-6xl font-light text-white tracking-tight leading-[1.1] mb-6">
-            Schedule <span className="font-medium text-amber-500">Service.</span>
+          
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-light text-white tracking-tighter leading-[1.05] mb-8">
+            Schedule <br className="hidden md:block" />
+            <span className="font-medium text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-amber-500">Professional Service.</span>
           </h1>
+          
+          <p className="text-zinc-400 text-lg md:text-xl font-light tracking-wide max-w-2xl mx-auto leading-relaxed">
+            Ready to experience the ProPlumb difference? Contact us today to secure your priority appointment with our master technicians.
+          </p>
         </div>
       </section>
 
@@ -123,88 +127,104 @@ export default function ContactPage() {
 
             {/* Right Side: Contact Form */}
             <div className="lg:col-span-3">
-              <div className="bg-[#0a0c10] border border-zinc-800/60 rounded-2xl p-8 md:p-12 relative overflow-hidden">
+              <div className="bg-[#0c0e12] border border-zinc-800/60 rounded-3xl p-6 md:p-12 relative overflow-hidden shadow-2xl">
                 {/* Form Ambient Glow */}
-                <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500/5 rounded-full blur-[80px] pointer-events-none"></div>
+                <div className="absolute -top-24 -right-24 w-80 h-80 bg-amber-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+                <div className="absolute -bottom-24 -left-24 w-80 h-80 bg-amber-500/5 rounded-full blur-[100px] pointer-events-none"></div>
 
-                <form className="relative z-10 flex flex-col gap-6">
+                <div className="relative z-10 mb-10">
+                  <h3 className="text-2xl md:text-3xl font-light text-white tracking-tight mb-2">Request Consultation</h3>
+                  <p className="text-zinc-500 text-sm font-light">Fill out the form below and our team will be in touch shortly.</p>
+                </div>
+
+                <form className="relative z-10 flex flex-col gap-8">
                   
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {/* Name */}
-                    <div className="flex flex-col gap-2">
-                      <label htmlFor="name" className="text-[11px] font-bold tracking-widest uppercase text-zinc-400">Full Name</label>
+                    <div className="flex flex-col gap-2.5 group">
+                      <label htmlFor="name" className="text-[10px] font-bold tracking-[0.2em] uppercase text-zinc-500 group-focus-within:text-amber-500 transition-colors">Full Name</label>
                       <input 
                         type="text" 
                         id="name"
                         placeholder="John Doe"
-                        className="bg-[#06070a] border border-zinc-800 text-white rounded-md px-4 py-4 focus:outline-none focus:border-amber-500/50 focus:ring-1 focus:ring-amber-500/50 transition-all font-light text-[15px]"
+                        className="bg-zinc-950/50 border border-zinc-800 text-white rounded-xl px-5 py-4.5 focus:outline-none focus:border-amber-500/50 focus:ring-4 focus:ring-amber-500/5 transition-all font-light text-[15px] placeholder:text-zinc-700"
                       />
                     </div>
                     {/* Phone */}
-                    <div className="flex flex-col gap-2">
-                      <label htmlFor="phone" className="text-[11px] font-bold tracking-widest uppercase text-zinc-400">Phone Number</label>
+                    <div className="flex flex-col gap-2.5 group">
+                      <label htmlFor="phone" className="text-[10px] font-bold tracking-[0.2em] uppercase text-zinc-500 group-focus-within:text-amber-500 transition-colors">Phone Number</label>
                       <input 
                         type="tel" 
                         id="phone"
                         placeholder="(555) 000-0000"
-                        className="bg-[#06070a] border border-zinc-800 text-white rounded-md px-4 py-4 focus:outline-none focus:border-amber-500/50 focus:ring-1 focus:ring-amber-500/50 transition-all font-light text-[15px]"
+                        className="bg-zinc-950/50 border border-zinc-800 text-white rounded-xl px-5 py-4.5 focus:outline-none focus:border-amber-500/50 focus:ring-4 focus:ring-amber-500/5 transition-all font-light text-[15px] placeholder:text-zinc-700"
                       />
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {/* Email */}
-                    <div className="flex flex-col gap-2">
-                      <label htmlFor="email" className="text-[11px] font-bold tracking-widest uppercase text-zinc-400">Email Address</label>
+                    <div className="flex flex-col gap-2.5 group">
+                      <label htmlFor="email" className="text-[10px] font-bold tracking-[0.2em] uppercase text-zinc-500 group-focus-within:text-amber-500 transition-colors">Email Address</label>
                       <input 
                         type="email" 
                         id="email"
                         placeholder="john@example.com"
-                        className="bg-[#06070a] border border-zinc-800 text-white rounded-md px-4 py-4 focus:outline-none focus:border-amber-500/50 focus:ring-1 focus:ring-amber-500/50 transition-all font-light text-[15px]"
+                        className="bg-zinc-950/50 border border-zinc-800 text-white rounded-xl px-5 py-4.5 focus:outline-none focus:border-amber-500/50 focus:ring-4 focus:ring-amber-500/5 transition-all font-light text-[15px] placeholder:text-zinc-700"
                       />
                     </div>
                     {/* Service Type */}
-                    <div className="flex flex-col gap-2">
-                      <label htmlFor="service" className="text-[11px] font-bold tracking-widest uppercase text-zinc-400">Service Needed</label>
-                      <select 
-                        id="service"
-                        className="bg-[#06070a] border border-zinc-800 text-white rounded-md px-4 py-4 focus:outline-none focus:border-amber-500/50 focus:ring-1 focus:ring-amber-500/50 transition-all font-light text-[15px] appearance-none"
-                      >
-                        <option value="">Select a service...</option>
-                        <option value="emergency">24/7 Emergency Repair</option>
-                        <option value="drain">Drain Cleaning</option>
-                        <option value="leak">Leak Repair</option>
-                        <option value="water-heater">Water Heater Services</option>
-                        <option value="pipes">Pipe Replacement</option>
-                        <option value="fixture">Fixture Installation</option>
-                        <option value="other">Other / Not Sure</option>
-                      </select>
+                    <div className="flex flex-col gap-2.5 group">
+                      <label htmlFor="service" className="text-[10px] font-bold tracking-[0.2em] uppercase text-zinc-500 group-focus-within:text-amber-500 transition-colors">Service Needed</label>
+                      <div className="relative">
+                        <select 
+                          id="service"
+                          className="w-full bg-zinc-950/50 border border-zinc-800 text-white rounded-xl px-5 py-4.5 focus:outline-none focus:border-amber-500/50 focus:ring-4 focus:ring-amber-500/5 transition-all font-light text-[15px] appearance-none cursor-pointer"
+                        >
+                          <option value="" className="bg-zinc-900">Select a service...</option>
+                          <option value="emergency" className="bg-zinc-900">24/7 Emergency Repair</option>
+                          <option value="drain" className="bg-zinc-900">Drain Cleaning</option>
+                          <option value="leak" className="bg-zinc-900">Leak Repair</option>
+                          <option value="water-heater" className="bg-zinc-900">Water Heater Services</option>
+                          <option value="pipes" className="bg-zinc-900">Pipe Replacement</option>
+                          <option value="fixture" className="bg-zinc-900">Fixture Installation</option>
+                          <option value="other" className="bg-zinc-900">Other / Not Sure</option>
+                        </select>
+                        <div className="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-zinc-600">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                          </svg>
+                        </div>
+                      </div>
                     </div>
                   </div>
 
                   {/* Message */}
-                  <div className="flex flex-col gap-2">
-                    <label htmlFor="message" className="text-[11px] font-bold tracking-widest uppercase text-zinc-400">Project Details or Issue</label>
+                  <div className="flex flex-col gap-2.5 group">
+                    <label htmlFor="message" className="text-[10px] font-bold tracking-[0.2em] uppercase text-zinc-500 group-focus-within:text-amber-500 transition-colors">Project Details or Issue</label>
                     <textarea 
                       id="message"
                       rows={5}
                       placeholder="Please describe what you need help with..."
-                      className="bg-[#06070a] border border-zinc-800 text-white rounded-md px-4 py-4 focus:outline-none focus:border-amber-500/50 focus:ring-1 focus:ring-amber-500/50 transition-all font-light text-[15px] resize-none"
+                      className="bg-zinc-950/50 border border-zinc-800 text-white rounded-xl px-5 py-4.5 focus:outline-none focus:border-amber-500/50 focus:ring-4 focus:ring-amber-500/5 transition-all font-light text-[15px] resize-none placeholder:text-zinc-700"
                     ></textarea>
                   </div>
 
                   {/* Submit Button */}
-                  <button 
-                    type="button" 
-                    className="mt-4 flex items-center justify-center gap-3 w-full py-5 bg-amber-500 hover:bg-amber-400 text-zinc-950 rounded-md text-[12px] font-bold tracking-[0.2em] uppercase transition-all duration-300 shadow-[0_0_20px_rgba(245,158,11,0.3)] hover:shadow-[0_0_30px_rgba(245,158,11,0.5)]"
-                  >
-                    Submit Request
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
-
-                  <p className="text-zinc-500 text-center text-[12px] font-light mt-2">
-                    By submitting this form, you agree to our privacy policy. We typically respond within 15 minutes during business hours.
-                  </p>
+                  <div className="pt-4">
+                    <button 
+                      type="button" 
+                      className="flex items-center justify-center gap-3 w-full py-5 bg-amber-500 hover:bg-amber-400 text-zinc-950 rounded-xl text-[12px] font-bold tracking-[0.2em] uppercase transition-all duration-300 shadow-[0_10px_30px_-10px_rgba(245,158,11,0.5)] hover:shadow-[0_15px_40px_-10px_rgba(245,158,11,0.6)] hover:-translate-y-1"
+                    >
+                      Submit Request
+                      <ArrowRight className="w-4 h-4" />
+                    </button>
+                    
+                    <p className="text-zinc-500 text-center text-[11px] font-light mt-6 leading-relaxed">
+                      By submitting this form, you agree to our privacy policy. <br className="hidden md:block" />
+                      We typically respond within <span className="text-amber-500/80 font-medium">15 minutes</span> during business hours.
+                    </p>
+                  </div>
 
                 </form>
               </div>

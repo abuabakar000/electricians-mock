@@ -1,3 +1,5 @@
+import React from "react";
+import Link from "next/link";
 
 const features = [
   {
@@ -66,83 +68,88 @@ export default function WhyUsSection() {
   return (
     <section className="bg-[#0b0c10] relative overflow-hidden">
       {/* ── Main two-column row ── */}
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-24 flex flex-col lg:flex-row items-stretch gap-12 lg:gap-20">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-20 md:py-28 flex flex-col lg:flex-row items-stretch gap-16 lg:gap-20">
 
         {/* LEFT COLUMN - Vertically Centered */}
-        <div className="lg:w-[35%] flex flex-col justify-center">
+        <div className="lg:w-[35%] flex flex-col justify-center text-center lg:text-left">
           {/* eyebrow */}
-          <div className="flex items-center gap-3 mb-6">
-            <span className="text-[11px] font-bold tracking-[0.15em] text-amber-500 uppercase">
+          <div className="flex items-center justify-center lg:justify-start gap-3 mb-6">
+            <span className="text-[11px] font-bold tracking-[0.2em] text-amber-500 uppercase">
               Why Choose Us
             </span>
-            <div className="w-8 h-px bg-amber-500" />
+            <div className="w-10 h-px bg-amber-500/40" />
           </div>
 
           {/* heading */}
-          <h2 className="text-[38px] md:text-5xl font-light text-white leading-[1.1] tracking-tight mb-6">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-white leading-[1.1] tracking-tight mb-8">
             Real Plumbers.<br />
             Real Solutions.<br />
             <span className="text-amber-500 font-medium">Real Results.</span>
           </h2>
 
           {/* body */}
-          <p className="text-zinc-400 text-[14px] font-light leading-relaxed max-w-xs">
-            We combine experience, quality, and reliability to deliver
-            plumbing services you can count on—every time.
+          <p className="text-zinc-400 text-base md:text-lg font-light leading-relaxed max-w-sm mx-auto lg:mx-0">
+            We combine decades of experience, master craftsmanship, and unwavering reliability to deliver plumbing services you can count on—every single time.
           </p>
         </div>
 
         {/* RIGHT COLUMN — feature grid */}
-        <div className="lg:w-[65%] grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 sm:gap-x-12 gap-y-10 sm:gap-y-14 self-center">
+        <div className="lg:w-[65%] grid grid-cols-2 md:grid-cols-3 gap-x-6 md:gap-x-12 gap-y-12 md:gap-y-16 self-center">
           {features.map((feature, idx) => (
-            <div key={idx} className="flex flex-col">
-              <div className="mb-4 sm:mb-6">
-                <div className="mb-3 sm:mb-4 scale-90 sm:scale-100 origin-left">{feature.icon}</div>
-                <div className="w-5 sm:w-7 h-[1px] bg-zinc-700/80" />
+            <div key={idx} className="flex flex-col group">
+              <div className="mb-6">
+                <div className="mb-4 transition-transform duration-300 group-hover:scale-110">
+                  <div className="w-16 h-16 rounded-xl bg-zinc-900/50 border border-zinc-800 flex items-center justify-center mb-4 shadow-xl group-hover:border-amber-500/30 group-hover:bg-amber-500/5 transition-all duration-300">
+                    <div className="scale-75 origin-center">
+                      {feature.icon}
+                    </div>
+                  </div>
+                  <div className="w-8 h-[2px] bg-amber-500/40 group-hover:w-12 transition-all duration-500" />
+                </div>
+                <h3 className="text-white font-bold tracking-[0.1em] text-[13px] uppercase mb-3 leading-snug group-hover:text-amber-500 transition-colors duration-300">
+                  {feature.title}
+                </h3>
+                <p className="text-zinc-400 text-[13px] font-light leading-relaxed">
+                  {feature.desc}
+                </p>
               </div>
-              <h3 className="text-white font-bold tracking-[0.05em] sm:tracking-[0.1em] text-xs sm:text-[13px] uppercase mb-2 sm:mb-3 pr-1 sm:pr-2 leading-snug">
-                {feature.title}
-              </h3>
-              <p className="text-zinc-400 text-xs sm:text-[14px] font-light leading-relaxed pr-1 sm:pr-4">
-                {feature.desc}
-              </p>
             </div>
           ))}
         </div>
       </div>
 
       {/* ── Bottom Banner ── */}
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-12 pb-14 relative z-20">
-        <div className="bg-[#06070a] border border-zinc-800/50 rounded-md px-6 sm:px-8 py-8 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left shadow-2xl">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-12 pb-20 relative z-20">
+        <div className="bg-[#0c0e12] border border-zinc-800/60 rounded-2xl px-6 md:px-12 py-10 md:py-12 flex flex-col lg:flex-row items-center justify-between gap-10 shadow-2xl relative overflow-hidden">
+          {/* Ambient Glow */}
+          <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500/5 rounded-full blur-[80px] pointer-events-none" />
 
-          <div className="flex flex-col md:flex-row items-center gap-5">
-            {/* amber accent line */}
-            <div className="hidden md:block w-[2px] h-12 bg-amber-600 rounded-full shrink-0" />
+          <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8 text-center md:text-left relative z-10">
             {/* phone icon circle */}
-            <div className="shrink-0 w-14 h-14 md:w-12 md:h-12 rounded-full border border-amber-600/30 flex items-center justify-center bg-amber-500/5 shadow-[0_0_15px_rgba(245,158,11,0.1)]">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" className="w-6 h-6 md:w-5 md:h-5 text-amber-500">
+            <div className="shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-full border border-amber-500/20 flex items-center justify-center bg-amber-500/5 shadow-[0_0_20px_rgba(245,158,11,0.15)]">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" className="w-8 h-8 md:w-10 md:h-10 text-amber-500">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.896-1.596-5.48-4.18-7.076-7.076l1.293-.97c.362-.271.527-.733.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
               </svg>
             </div>
             <div>
-              <h3 className="text-white text-lg md:text-[16px] font-medium tracking-wide mb-2 md:mb-1">
+              <h3 className="text-white text-2xl md:text-3xl font-light tracking-tight mb-2">
                 Need a plumber you can trust?
               </h3>
-              <p className="text-zinc-400 text-sm md:text-[13px] font-light">
-                Reliable service. Lasting solutions. Total peace of mind.
+              <p className="text-zinc-500 text-base md:text-lg font-light max-w-md">
+                Experience reliable service and total peace of mind with metropolis master technicians.
               </p>
             </div>
           </div>
 
-          <div className="flex items-center gap-6 w-full md:w-auto">
-            <div className="hidden lg:block w-[1px] h-14 bg-zinc-800/60" />
-            <button className="w-full md:w-auto shrink-0 px-8 py-4 bg-amber-500 hover:bg-amber-400 text-zinc-950 rounded text-xs font-bold tracking-[0.15em] uppercase transition-all duration-300 flex items-center justify-center gap-3 shadow-[0_0_20px_rgba(245,158,11,0.2)]">
-              Schedule Service
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-              </svg>
-            </button>
-          </div>
+          <Link 
+            href="/contact"
+            className="w-full lg:w-auto px-10 py-5 bg-amber-500 hover:bg-amber-400 text-zinc-950 rounded-md text-[13px] font-bold tracking-[0.2em] uppercase transition-all duration-300 flex items-center justify-center gap-3 shadow-[0_0_25px_rgba(245,158,11,0.3)] relative z-10"
+          >
+            Schedule Service
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>
+          </Link>
 
         </div>
       </div>
