@@ -1,0 +1,227 @@
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import CtaSection from "@/components/CtaSection";
+import ProcessSection from "@/components/ProcessSection";
+import MapSection from "@/components/MapSection";
+import { 
+  Waves, 
+  Droplets, 
+  Flame, 
+  Wrench, 
+  Bath, 
+  ArrowDownToLine,
+  CheckCircle2,
+  Trash2,
+  Activity
+} from "lucide-react";
+
+export const metadata = {
+  title: "Premium Plumbing Services | ProPlumb",
+  description: "Explore our comprehensive range of high-end plumbing services, from emergency repairs to full luxury fixture installations.",
+};
+
+const detailedServices = [
+  {
+    id: "drain-cleaning",
+    title: "Drain Cleaning & Clearing",
+    icon: <Waves strokeWidth={1.5} className="w-8 h-8 text-amber-500" />,
+    desc: "Stubborn clogs and slow drains are no match for our advanced clearing technology. We completely eliminate blockages to restore perfect flow.",
+    features: [
+      "High-pressure hydro-jetting",
+      "Video camera line inspections",
+      "Tree root removal",
+      "Preventative maintenance plans"
+    ]
+  },
+  {
+    id: "leak-repair",
+    title: "Precision Leak Repair",
+    icon: <Droplets strokeWidth={1.5} className="w-8 h-8 text-amber-500" />,
+    desc: "Hidden leaks can cause catastrophic structural damage. We utilize non-invasive acoustic and thermal imaging to pinpoint and seal leaks instantly.",
+    features: [
+      "Slab leak detection",
+      "Burst pipe emergency repair",
+      "Ceiling and wall leak tracing",
+      "Non-destructive acoustic tech"
+    ]
+  },
+  {
+    id: "water-heaters",
+    title: "Water Heater Systems",
+    icon: <Flame strokeWidth={1.5} className="w-8 h-8 text-amber-500" />,
+    desc: "Never run out of hot water again. We install, repair, and maintain premium conventional and tankless water heating systems.",
+    features: [
+      "Tankless system upgrades",
+      "Traditional tank replacements",
+      "Heating element repairs",
+      "Annual sediment flushing"
+    ]
+  },
+  {
+    id: "pipe-replacement",
+    title: "Pipe Repair & Replacement",
+    icon: <Wrench strokeWidth={1.5} className="w-8 h-8 text-amber-500" />,
+    desc: "Upgrade your property's plumbing infrastructure. We replace old, corroded, or dangerous piping with modern, high-grade materials.",
+    features: [
+      "Whole-home repiping",
+      "Copper & PEX installations",
+      "Corrosion diagnostics",
+      "Code compliance upgrades"
+    ]
+  },
+  {
+    id: "fixture-installation",
+    title: "Luxury Fixture Installation",
+    icon: <Bath strokeWidth={1.5} className="w-8 h-8 text-amber-500" />,
+    desc: "Elevate your kitchen and bathrooms. We expertly install high-end sinks, architectural faucets, spa showers, and modern toilets.",
+    features: [
+      "Rainfall shower systems",
+      "Touchless kitchen faucets",
+      "Freestanding tub plumbing",
+      "Smart toilet integration"
+    ]
+  },
+  {
+    id: "sump-pumps",
+    title: "Sump Pump Solutions",
+    icon: <ArrowDownToLine strokeWidth={1.5} className="w-8 h-8 text-amber-500" />,
+    desc: "Protect your basement and foundation from devastating water damage with our heavy-duty, ultra-reliable sump pump systems.",
+    features: [
+      "Primary pump installation",
+      "Battery backup systems",
+      "Discharge line routing",
+      "Float switch calibration"
+    ]
+  },
+  {
+    id: "garbage-disposal",
+    title: "Garbage Disposal Services",
+    icon: <Trash2 strokeWidth={1.5} className="w-8 h-8 text-amber-500" />,
+    desc: "A jammed or leaking garbage disposal can disrupt your kitchen. We provide rapid repairs and install premium, quiet-operation disposal units.",
+    features: [
+      "Jammed unit clearing",
+      "Motor replacement",
+      "Under-sink leak repair",
+      "High-HP unit installation"
+    ]
+  },
+  {
+    id: "sewer-line",
+    title: "Sewer Line Diagnostics & Repair",
+    icon: <Activity strokeWidth={1.5} className="w-8 h-8 text-amber-500" />,
+    desc: "Avoid costly backups with our comprehensive sewer line services. We offer trenchless repairs and thorough inspections to keep your main lines clear.",
+    features: [
+      "Main line clearing",
+      "Trenchless pipe repair",
+      "Video camera diagnostics",
+      "Sewer gas odor detection"
+    ]
+  }
+];
+
+export default function ServicesPage() {
+  return (
+    <main className="flex min-h-screen flex-col bg-zinc-950 pt-24">
+      
+      {/* ── HERO SECTION ── */}
+      <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden border-b border-zinc-800/60">
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <Image 
+            src="/services-page-hero.png"
+            fill
+            alt="Luxury Plumbing Services"
+            className="object-cover object-center opacity-40 mix-blend-screen grayscale-[20%]"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#06070a] via-[#06070a]/60 to-zinc-950"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent"></div>
+        </div>
+
+        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-10">
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <div className="w-8 h-[1px] bg-amber-500/50" />
+            <span className="text-[11px] font-bold tracking-[0.2em] text-amber-500 uppercase">
+              Our Expertise
+            </span>
+            <div className="w-8 h-[1px] bg-amber-500/50" />
+          </div>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-light text-white tracking-tight leading-[1.1] mb-6">
+            Premium Solutions for <br />
+            <span className="font-medium text-amber-500">Every System.</span>
+          </h1>
+          <p className="text-zinc-400 text-base md:text-lg font-light tracking-wide max-w-2xl mx-auto leading-relaxed">
+            From emergency interventions to full architectural pipe replacements, we deliver unparalleled craftsmanship and reliability.
+          </p>
+        </div>
+      </section>
+
+      {/* ── DETAILED SERVICES GRID ── */}
+      <section className="py-24 relative z-10 bg-zinc-950">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+            {detailedServices.map((service, idx) => (
+              <div 
+                key={service.id} 
+                id={service.id}
+                className="group relative bg-[#0c0e12] border border-zinc-800/60 rounded-xl p-8 md:p-10 hover:bg-[#0f1116] hover:-translate-y-2 hover:border-amber-500/30 hover:shadow-[0_20px_40px_-15px_rgba(245,158,11,0.15)] transition-all duration-500 ease-out flex flex-col h-full overflow-hidden"
+              >
+                {/* Ambient Hover Glow */}
+                <div className="absolute -top-32 -right-32 w-64 h-64 bg-amber-500/10 rounded-full blur-[80px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none z-0"></div>
+
+                <div className="relative z-10 flex flex-col h-full">
+                  
+                  {/* Header Row */}
+                  <div className="flex items-center gap-6 mb-8">
+                    <div className="shrink-0 w-16 h-16 rounded-full border border-zinc-700/50 flex items-center justify-center bg-zinc-900/50 group-hover:border-amber-500/40 group-hover:bg-amber-500/5 transition-colors duration-500 shadow-[inset_0_0_15px_rgba(0,0,0,0.5)]">
+                      {service.icon}
+                    </div>
+                    <div>
+                      <h2 className="text-white text-xl md:text-2xl font-light tracking-wide mb-2 group-hover:text-amber-500 transition-colors duration-300">
+                        {service.title}
+                      </h2>
+                      <div className="w-10 h-[2px] bg-amber-500 group-hover:w-16 transition-all duration-500"></div>
+                    </div>
+                  </div>
+
+                  {/* Description */}
+                  <p className="text-zinc-400 text-[15px] font-light leading-relaxed mb-8">
+                    {service.desc}
+                  </p>
+
+                  {/* Features List */}
+                  <div className="mt-auto pt-6 border-t border-zinc-800/50">
+                    <h4 className="text-white text-[11px] font-bold tracking-[0.15em] uppercase mb-4 opacity-80">
+                      Included in this service
+                    </h4>
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-4">
+                      {service.features.map((feature, fIdx) => (
+                        <li key={fIdx} className="flex items-start gap-3">
+                          <CheckCircle2 className="w-4 h-4 text-amber-500 shrink-0 mt-[2px]" strokeWidth={2} />
+                          <span className="text-zinc-300 text-sm font-light">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+      {/* ── HOW WE WORK (Process) ── */}
+      <ProcessSection />
+
+      {/* ── SERVICE AREA (Map) ── */}
+      <MapSection />
+
+      {/* ── CTA SECTION ── */}
+      <CtaSection />
+      
+    </main>
+  );
+}
