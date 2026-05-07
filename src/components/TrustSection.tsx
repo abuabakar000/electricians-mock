@@ -4,10 +4,10 @@ export default function TrustSection() {
   return (
     <section className="bg-white py-20 border-b border-gray-100 relative z-20">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
-        
+
         <div className="text-center mb-16">
           <h2 className="text-[#0a1930] text-xl md:text-2xl font-medium tracking-[0.15em] uppercase mb-4">
-            Your Trusted Neighborhood Plumbers
+            Trusted Local Plumbers
           </h2>
           <p className="text-slate-500 text-lg font-light tracking-wide">
             Serving our community with honest work and upfront pricing.
@@ -15,13 +15,13 @@ export default function TrustSection() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-10 gap-x-2 sm:gap-x-4 lg:gap-0 lg:divide-x divide-gray-200/80">
-          
+
           {/* 1. Google Reviews */}
           <div className="col-span-2 md:col-span-1 flex flex-col items-center justify-center text-center px-2 xl:px-6 pb-4 md:pb-0">
             <div className="relative w-[85px] h-[28px] mb-3">
-              <Image 
-                src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" 
-                alt="Google" 
+              <Image
+                src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
+                alt="Google"
                 fill
                 className="object-contain"
                 unoptimized
@@ -49,9 +49,9 @@ export default function TrustSection() {
             </div>
             <div className="mt-1 xl:mt-0">
               <h3 className="text-[#0a1930] font-semibold text-[10px] sm:text-xs uppercase tracking-[0.05em] sm:tracking-[0.15em] leading-tight mb-1">
-                Licensed <br className="hidden xl:block"/>& Insured
+                Licensed <br className="hidden xl:block" />& Insured
               </h3>
-              <p className="text-slate-500 text-[10px] sm:text-[13px] font-light leading-relaxed">Fully licensed &<br className="hidden xl:block"/>fully insured</p>
+              <p className="text-slate-500 text-[10px] sm:text-[13px] font-light leading-relaxed">Fully licensed &<br className="hidden xl:block" />fully insured</p>
             </div>
           </div>
 
@@ -67,9 +67,9 @@ export default function TrustSection() {
             </div>
             <div className="mt-1 xl:mt-0">
               <h3 className="text-[#0a1930] font-semibold text-[10px] sm:text-xs uppercase tracking-[0.05em] sm:tracking-[0.15em] leading-tight mb-1">
-                24/7 Emergency <br className="hidden xl:block"/>Service
+                24/7 Emergency <br className="hidden xl:block" />Service
               </h3>
-              <p className="text-slate-500 text-[10px] sm:text-[13px] font-light leading-relaxed">We're available<br className="hidden xl:block"/>day or night</p>
+              <p className="text-slate-500 text-[10px] sm:text-[13px] font-light leading-relaxed">We're available<br className="hidden xl:block" />day or night</p>
             </div>
           </div>
 
@@ -82,9 +82,9 @@ export default function TrustSection() {
             </div>
             <div className="mt-1 xl:mt-0">
               <h3 className="text-[#0a1930] font-semibold text-[10px] sm:text-xs uppercase tracking-[0.05em] sm:tracking-[0.15em] leading-tight mb-1">
-                500+ Happy <br className="hidden xl:block"/>Customers
+                500+ Happy <br className="hidden xl:block" />Customers
               </h3>
-              <p className="text-slate-500 text-[10px] sm:text-[13px] font-light leading-relaxed">Satisfied homeowners<br className="hidden xl:block"/>and businesses</p>
+              <p className="text-slate-500 text-[10px] sm:text-[13px] font-light leading-relaxed">Satisfied homeowners<br className="hidden xl:block" />and businesses</p>
             </div>
           </div>
 
@@ -97,9 +97,9 @@ export default function TrustSection() {
             </div>
             <div className="mt-1 xl:mt-0">
               <h3 className="text-[#0a1930] font-semibold text-[10px] sm:text-xs uppercase tracking-[0.05em] sm:tracking-[0.15em] leading-tight mb-1">
-                100% Satisfaction <br className="hidden xl:block"/>Guaranteed
+                100% Satisfaction <br className="hidden xl:block" />Guaranteed
               </h3>
-              <p className="text-slate-500 text-[10px] sm:text-[13px] font-light leading-relaxed">We stand behind<br className="hidden xl:block"/>our work</p>
+              <p className="text-slate-500 text-[10px] sm:text-[13px] font-light leading-relaxed">We stand behind<br className="hidden xl:block" />our work</p>
             </div>
           </div>
 
