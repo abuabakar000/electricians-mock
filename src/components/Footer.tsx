@@ -148,7 +148,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="pt-8 border-t border-zinc-800/60 text-center flex flex-col items-center justify-center">
           <p className="text-zinc-500 text-[12px] font-light tracking-wide">
-            © {new Date().getFullYear()} Elite Plumbing Solutions. All rights reserved.
+            © {new Date().getFullYear()} Your Family-Owned Neighborhood Plumber. All rights reserved.
           </p>
         </div>
 

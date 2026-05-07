@@ -73,13 +73,13 @@ export default function ServicesSection() {
           </div>
           
           <h2 className="text-[38px] md:text-5xl font-light text-white leading-[1.1] tracking-tight mb-6">
-            Premium Plumbing <br />
-            <span className="text-amber-500 font-medium">Services</span> Tailored to You.
+            Expert Care for Your <br />
+            <span className="text-amber-500 font-medium">Home's Plumbing.</span>
           </h2>
           
           <p className="text-zinc-400 text-[15px] font-light leading-relaxed max-w-lg">
             From quick fixes to full installations, we provide reliable, 
-            high-quality plumbing solutions with unmatched attention to detail.
+            local plumbing solutions with unmatched attention to detail.
           </p>
         </div>
 

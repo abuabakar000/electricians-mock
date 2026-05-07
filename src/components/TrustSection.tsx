@@ -5,12 +5,12 @@ export default function TrustSection() {
     <section className="bg-white py-20 border-b border-gray-100 relative z-20">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
         
-        <div className="text-left mb-16">
+        <div className="text-center mb-16">
           <h2 className="text-[#0a1930] text-xl md:text-2xl font-medium tracking-[0.15em] uppercase mb-4">
-            Trusted By Homeowners Across The Region
+            Your Trusted Neighborhood Plumbers
           </h2>
           <p className="text-slate-500 text-lg font-light tracking-wide">
-            Quality service. Honest pricing. Guaranteed satisfaction.
+            Serving our community with honest work and upfront pricing.
           </p>
         </div>
 

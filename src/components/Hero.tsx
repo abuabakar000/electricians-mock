@@ -22,19 +22,19 @@ export default function Hero() {
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center pt-24 pb-20">
         <div className="w-full md:w-2/3 max-w-3xl text-left">
           <div className="inline-block mb-4 px-3 py-1 border border-zinc-700 rounded-full bg-zinc-800/50 backdrop-blur-md">
-            <span className="text-xs uppercase tracking-[0.2em] text-zinc-300">Premium Plumbing Boutique</span>
+            <span className="text-xs uppercase tracking-[0.2em] text-zinc-300">Family-Owned Master Plumbers</span>
           </div>
 
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-white tracking-tighter leading-[1.1] mb-6">
-            Elevating <br className="hidden md:block" />
+            Honest <br className="hidden md:block" />
             <span className="font-medium text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-amber-500">
-              Plumbing
+              Craftsmanship
             </span>{" "}
-            to an Art.
+            for Your Home.
           </h1>
 
           <p className="text-lg md:text-xl text-white mb-10 max-w-xl font-light leading-relaxed">
-            Experience unparalleled craftsmanship and high-end boutique service. We deliver premium solutions for those who demand perfection in every detail.
+            Reliable, high-end service with a personal touch. We treat every home as if it were our own, delivering master-level plumbing with unwavering integrity.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-start">

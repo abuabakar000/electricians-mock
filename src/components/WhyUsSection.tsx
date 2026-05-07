@@ -136,7 +136,7 @@ export default function WhyUsSection() {
                 Need a plumber you can trust?
               </h3>
               <p className="text-zinc-500 text-[13px] md:text-lg font-light max-w-md">
-                Experience reliable service and total peace of mind with metropolis master technicians.
+                Experience reliable service and total peace of mind with our dedicated team of local master experts.
               </p>
             </div>
           </div>
