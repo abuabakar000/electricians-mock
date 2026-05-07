@@ -33,19 +33,19 @@ export default function Hero() {
             to an Art.
           </h1>
 
-          <p className="text-lg md:text-xl text-zinc-400 mb-10 max-w-xl font-light leading-relaxed">
+          <p className="text-lg md:text-xl text-white mb-10 max-w-xl font-light leading-relaxed">
             Experience unparalleled craftsmanship and high-end boutique service. We deliver premium solutions for those who demand perfection in every detail.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-start">
             <Link
-              href="#quote"
+              href="/contact"
               className="px-8 py-4 bg-amber-500 hover:bg-amber-400 text-zinc-950 text-sm font-semibold uppercase tracking-widest transition-all duration-300 ease-out transform hover:-translate-y-1 flex items-center justify-center gap-2"
             >
               Request Consultation
             </Link>
             <Link
-              href="#services"
+              href="/services"
               className="px-8 py-4 bg-transparent border border-zinc-600 text-white hover:border-white hover:bg-white/5 text-sm font-semibold uppercase tracking-widest transition-all duration-300 ease-out flex items-center justify-center gap-2"
             >
               Explore Services

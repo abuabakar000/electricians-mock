@@ -36,8 +36,8 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Column 2: Services */}
-          <div className="col-span-1 lg:col-span-2 flex flex-col">
+          {/* Column 2: Services - HIDDEN ON MOBILE/TABLET */}
+          <div className="hidden md:flex col-span-1 lg:col-span-2 flex flex-col">
             <h4 className="text-white font-bold tracking-widest text-[13px] uppercase mb-6 relative inline-block">
               Services
               <span className="absolute -bottom-2 left-0 w-6 h-[2px] bg-amber-500"></span>
@@ -54,8 +54,8 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Column 3: Navigation */}
-          <div className="col-span-1 lg:col-span-2 flex flex-col">
+          {/* Column 3: Navigation - HIDDEN ON MOBILE/TABLET */}
+          <div className="hidden md:flex col-span-1 lg:col-span-2 flex flex-col">
             <h4 className="text-white font-bold tracking-widest text-[13px] uppercase mb-6 relative inline-block">
               Navigation
               <span className="absolute -bottom-2 left-0 w-6 h-[2px] bg-amber-500"></span>
@@ -155,7 +155,12 @@ export default function Footer() {
       </div>
 
       {/* ── AGENCY ATTRIBUTION BAR ── */}
-      <div className="bg-[#030303] border-t border-white/[0.03] py-16 relative overflow-hidden">
+      <div className="bg-[#030303] py-16 relative overflow-hidden">
+        {/* Animated Top Border Line */}
+        <div className="absolute top-0 left-0 w-full h-[1px] overflow-hidden">
+          <div className="absolute inset-0 bg-white/[0.03]"></div>
+          <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-red-600/60 to-transparent animate-line-shimmer"></div>
+        </div>
         {/* Background Ambient Glows */}
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-red-600/5 rounded-full blur-[120px] pointer-events-none"></div>
         <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-red-600/5 rounded-full blur-[100px] pointer-events-none"></div>

@@ -71,9 +71,9 @@ export default function WhyUsSection() {
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-20 md:py-28 flex flex-col lg:flex-row items-stretch gap-16 lg:gap-20">
 
         {/* LEFT COLUMN - Vertically Centered */}
-        <div className="lg:w-[35%] flex flex-col justify-center text-center lg:text-left">
+        <div className="lg:w-[35%] flex flex-col justify-center text-left">
           {/* eyebrow */}
-          <div className="flex items-center justify-center lg:justify-start gap-3 mb-6">
+          <div className="flex items-center justify-start gap-3 mb-6">
             <span className="text-[11px] font-bold tracking-[0.2em] text-amber-500 uppercase">
               Why Choose Us
             </span>
@@ -88,7 +88,7 @@ export default function WhyUsSection() {
           </h2>
 
           {/* body */}
-          <p className="text-zinc-400 text-base md:text-lg font-light leading-relaxed max-w-sm mx-auto lg:mx-0">
+          <p className="text-zinc-400 text-base md:text-lg font-light leading-relaxed max-w-sm">
             We combine decades of experience, master craftsmanship, and unwavering reliability to deliver plumbing services you can count on—every single time.
           </p>
         </div>
@@ -120,36 +120,48 @@ export default function WhyUsSection() {
 
       {/* ── Bottom Banner ── */}
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 pb-20 relative z-20">
-        <div className="bg-[#0c0e12] border border-zinc-800/60 rounded-2xl px-6 md:px-12 py-10 md:py-12 flex flex-col lg:flex-row items-center justify-between gap-10 shadow-2xl relative overflow-hidden">
+        <div className="bg-[#0c0e12] border border-zinc-800/60 rounded-2xl px-6 md:px-12 py-6 md:py-12 flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-10 shadow-2xl relative overflow-hidden">
           {/* Ambient Glow */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500/5 rounded-full blur-[80px] pointer-events-none" />
 
-          <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8 text-center md:text-left relative z-10">
+          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-center md:text-left relative z-10">
             {/* phone icon circle */}
-            <div className="shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-full border border-amber-500/20 flex items-center justify-center bg-amber-500/5 shadow-[0_0_20px_rgba(245,158,11,0.15)]">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" className="w-8 h-8 md:w-10 md:h-10 text-amber-500">
+            <div className="shrink-0 w-14 h-14 md:w-20 md:h-20 rounded-full border border-amber-500/20 flex items-center justify-center bg-amber-500/5 shadow-[0_0_20px_rgba(245,158,11,0.15)]">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" className="w-7 h-7 md:w-10 md:h-10 text-amber-500">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.896-1.596-5.48-4.18-7.076-7.076l1.293-.97c.362-.271.527-.733.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
               </svg>
             </div>
             <div>
-              <h3 className="text-white text-2xl md:text-3xl font-light tracking-tight mb-2">
+              <h3 className="text-white text-xl md:text-3xl font-light tracking-tight mb-1 md:mb-2">
                 Need a plumber you can trust?
               </h3>
-              <p className="text-zinc-500 text-base md:text-lg font-light max-w-md">
+              <p className="text-zinc-500 text-[13px] md:text-lg font-light max-w-md">
                 Experience reliable service and total peace of mind with metropolis master technicians.
               </p>
             </div>
           </div>
 
-          <Link 
-            href="/contact"
-            className="w-full lg:w-auto px-10 py-5 bg-amber-500 hover:bg-amber-400 text-zinc-950 rounded-md text-[13px] font-bold tracking-[0.2em] uppercase transition-all duration-300 flex items-center justify-center gap-3 shadow-[0_0_25px_rgba(245,158,11,0.3)] relative z-10"
-          >
-            Schedule Service
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-            </svg>
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 w-full lg:w-auto relative z-10">
+            <Link 
+              href="tel:+18005550199"
+              className="w-full sm:w-auto px-6 py-3.5 lg:px-10 lg:py-5 bg-amber-500 hover:bg-amber-400 text-zinc-950 rounded-md text-[11px] lg:text-[13px] font-bold tracking-[0.2em] uppercase transition-all duration-300 flex items-center justify-center gap-3 shadow-[0_0_25px_rgba(245,158,11,0.3)]"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.896-1.596-5.48-4.18-7.076-7.076l1.293-.97c.362-.271.527-.733.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+              </svg>
+              Call Now
+            </Link>
+
+            <Link 
+              href="/contact"
+              className="w-full sm:w-auto px-6 py-3.5 lg:px-10 lg:py-5 bg-transparent border border-zinc-700 hover:border-amber-500 hover:text-amber-500 text-white rounded-md text-[11px] lg:text-[13px] font-bold tracking-[0.2em] uppercase transition-all duration-300 flex items-center justify-center gap-3"
+            >
+              Schedule Service
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+            </Link>
+          </div>
 
         </div>
       </div>

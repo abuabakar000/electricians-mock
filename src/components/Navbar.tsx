@@ -131,8 +131,8 @@ export default function Navbar() {
                 className={`group relative flex items-center justify-center transition-all duration-700 delay-[${100 + index * 50}ms] ${isMobileMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                <div className="flex items-baseline gap-4">
-                  <span className="text-amber-500/40 text-xs font-mono font-bold tracking-widest translate-y-[-10px] group-hover:text-amber-500 transition-colors">
+                <div className="relative flex items-center justify-center">
+                  <span className="absolute right-full mr-4 text-amber-500/40 text-xs font-mono font-bold tracking-widest group-hover:text-amber-500 transition-colors whitespace-nowrap">
                     [{item.num}]
                   </span>
                   <span className="text-4xl sm:text-5xl font-black tracking-tighter uppercase text-white group-hover:text-amber-500 transition-colors duration-300">

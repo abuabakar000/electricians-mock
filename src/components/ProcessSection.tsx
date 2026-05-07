@@ -104,7 +104,7 @@ export default function ProcessSection() {
           <div className="hidden xl:block absolute top-[36px] left-[5%] right-[5%] h-[1px] border-t border-dashed border-zinc-700/80 z-0"></div>
           
           {steps.map((step, index) => (
-            <div key={index} className="flex flex-col items-center relative z-10 text-center group">
+            <div key={index} className={`flex flex-col items-center relative z-10 text-center group ${index === 6 ? 'hidden xl:flex' : ''}`}>
               
               <div className="w-[64px] h-[64px] md:w-[72px] md:h-[72px] shrink-0 rounded-full border border-zinc-700/60 bg-[#111318] flex items-center justify-center text-amber-500 mb-4 group-hover:border-amber-500/50 group-hover:shadow-[0_0_20px_rgba(245,158,11,0.15)] transition-all duration-300">
                 <div className="scale-90 md:scale-100">
@@ -115,7 +115,7 @@ export default function ProcessSection() {
               <div className="flex flex-col items-center px-2">
                 <span className="text-amber-500 text-[10px] font-bold tracking-widest mb-1">{step.num}</span>
                 <h4 className="text-white text-[13px] font-semibold mb-1">{step.title}</h4>
-                <p className="text-zinc-500 text-[10px] leading-relaxed max-w-[150px]">{step.desc}</p>
+                <p className="text-zinc-500 text-[12px] leading-relaxed max-w-[150px]">{step.desc}</p>
               </div>
               
             </div>

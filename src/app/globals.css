@@ -106,3 +106,12 @@ body {
   border-radius: 3px;
   z-index: 1;
 }
+
+@keyframes line-shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.animate-line-shimmer {
+  animation: line-shimmer 3s linear infinite;
+}
