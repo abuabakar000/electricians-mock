@@ -132,10 +132,10 @@ export default function ProcessSection({ leadData: passedLeadData }: { leadData?
                 </div>
               </div>
               
-              <div className="flex flex-col items-center px-2">
+              <div className="flex flex-col items-center px-2 mt-4">
                 <span 
                   style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor }}
-                  className={`${leadData.slug === "default" ? "text-amber-500" : ""} text-[10px] font-bold tracking-widest mb-1`}
+                  className={`${leadData.slug === "default" ? "text-amber-500" : ""} text-[10px] font-bold tracking-widest mb-2`}
                 >
                   {step.num}
                 </span>

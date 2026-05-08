@@ -32,7 +32,7 @@ export default function Hero({ leadData: passedLeadData }: { leadData?: LeadData
             </span>
           </div>
 
-          <h1 className="text-5xl md:text-7xl lg:text-[105px] font-light text-white tracking-tighter leading-[0.95] mb-8 animate-in fade-in slide-in-from-bottom-8 duration-1000">
+          <h1 className="text-5xl md:text-7xl lg:text-[90px] font-light text-white tracking-tighter leading-[0.95] mb-8 animate-in fade-in slide-in-from-bottom-8 duration-1000">
             Honest <br className="hidden md:block" />
             <span 
               style={{ 
@@ -44,7 +44,7 @@ export default function Hero({ leadData: passedLeadData }: { leadData?: LeadData
               }}
               className={`${leadData.slug === "default" ? "text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-amber-500" : ""} font-medium`}
             >
-              {leadData.hero?.headline?.split(" ").slice(-1)[0] || "Craftsmanship"}
+              {leadData.slug === "default" ? "Craftsmanship" : (leadData.hero?.headline?.split(" ")[1] || "Craftsmanship")}
             </span> for <br className="hidden md:block" />
             Your Home.
           </h1>

@@ -68,9 +68,9 @@ const features = [
 export default function WhyUsSection({ leadData: passedLeadData }: { leadData?: LeadData }) {
   const leadData = passedLeadData || getLeadData();
   const primaryColor = leadData.theme?.primaryColor || "#f59e0b";
-  
+
   return (
-    <section 
+    <section
       style={{ "--primary-color": leadData.slug === "default" ? "#f59e0b" : leadData.primaryColor } as any}
       className="bg-[#0b0c10] relative overflow-hidden"
     >
@@ -81,15 +81,15 @@ export default function WhyUsSection({ leadData: passedLeadData }: { leadData?: 
         <div className="lg:w-[35%] flex flex-col justify-center text-left">
           {/* eyebrow */}
           <div className="flex items-center justify-start gap-3 mb-6">
-            <span 
+            <span
               style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor }}
               className={`text-[11px] font-bold tracking-[0.2em] ${leadData.slug === "default" ? "text-amber-500" : ""} uppercase`}
             >
               Why Choose Us
             </span>
-            <div 
+            <div
               style={{ backgroundColor: leadData.slug === "default" ? "" : leadData.primaryColor }}
-              className={`w-10 h-px ${leadData.slug === "default" ? "bg-amber-500/40" : "opacity-40"}`} 
+              className={`w-10 h-px ${leadData.slug === "default" ? "bg-amber-500/40" : "opacity-40"}`}
             />
           </div>
 
@@ -97,7 +97,7 @@ export default function WhyUsSection({ leadData: passedLeadData }: { leadData?: 
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-white leading-[1.1] tracking-tight mb-8">
             Real Plumbers.<br />
             Real Solutions.<br />
-            <span 
+            <span
               style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor }}
               className={`${leadData.slug === "default" ? "text-amber-500" : ""} font-medium`}
             >
@@ -117,8 +117,8 @@ export default function WhyUsSection({ leadData: passedLeadData }: { leadData?: 
             <div key={idx} className="flex flex-col group">
               <div className="mb-6">
                 <div className="mb-4 transition-transform duration-300 group-hover:scale-110">
-                  <div 
-                    style={{ 
+                  <div
+                    style={{
                       borderColor: leadData.slug === "default" ? "" : `${leadData.primaryColor}4d`,
                       backgroundColor: leadData.slug === "default" ? "" : `${leadData.primaryColor}0d`
                     }}
@@ -128,12 +128,12 @@ export default function WhyUsSection({ leadData: passedLeadData }: { leadData?: 
                       {feature.icon}
                     </div>
                   </div>
-                  <div 
+                  <div
                     style={{ backgroundColor: leadData.slug === "default" ? "" : leadData.primaryColor }}
-                    className={`w-8 h-[2px] ${leadData.slug === "default" ? "bg-amber-500/40" : "opacity-40"} group-hover:w-12 transition-all duration-500`} 
+                    className={`w-8 h-[2px] ${leadData.slug === "default" ? "bg-amber-500/40" : "opacity-40"} group-hover:w-12 transition-all duration-500`}
                   />
                 </div>
-                <h3 
+                <h3
                   style={{ "--hover-color": leadData.slug === "default" ? "" : leadData.primaryColor } as any}
                   className={`text-white font-bold tracking-[0.1em] text-[13px] uppercase mb-3 leading-snug ${leadData.slug === "default" ? "group-hover:text-amber-500" : "group-hover:text-[var(--hover-color)]"} transition-colors duration-300`}
                 >
@@ -152,27 +152,27 @@ export default function WhyUsSection({ leadData: passedLeadData }: { leadData?: 
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 pb-20 relative z-20">
         <div className="bg-[#0c0e12] border border-zinc-800/60 rounded-2xl px-6 md:px-12 py-6 md:py-12 flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-10 shadow-2xl relative overflow-hidden">
           {/* Ambient Glow */}
-          <div 
+          <div
             style={{ backgroundColor: leadData.slug === "default" ? "" : leadData.primaryColor }}
-            className={`absolute top-0 right-0 w-64 h-64 ${leadData.slug === "default" ? "bg-amber-500/5" : "opacity-[0.05]"} rounded-full blur-[80px] pointer-events-none`} 
+            className={`absolute top-0 right-0 w-64 h-64 ${leadData.slug === "default" ? "bg-amber-500/5" : "opacity-[0.05]"} rounded-full blur-[80px] pointer-events-none`}
           />
 
           <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-center md:text-left relative z-10">
             {/* phone icon circle */}
-            <div 
-              style={{ 
+            <div
+              style={{
                 borderColor: leadData.slug === "default" ? "" : `${leadData.primaryColor}33`,
                 backgroundColor: leadData.slug === "default" ? "" : `${leadData.primaryColor}0d`,
                 boxShadow: leadData.slug === "default" ? "" : `0 0 20px ${leadData.primaryColor}26`
               }}
               className={`shrink-0 w-14 h-14 md:w-20 md:h-20 rounded-full border ${leadData.slug === "default" ? "border-amber-500/20 bg-amber-500/5 shadow-[0_0_20px_rgba(245,158,11,0.15)]" : ""} flex items-center justify-center`}
             >
-              <svg 
-                xmlns="http://www.w3.org/2000/svg" 
-                fill="none" 
-                viewBox="0 0 24 24" 
-                strokeWidth={1} 
-                stroke="currentColor" 
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1}
+                stroke="currentColor"
                 style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor }}
                 className={`w-7 h-7 md:w-10 md:h-10 ${leadData.slug === "default" ? "text-amber-500" : ""}`}
               >
@@ -190,9 +190,9 @@ export default function WhyUsSection({ leadData: passedLeadData }: { leadData?: 
           </div>
 
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 w-full lg:w-auto relative z-10">
-            <Link 
+            <Link
               href={`tel:${leadData.phone}`}
-              style={{ 
+              style={{
                 backgroundColor: leadData.slug === "default" ? "" : leadData.primaryColor,
                 boxShadow: leadData.slug === "default" ? "" : `0 0 25px ${leadData.primaryColor}4d`
               }}
@@ -204,7 +204,7 @@ export default function WhyUsSection({ leadData: passedLeadData }: { leadData?: 
               Call Now
             </Link>
 
-            <Link 
+            <Link
               href="/contact"
               style={{ "--hover-color": leadData.slug === "default" ? "" : leadData.primaryColor } as any}
               className={`w-full sm:w-auto px-6 py-3.5 lg:px-10 lg:py-5 bg-transparent border border-zinc-700 ${leadData.slug === "default" ? "hover:border-amber-500 hover:text-amber-500" : "hover:border-[var(--hover-color)] hover:text-[var(--hover-color)]"} text-white rounded-md text-[11px] lg:text-[13px] font-bold tracking-[0.2em] uppercase transition-all duration-300 flex items-center justify-center gap-3`}
