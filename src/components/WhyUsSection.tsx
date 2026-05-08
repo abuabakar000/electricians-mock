@@ -67,7 +67,7 @@ const features = [
 
 export default function WhyUsSection({ leadData: passedLeadData }: { leadData?: LeadData }) {
   const leadData = passedLeadData || getLeadData();
-  const primaryColor = leadData.theme?.primaryColor || "#f59e0b";
+  const primaryColor = leadData.primaryColor || "#f59e0b";
 
   return (
     <section
