@@ -11,6 +11,7 @@ export interface LeadData {
   heroSubtext: string;
   trustRating: string;
   customerCount: string;
+  licensedText?: string;
   hours: {
     monFri: string;
     sat: string;

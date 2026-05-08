@@ -56,7 +56,7 @@ export default function TrustSection({ leadData: passedLeadData }: { leadData?: 
                 Licensed <br className="hidden xl:block" />& Insured
               </h3>
               <p className="text-slate-500 text-[10px] sm:text-[13px] font-light leading-relaxed">
-                {leadData.trust?.licensedText || "Fully licensed & fully insured"}
+                {leadData.licensedText || "Fully licensed & fully insured"}
               </p>
             </div>
           </div>
