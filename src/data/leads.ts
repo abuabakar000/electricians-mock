@@ -1,7 +1,7 @@
 export interface LeadData {
   slug: string;
   title: string;
-  logo?: string; 
+  logo?: string;
   primaryColor: string;
   phone: string;
   address: string;
@@ -77,6 +77,22 @@ export const leads: Record<string, LeadData> = {
     primaryColor: "#0ea5e9",
     address: "Regina, SK & Coastal Areas",
     heroHeading: "Regina's Premier Luxury Plumbing Experts",
+  },
+  "revolution-mechanical": {
+    ...defaultLead,
+    slug: "revolution-mechanical",
+    title: "Revolution Mechanical",
+    logo: "/revolution-mechanical.png",
+    primaryColor: "#6b9e2e",
+    phone: "+1 (306) 529-4174",
+    email: "revolutionmech@gmail.com",
+    address: "1560A Mcara St, Regina, SK S4N 6C5, Canada",
+    heroHeading: "Elite Mechanical in Regina",
+    highlightWord: "Mechanical",
+    heroSubtext: "Providing master-level plumbing, Heating & AC craftsmanship to the Regina community. We offer 24/7 rapid response and elite installations for your home.",
+    trustRating: "4.8",
+    customerCount: "200+",
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.297798643631!2d-104.5825375!3d50.454178999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x531ea1f2159ddf59%3A0x5e76c097745b37ba!2sRevolution%20Mechanical!5e0!3m2!1sen!2s!4v1778279805488!5m2!1sen!2s"
   },
 };
 
