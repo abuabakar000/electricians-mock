@@ -2,6 +2,8 @@ import React from "react";
 import Image from "next/image";
 import MapSection from "@/components/MapSection";
 import CtaSection from "@/components/CtaSection";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { MapPin, Navigation, Building2, Home, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
@@ -39,7 +41,9 @@ const locations = [
 
 export default function LocationsPage() {
   return (
-    <main className="flex min-h-screen flex-col bg-zinc-950 pt-24">
+    <>
+      <Navbar />
+      <main className="flex min-h-screen flex-col bg-zinc-950 pt-24">
       
       {/* ── HERO SECTION ── */}
       <section className="relative min-h-[55vh] flex items-center justify-center overflow-hidden border-b border-zinc-800/60">
@@ -128,5 +132,7 @@ export default function LocationsPage() {
       <CtaSection />
 
     </main>
+      <Footer />
+    </>
   );
 }

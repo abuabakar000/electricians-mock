@@ -2,6 +2,8 @@ import React from "react";
 import Image from "next/image";
 import { Phone, Mail, MapPin, Clock, ArrowRight } from "lucide-react";
 import MapSection from "@/components/MapSection";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "Schedule Service | ProPlumb",
@@ -10,7 +12,9 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
-    <main className="flex min-h-screen flex-col bg-zinc-950 pt-24">
+    <>
+      <Navbar />
+      <main className="flex min-h-screen flex-col bg-zinc-950 pt-24">
       
       {/* ── HERO SECTION ── */}
       <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden border-b border-zinc-800/60">
@@ -238,5 +242,7 @@ export default function ContactPage() {
       <MapSection />
 
     </main>
+      <Footer />
+    </>
   );
 }

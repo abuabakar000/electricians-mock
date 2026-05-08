@@ -7,17 +7,23 @@ import WhyUsSection from "@/components/WhyUsSection";
 import FaqSection from "@/components/FaqSection";
 import CtaSection from "@/components/CtaSection";
 
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col bg-zinc-950">
-      <Hero />
-      <TrustSection />
-      <ServicesSection />
-      <MapSection />
-      <WhyUsSection />
-      {/* <ProcessSection /> */}
-      <FaqSection />
-      <CtaSection />
-    </main>
+    <>
+      <Navbar />
+      <main className="flex min-h-screen flex-col bg-zinc-950">
+        <Hero />
+        <TrustSection />
+        <ServicesSection />
+        <MapSection />
+        <WhyUsSection />
+        <FaqSection />
+        <CtaSection />
+      </main>
+      <Footer />
+    </>
   );
 }

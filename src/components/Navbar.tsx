@@ -2,9 +2,12 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { LeadData, getLeadData } from "@/data/leads";
 
-export default function Navbar() {
+export default function Navbar({ leadData: passedLeadData }: { leadData?: LeadData }) {
+  const leadData = passedLeadData || getLeadData();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
@@ -51,18 +54,40 @@ export default function Navbar() {
         <div className="w-full max-w-[1600px] mx-auto px-6 lg:px-12 flex justify-between items-center">
           
           {/* Logo */}
-          <Link href="/" className="flex items-center relative z-[110]" onClick={() => setIsMobileMenuOpen(false)}>
-            <span className="text-white text-2xl font-bold tracking-wider">
-              PRO<span className="text-amber-500">PLUMB</span>
-            </span>
+          <Link href={leadData.slug === "default" ? "/" : `/${leadData.slug}`} className="flex items-center relative z-[110]" onClick={() => setIsMobileMenuOpen(false)}>
+            {leadData.logoUrl ? (
+              <div className="relative h-10 w-40 md:h-12 md:w-48">
+                <Image 
+                  src={leadData.logoUrl} 
+                  alt={leadData.name} 
+                  fill 
+                  className="object-contain object-left"
+                  priority
+                />
+              </div>
+            ) : (
+              <span className="text-white text-2xl font-bold tracking-wider">
+                {leadData.slug === "default" ? (
+                  <>PRO<span className="text-amber-500">PLUMB</span></>
+                ) : (
+                  <span style={{ color: leadData.primaryColor }}>{leadData.name.toUpperCase()}</span>
+                )}
+              </span>
+            )}
           </Link>
 
           {/* Mobile Header Actions */}
           <div className="md:hidden flex items-center gap-4 relative z-[110]">
             {/* Mobile Call Button */}
             <Link
-              href="tel:+18005550199"
-              className="w-10 h-10 flex items-center justify-center rounded-full border border-white/20 text-white hover:border-amber-500 hover:text-amber-500 hover:bg-amber-500/10 transition-all duration-300"
+              href={`tel:${leadData.phone}`}
+              style={{ 
+                backgroundColor: leadData.slug === "default" ? "" : leadData.primaryColor, 
+                borderColor: leadData.slug === "default" ? "" : leadData.primaryColor,
+                color: leadData.slug === "default" ? "" : "white",
+                "--primary-color": leadData.primaryColor
+              } as any}
+              className={`w-10 h-10 flex items-center justify-center rounded-full border border-white/20 text-white ${leadData.slug === "default" ? "hover:border-amber-500 hover:text-amber-500 hover:bg-amber-500/10" : "hover:brightness-110 hover:text-zinc-950 hover:bg-[var(--primary-color)] hover:border-[var(--primary-color)]"} transition-all duration-300`}
               aria-label="Call Now"
             >
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
@@ -75,33 +100,64 @@ export default function Navbar() {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle menu"
             >
-              <span className={`h-[2px] w-8 bg-white transition-all duration-300 transform ${isMobileMenuOpen ? "rotate-45 translate-y-[8px] bg-amber-500" : ""}`} />
+              <span 
+                style={{ backgroundColor: isMobileMenuOpen && leadData.slug !== "default" ? leadData.primaryColor : "" }}
+                className={`h-[2px] w-8 bg-white transition-all duration-300 transform ${isMobileMenuOpen ? `rotate-45 translate-y-[8px] ${leadData.slug === "default" ? "bg-amber-500" : ""}` : ""}`} 
+              />
               <span className={`h-[2px] w-8 bg-white transition-all duration-300 ${isMobileMenuOpen ? "opacity-0" : ""}`} />
-              <span className={`h-[2px] w-8 bg-white transition-all duration-300 transform ${isMobileMenuOpen ? "-rotate-45 -translate-y-[8px] bg-amber-500" : ""}`} />
+              <span 
+                style={{ backgroundColor: isMobileMenuOpen && leadData.slug !== "default" ? leadData.primaryColor : "" }}
+                className={`h-[2px] w-8 bg-white transition-all duration-300 transform ${isMobileMenuOpen ? `-rotate-45 -translate-y-[8px] ${leadData.slug === "default" ? "bg-amber-500" : ""}` : ""}`} 
+              />
             </button>
           </div>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-10">
             <div className="flex gap-10 text-[12px] font-bold tracking-[0.25em] uppercase text-white">
-              <Link href="/services" className="relative group hover:text-amber-500 transition-colors">
+              <Link 
+                href={leadData.slug === "default" ? "/services" : `/${leadData.slug}/services`} 
+                style={{ "--hover-color": leadData.slug === "default" ? "#f59e0b" : leadData.primaryColor } as any}
+                className="relative group hover:text-[var(--hover-color)] transition-colors"
+              >
                 Services
-                <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-amber-500 transition-all duration-300 group-hover:w-full"></span>
+                <span 
+                  style={{ backgroundColor: leadData.slug === "default" ? "" : leadData.primaryColor }}
+                  className={`absolute -bottom-1 left-0 w-0 h-[1px] ${leadData.slug === "default" ? "bg-amber-500" : ""} transition-all duration-300 group-hover:w-full`}
+                ></span>
               </Link>
-              <Link href="/locations" className="relative group hover:text-amber-500 transition-colors">
+              <Link 
+                href={leadData.slug === "default" ? "/locations" : `/${leadData.slug}/locations`} 
+                style={{ "--hover-color": leadData.slug === "default" ? "#f59e0b" : leadData.primaryColor } as any}
+                className="relative group hover:text-[var(--hover-color)] transition-colors"
+              >
                 Locations
-                <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-amber-500 transition-all duration-300 group-hover:w-full"></span>
+                <span 
+                  style={{ backgroundColor: leadData.slug === "default" ? "" : leadData.primaryColor }}
+                  className={`absolute -bottom-1 left-0 w-0 h-[1px] ${leadData.slug === "default" ? "bg-amber-500" : ""} transition-all duration-300 group-hover:w-full`}
+                ></span>
               </Link>
-              <Link href="/contact" className="relative group hover:text-amber-500 transition-colors">
+              <Link 
+                href={leadData.slug === "default" ? "/contact" : `/${leadData.slug}/contact`} 
+                style={{ "--hover-color": leadData.slug === "default" ? "#f59e0b" : leadData.primaryColor } as any}
+                className="relative group hover:text-[var(--hover-color)] transition-colors"
+              >
                 Contact
-                <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-amber-500 transition-all duration-300 group-hover:w-full"></span>
+                <span 
+                  style={{ backgroundColor: leadData.slug === "default" ? "" : leadData.primaryColor }}
+                  className={`absolute -bottom-1 left-0 w-0 h-[1px] ${leadData.slug === "default" ? "bg-amber-500" : ""} transition-all duration-300 group-hover:w-full`}
+                ></span>
               </Link>
             </div>
             <Link
-              href="tel:+18005550199"
-              className="bg-amber-500 hover:bg-amber-400 text-zinc-950 px-6 py-3 rounded-sm text-sm font-bold tracking-[0.15em] uppercase transition-all shadow-[0_0_15px_rgba(245,158,11,0.4)]"
+              href={`tel:${leadData.phone}`}
+              style={{ 
+                backgroundColor: leadData.slug === "default" ? "" : leadData.primaryColor,
+                boxShadow: leadData.slug === "default" ? "" : `0 0 15px ${leadData.primaryColor}66`
+              }}
+              className={`${leadData.slug === "default" ? "bg-amber-500 hover:bg-amber-400 shadow-[0_0_15px_rgba(245,158,11,0.4)]" : "hover:brightness-110"} text-zinc-950 px-6 py-3 rounded-sm text-sm font-bold tracking-[0.15em] uppercase transition-all`}
             >
-              (800) 555-0199
+              {leadData.phone}
             </Link>
           </nav>
         </div>
@@ -114,16 +170,22 @@ export default function Navbar() {
         }`}
       >
         {/* Aesthetic Background Elements */}
-        <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-amber-500/10 rounded-full blur-[120px] pointer-events-none opacity-60"></div>
-        <div className="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] bg-amber-500/5 rounded-full blur-[100px] pointer-events-none opacity-40"></div>
+        <div 
+          style={{ backgroundColor: leadData.slug === "default" ? "" : leadData.primaryColor }}
+          className={`absolute top-[-10%] right-[-10%] w-[500px] h-[500px] ${leadData.slug === "default" ? "bg-amber-500/10" : "opacity-[0.1]"} rounded-full blur-[120px] pointer-events-none opacity-60`} 
+        />
+        <div 
+          style={{ backgroundColor: leadData.slug === "default" ? "" : leadData.primaryColor }}
+          className={`absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] ${leadData.slug === "default" ? "bg-amber-500/5" : "opacity-[0.05]"} rounded-full blur-[100px] pointer-events-none opacity-40`} 
+        />
 
         <div className="flex flex-col justify-center items-center h-full relative z-10 px-8">
           {/* Main Navigation */}
           <nav className="flex flex-col items-center gap-12 w-full mb-20">
             {[
-              { name: "Services", href: "/services", num: "01" },
-              { name: "Locations", href: "/locations", num: "02" },
-              { name: "Contact", href: "/contact", num: "03" },
+              { name: "Services", href: leadData.slug === "default" ? "/services" : `/${leadData.slug}/services`, num: "01" },
+              { name: "Locations", href: leadData.slug === "default" ? "/locations" : `/${leadData.slug}/locations`, num: "02" },
+              { name: "Contact", href: leadData.slug === "default" ? "/contact" : `/${leadData.slug}/contact`, num: "03" },
             ].map((item, index) => (
               <Link
                 key={item.name}
@@ -132,10 +194,16 @@ export default function Navbar() {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 <div className="relative flex items-center justify-center">
-                  <span className="absolute right-full mr-4 text-amber-500/40 text-xs font-mono font-bold tracking-widest group-hover:text-amber-500 transition-colors whitespace-nowrap">
+                  <span 
+                    style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor, "--hover-color": leadData.slug === "default" ? "" : leadData.primaryColor } as any}
+                    className={`absolute right-full mr-4 ${leadData.slug === "default" ? "text-amber-500/40 group-hover:text-amber-500" : "opacity-40 group-hover:opacity-100 group-hover:text-[var(--hover-color)]"} text-xs font-mono font-bold tracking-widest transition-colors whitespace-nowrap`}
+                  >
                     [{item.num}]
                   </span>
-                  <span className="text-4xl sm:text-5xl font-black tracking-tighter uppercase text-white group-hover:text-amber-500 transition-colors duration-300">
+                  <span 
+                    style={{ "--hover-color": leadData.slug === "default" ? "" : leadData.primaryColor } as any}
+                    className={`text-4xl sm:text-5xl font-black tracking-tighter uppercase text-white ${leadData.slug === "default" ? "group-hover:text-amber-500" : "group-hover:text-[var(--hover-color)]"} transition-colors duration-300`}
+                  >
                     {item.name}
                   </span>
                 </div>
@@ -145,14 +213,25 @@ export default function Navbar() {
 
           {/* Contact Details */}
           <div className={`flex flex-col items-center gap-6 w-full transition-all duration-700 delay-300 ${isMobileMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-            <div className="w-12 h-[1px] bg-amber-500/40"></div>
+            <div 
+              style={{ backgroundColor: leadData.slug === "default" ? "" : leadData.primaryColor }}
+              className={`w-12 h-[1px] ${leadData.slug === "default" ? "bg-amber-500/40" : "opacity-40"}`} 
+            />
             
             <div className="flex flex-col items-center gap-2">
-              <Link href="tel:+18005550199" className="text-3xl font-light text-amber-500 tracking-widest hover:text-white transition-colors">
-                (800) 555-0199
+              <Link 
+                href={`tel:${leadData.phone}`} 
+                style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor }}
+                className={`text-3xl font-light ${leadData.slug === "default" ? "text-amber-500" : ""} tracking-widest hover:text-white transition-colors`}
+              >
+                {leadData.phone}
               </Link>
-              <Link href="mailto:contact@proplumb.com" className="text-sm font-medium text-white/50 tracking-[0.2em] uppercase hover:text-amber-500 transition-colors">
-                contact@proplumb.com
+              <Link 
+                href={`mailto:${leadData.email}`} 
+                style={{ "--hover-color": leadData.slug === "default" ? "" : leadData.primaryColor } as any}
+                className={`text-sm font-medium text-white/50 tracking-[0.2em] uppercase ${leadData.slug === "default" ? "hover:text-amber-500" : "hover:text-[var(--hover-color)]"} transition-colors`}
+              >
+                {leadData.email}
               </Link>
             </div>
           </div>

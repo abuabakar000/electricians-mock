@@ -1,6 +1,8 @@
 import React from "react";
+import { LeadData, getLeadData } from "@/data/leads";
 
-export default function MapSection() {
+export default function MapSection({ leadData: passedLeadData }: { leadData?: LeadData }) {
+  const leadData = passedLeadData || getLeadData();
   return (
     <section className="bg-white py-16 md:py-24 border-b border-gray-100 relative z-20">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">

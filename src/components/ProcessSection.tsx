@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { LeadData, getLeadData } from "@/data/leads";
 
 const steps = [
   {
@@ -75,7 +76,8 @@ const steps = [
   }
 ];
 
-export default function ProcessSection() {
+export default function ProcessSection({ leadData: passedLeadData }: { leadData?: LeadData }) {
+  const leadData = passedLeadData || getLeadData();
   return (
     <section className="bg-[#111318] py-16 relative overflow-hidden border-y border-white/5 shadow-2xl">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
@@ -83,15 +85,26 @@ export default function ProcessSection() {
         {/* Header */}
         <div className="text-left mb-16">
           <div className="flex items-center justify-start gap-3 mb-6">
-            <span className="text-[11px] font-bold tracking-[0.15em] text-amber-500 uppercase">
+            <span 
+              style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor }}
+              className={`text-[11px] font-bold tracking-[0.15em] ${leadData.slug === "default" ? "text-amber-500" : ""} uppercase`}
+            >
               Our Process
             </span>
-            <div className="w-8 h-[1px] bg-amber-500/50" />
+            <div 
+              style={{ backgroundColor: leadData.slug === "default" ? "" : leadData.primaryColor }}
+              className={`w-8 h-[1px] ${leadData.slug === "default" ? "bg-amber-500/50" : "opacity-50"}`} 
+            />
           </div>
 
           <h2 className="text-4xl md:text-5xl font-light text-white leading-[1.15] tracking-tight mb-6">
             How We Approach<br />
-            <span className="text-amber-500 font-medium">Every Task.</span>
+            <span 
+              style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor }}
+              className={`${leadData.slug === "default" ? "text-amber-500" : ""} font-medium`}
+            >
+              Every Task.
+            </span>
           </h2>
           <p className="text-zinc-400 text-[15px] font-light leading-relaxed max-w-lg">
             A simple, transparent process to deliver reliable plumbing solutions from start to finish.
@@ -106,14 +119,26 @@ export default function ProcessSection() {
           {steps.map((step, index) => (
             <div key={index} className={`flex flex-col items-center relative z-10 text-center group ${index === 6 ? 'hidden xl:flex' : ''}`}>
               
-              <div className="w-[64px] h-[64px] md:w-[72px] md:h-[72px] shrink-0 rounded-full border border-zinc-700/60 bg-[#111318] flex items-center justify-center text-amber-500 mb-4 group-hover:border-amber-500/50 group-hover:shadow-[0_0_20px_rgba(245,158,11,0.15)] transition-all duration-300">
+              <div 
+                style={{ 
+                  color: leadData.slug === "default" ? "" : leadData.primaryColor,
+                  borderColor: leadData.slug === "default" ? "" : `${leadData.primaryColor}80`,
+                  boxShadow: leadData.slug === "default" ? "" : `0 0 20px ${leadData.primaryColor}26`
+                }}
+                className={`w-[64px] h-[64px] md:w-[72px] md:h-[72px] shrink-0 rounded-full border border-zinc-700/60 bg-[#111318] flex items-center justify-center ${leadData.slug === "default" ? "text-amber-500 group-hover:border-amber-500/50 group-hover:shadow-[0_0_20px_rgba(245,158,11,0.15)]" : ""} transition-all duration-300`}
+              >
                 <div className="scale-90 md:scale-100">
                   {step.icon}
                 </div>
               </div>
               
               <div className="flex flex-col items-center px-2">
-                <span className="text-amber-500 text-[10px] font-bold tracking-widest mb-1">{step.num}</span>
+                <span 
+                  style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor }}
+                  className={`${leadData.slug === "default" ? "text-amber-500" : ""} text-[10px] font-bold tracking-widest mb-1`}
+                >
+                  {step.num}
+                </span>
                 <h4 className="text-white text-[13px] font-semibold mb-1">{step.title}</h4>
                 <p className="text-zinc-500 text-[12px] leading-relaxed max-w-[150px]">{step.desc}</p>
               </div>
@@ -127,14 +152,23 @@ export default function ProcessSection() {
           
           {/* Left: Phone */}
           <div className="flex items-center gap-5">
-            <div className="w-14 h-14 shrink-0 rounded-xl border border-zinc-800 flex items-center justify-center text-amber-500 bg-zinc-900/30">
+            <div 
+              style={{ backgroundColor: leadData.slug === "default" ? "" : `${leadData.primaryColor}1a`, color: leadData.slug === "default" ? "" : leadData.primaryColor }}
+              className={`w-14 h-14 shrink-0 rounded-xl border border-zinc-800 flex items-center justify-center ${leadData.slug === "default" ? "text-amber-500 bg-zinc-900/30" : ""}`}
+            >
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.896-1.596-5.48-4.18-7.076-7.076l1.293-.97c.362-.271.527-.733.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
               </svg>
             </div>
             <div className="flex flex-col text-left">
               <span className="text-zinc-400 text-xs mb-1">Need help now?</span>
-              <span className="text-white text-2xl font-semibold tracking-wide">(800) 555-0199</span>
+              <a 
+                href={`tel:${leadData.phone}`} 
+                style={{ "--hover-color": leadData.slug === "default" ? "" : leadData.primaryColor } as any}
+                className={`text-white text-2xl font-semibold tracking-wide ${leadData.slug === "default" ? "hover:text-amber-500" : "hover:text-[var(--hover-color)]"} transition-colors`}
+              >
+                {leadData.phone}
+              </a>
               <span className="text-zinc-500 text-[11px] mt-1">We're available 24/7</span>
             </div>
           </div>
@@ -142,7 +176,12 @@ export default function ProcessSection() {
           {/* Right: Button */}
           <Link 
             href="/contact"
-            className="px-8 py-4 border border-amber-500 text-amber-500 hover:bg-amber-500 hover:text-[#0b0c10] transition-colors duration-300 rounded-sm text-[11px] font-bold tracking-[0.15em] uppercase flex items-center gap-3 shrink-0"
+            style={{ 
+              borderColor: leadData.slug === "default" ? "" : leadData.primaryColor,
+              color: leadData.slug === "default" ? "" : leadData.primaryColor,
+              "--hover-bg": leadData.slug === "default" ? "" : leadData.primaryColor
+            } as any}
+            className={`px-8 py-4 border ${leadData.slug === "default" ? "border-amber-500 text-amber-500 hover:bg-amber-500 hover:text-[#0b0c10]" : "hover:bg-[var(--hover-bg)] hover:text-[#0b0c10]"} transition-colors duration-300 rounded-sm text-[11px] font-bold tracking-[0.15em] uppercase flex items-center gap-3 shrink-0`}
           >
             Schedule Service
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
