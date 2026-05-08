@@ -27,15 +27,7 @@ export default function Hero({ leadData: passedLeadData }: { leadData?: LeadData
       {/* Hero Content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center pt-24 pb-20">
         <div className="w-full md:w-2/3 max-w-3xl text-left">
-          <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8 animate-in fade-in slide-in-from-top-4 duration-1000">
-            <div 
-              style={{ backgroundColor: leadData.slug === "default" ? "" : leadData.primaryColor }}
-              className={`w-2 h-2 rounded-full ${leadData.slug === "default" ? "bg-amber-500" : ""} shadow-[0_0_10px_rgba(245,158,11,0.5)]`}
-            />
-            <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-zinc-400">
-              Family-Owned Master Plumbers
-            </span>
-          </div>
+
 
           <h1 className="text-5xl md:text-7xl lg:text-[90px] font-light text-white tracking-tighter leading-[0.95] mb-8 animate-in fade-in slide-in-from-bottom-8 duration-1000">
             {words.map((word, i) => (

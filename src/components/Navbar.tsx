@@ -220,7 +220,7 @@ export default function Navbar({ leadData: passedLeadData }: { leadData?: LeadDa
               <Link 
                 href={`tel:${leadData.phone}`} 
                 style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor }}
-                className={`text-3xl font-light ${leadData.slug === "default" ? "text-amber-500" : ""} tracking-widest hover:text-white transition-colors`}
+                className={`text-2xl font-light ${leadData.slug === "default" ? "text-amber-500" : ""} tracking-widest hover:text-white transition-colors`}
               >
                 {leadData.phone}
               </Link>
