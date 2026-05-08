@@ -10,10 +10,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const leadData = getLeadData(slug);
   return {
-    title: `Contact Us | ${leadData.name}`,
-    description: `Get in touch with ${leadData.name} for professional plumbing services.`,
+    title: `Contact Us | ${leadData.title}`,
+    description: `Get in touch with ${leadData.title} for professional plumbing services.`,
     icons: {
-      icon: leadData.logoUrl || "/logo.png",
+      icon: leadData.logo || "/logo.png",
     }
   };
 }
@@ -76,7 +76,7 @@ export default async function ContactPage({ params }: { params: Promise<{ slug: 
             </h1>
             
             <p className="text-zinc-400 text-lg md:text-xl font-light tracking-wide max-w-2xl mx-auto leading-relaxed">
-              Ready to experience the {leadData.name} difference? Contact us today to secure your priority appointment with our master technicians.
+              Ready to experience the {leadData.title} difference? Contact us today to secure your priority appointment with our master technicians.
             </p>
           </div>
         </section>

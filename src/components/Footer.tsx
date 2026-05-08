@@ -189,7 +189,7 @@ export default function Footer({ leadData: passedLeadData }: { leadData?: LeadDa
         {/* Copyright */}
         <div className="pt-8 border-t border-zinc-800/60 text-center flex flex-col items-center justify-center">
           <p className="text-zinc-500 text-[12px] font-light tracking-wide">
-            © {new Date().getFullYear()} {leadData.name}. All rights reserved.
+            © {new Date().getFullYear()} {leadData.title}. All rights reserved.
           </p>
         </div>
 

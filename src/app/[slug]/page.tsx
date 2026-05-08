@@ -14,10 +14,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const leadData = getLeadData(slug);
   return {
-    title: `${leadData.name} | Professional Plumbing Services`,
-    description: leadData.hero?.subheadline,
+    title: `${leadData.title} | Professional Plumbing Services`,
+    description: leadData.heroSubtext,
     icons: {
-      icon: leadData.logoUrl || "/logo.png",
+      icon: leadData.logo || "/logo.png",
     }
   };
 }

@@ -12,10 +12,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const leadData = getLeadData(slug);
   return {
-    title: `Locations | ${leadData.name}`,
-    description: `View the service areas and locations covered by ${leadData.name}.`,
+    title: `Locations | ${leadData.title}`,
+    description: `View the service areas and locations covered by ${leadData.title}.`,
     icons: {
-      icon: leadData.logoUrl || "/logo.png",
+      icon: leadData.logo || "/logo.png",
     }
   };
 }

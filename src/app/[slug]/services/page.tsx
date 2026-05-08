@@ -24,10 +24,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const leadData = getLeadData(slug);
   return {
-    title: `Premium Services | ${leadData.name}`,
-    description: `Explore professional plumbing services offered by ${leadData.name}.`,
+    title: `Premium Services | ${leadData.title}`,
+    description: `Explore professional plumbing services offered by ${leadData.title}.`,
     icons: {
-      icon: leadData.logoUrl || "/logo.png",
+      icon: leadData.logo || "/logo.png",
     }
   };
 }
