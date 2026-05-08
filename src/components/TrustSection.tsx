@@ -30,7 +30,9 @@ export default function TrustSection({ leadData: passedLeadData }: { leadData?: 
               />
             </div>
             <div className="flex items-center gap-2 mb-2">
-              <span className="text-2xl font-semibold text-[#0a1930] tracking-tight">4.9</span>
+              <span className="text-2xl font-semibold text-[#0a1930] tracking-tight">
+                {leadData.trustRating}
+              </span>
               <div className="flex gap-0.5 text-[#0ea5e9]">
                 {[...Array(5)].map((_, i) => (
                   <svg key={i} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
@@ -53,7 +55,9 @@ export default function TrustSection({ leadData: passedLeadData }: { leadData?: 
               <h3 className="text-[#0a1930] font-semibold text-[10px] sm:text-xs uppercase tracking-[0.05em] sm:tracking-[0.15em] leading-tight mb-1">
                 Licensed <br className="hidden xl:block" />& Insured
               </h3>
-              <p className="text-slate-500 text-[10px] sm:text-[13px] font-light leading-relaxed">Fully licensed &<br className="hidden xl:block" />fully insured</p>
+              <p className="text-slate-500 text-[10px] sm:text-[13px] font-light leading-relaxed">
+                {leadData.trust?.licensedText || "Fully licensed & fully insured"}
+              </p>
             </div>
           </div>
 
@@ -84,7 +88,7 @@ export default function TrustSection({ leadData: passedLeadData }: { leadData?: 
             </div>
             <div className="mt-1 xl:mt-0">
               <h3 className="text-[#0a1930] font-semibold text-[10px] sm:text-xs uppercase tracking-[0.05em] sm:tracking-[0.15em] leading-tight mb-1">
-                500+ Happy <br className="hidden xl:block" />Customers
+                {leadData.customerCount} Happy <br className="hidden xl:block" />Customers
               </h3>
               <p className="text-slate-500 text-[10px] sm:text-[13px] font-light leading-relaxed">Satisfied homeowners<br className="hidden xl:block" />and businesses</p>
             </div>

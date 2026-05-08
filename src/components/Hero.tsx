@@ -1,9 +1,14 @@
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { LeadData, getLeadData } from "@/data/leads";
 
 export default function Hero({ leadData: passedLeadData }: { leadData?: LeadData }) {
   const leadData = passedLeadData || getLeadData();
+  const heading = leadData.heroHeading;
+  const highlightWord = leadData.highlightWord;
+  const subtext = leadData.heroSubtext;
+  const words = heading.split(" ");
   
   return (
     <section className="relative w-full min-h-screen flex flex-col items-center justify-center bg-zinc-950 overflow-hidden">
@@ -11,7 +16,7 @@ export default function Hero({ leadData: passedLeadData }: { leadData?: LeadData
       <div className="absolute inset-0 w-full h-full z-0">
         <Image
           src="/hero-bg.webp"
-          alt={leadData.name || "Premium Plumbing Services"}
+          alt={leadData.title}
           fill
           priority
           className="object-cover object-center opacity-60 mix-blend-overlay"
@@ -28,41 +33,50 @@ export default function Hero({ leadData: passedLeadData }: { leadData?: LeadData
               className={`w-2 h-2 rounded-full ${leadData.slug === "default" ? "bg-amber-500" : ""} shadow-[0_0_10px_rgba(245,158,11,0.5)]`}
             />
             <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-zinc-400">
-              {leadData.hero?.badge || "Family-Owned Master Plumbers"}
+              Family-Owned Master Plumbers
             </span>
           </div>
 
           <h1 className="text-5xl md:text-7xl lg:text-[90px] font-light text-white tracking-tighter leading-[0.95] mb-8 animate-in fade-in slide-in-from-bottom-8 duration-1000">
-            Honest <br className="hidden md:block" />
-            <span 
-              style={{ 
-                color: leadData.slug === "default" ? "" : "transparent",
-                backgroundImage: leadData.slug === "default" ? "" : `linear-gradient(to right, white, ${leadData.primaryColor})`,
-                WebkitBackgroundClip: "text",
-                backgroundClip: "text",
-                WebkitTextFillColor: leadData.slug === "default" ? "" : "transparent"
-              }}
-              className={`${leadData.slug === "default" ? "text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-amber-500" : ""} font-medium`}
-            >
-              {leadData.slug === "default" ? "Craftsmanship" : (leadData.hero?.headline?.split(" ")[1] || "Craftsmanship")}
-            </span> for <br className="hidden md:block" />
-            Your Home.
+            {words.map((word, i) => (
+              <React.Fragment key={i}>
+                {word.toLowerCase() === highlightWord?.toLowerCase() ? (
+                  <span 
+                    style={{ 
+                      color: leadData.slug === "default" ? "" : "transparent",
+                      backgroundImage: leadData.slug === "default" ? "" : `linear-gradient(to right, white, ${leadData.primaryColor})`,
+                      WebkitBackgroundClip: "text",
+                      backgroundClip: "text",
+                      WebkitTextFillColor: leadData.slug === "default" ? "" : "transparent"
+                    }}
+                    className={`${leadData.slug === "default" ? "text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-amber-500" : ""} font-medium`}
+                  >
+                    {word}
+                  </span>
+                ) : (
+                  word
+                )}
+                {i < words.length - 1 && " "}
+                {i === 0 && <br className="hidden md:block" />}
+                {i === 2 && <br className="hidden md:block" />}
+              </React.Fragment>
+            ))}
           </h1>
 
           <p className="text-lg md:text-xl text-white mb-10 max-w-xl font-light leading-relaxed">
-            {leadData.hero?.subheadline || "Reliable, high-end service with a personal touch. We treat every home as if it were our own, delivering master-level plumbing with unwavering integrity."}
+            {subtext}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-start">
             <Link
-              href="/contact"
+              href={leadData.slug === "default" ? "/contact" : `/${leadData.slug}/contact`}
               style={{ backgroundColor: leadData.slug === "default" ? "" : leadData.primaryColor }}
               className={`px-8 py-4 ${leadData.slug === "default" ? "bg-amber-500 hover:bg-amber-400" : "hover:brightness-110"} text-zinc-950 text-sm font-semibold uppercase tracking-widest transition-all duration-300 ease-out transform hover:-translate-y-1 flex items-center justify-center gap-2`}
             >
               Request Consultation
             </Link>
             <Link
-              href="/services"
+              href={leadData.slug === "default" ? "/services" : `/${leadData.slug}/services`}
               className="px-8 py-4 bg-transparent border border-zinc-600 text-white hover:border-white hover:bg-white/5 text-sm font-semibold uppercase tracking-widest transition-all duration-300 ease-out flex items-center justify-center gap-2"
             >
               Explore Services

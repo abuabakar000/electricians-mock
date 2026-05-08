@@ -155,7 +155,7 @@ export default async function ContactPage({ params }: { params: Promise<{ slug: 
                       />
                     </div>
                     <div className="pt-1">
-                      <p className="text-zinc-500 text-[11px] font-bold tracking-[0.15em] uppercase mb-1">Service Area</p>
+                      <p className="text-zinc-500 text-[11px] font-bold tracking-[0.15em] uppercase mb-1">Headquarters</p>
                       <p className="text-white text-lg font-light tracking-wide">
                         {leadData.address}
                       </p>
@@ -175,11 +175,11 @@ export default async function ContactPage({ params }: { params: Promise<{ slug: 
                   <div className="space-y-2 text-sm font-light">
                     <div className="flex justify-between text-zinc-400">
                       <span>Monday - Friday</span>
-                      <span className="text-white">7:00 AM - 8:00 PM</span>
+                      <span className="text-white">{leadData.hours?.monFri || "7:00 AM - 8:00 PM"}</span>
                     </div>
                     <div className="flex justify-between text-zinc-400">
                       <span>Saturday</span>
-                      <span className="text-white">8:00 AM - 5:00 PM</span>
+                      <span className="text-white">{leadData.hours?.sat || "8:00 AM - 5:00 PM"}</span>
                     </div>
                     <div className="flex justify-between text-zinc-400 pt-2 border-t border-zinc-800/60 mt-2">
                       <span>Emergency Services</span>
@@ -187,7 +187,7 @@ export default async function ContactPage({ params }: { params: Promise<{ slug: 
                         style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor }}
                         className={`${leadData.slug === "default" ? "text-amber-500" : ""} font-medium`}
                       >
-                        Available 24/7
+                        {leadData.hours?.emergency || "Available 24/7"}
                       </span>
                     </div>
                   </div>

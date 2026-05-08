@@ -119,74 +119,86 @@ export default async function LocationsPage({ params }: { params: Promise<{ slug
         </div>
       </section>
 
-      {/* ── COVERAGE AREAS GRID ── */}
-      <section className="py-24 relative z-10 bg-zinc-950">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
-            {dynamicLocations.map((loc, idx) => (
-              <div 
-                key={idx} 
-                style={{ 
-                  "--hover-border": leadData.slug === "default" ? "" : `${leadData.primaryColor}4d`,
-                  "--hover-shadow": leadData.slug === "default" ? "" : `0 20px 40px -15px ${leadData.primaryColor}26`
-                } as any}
-                className={`group relative bg-[#0c0e12] border border-zinc-800/60 rounded-xl p-8 hover:bg-[#0f1116] hover:-translate-y-2 ${leadData.slug === "default" ? "hover:border-amber-500/30 hover:shadow-[0_20px_40px_-15px_rgba(245,158,11,0.15)]" : "hover:border-[var(--hover-border)] hover:shadow-[var(--hover-shadow)]"} transition-all duration-500 ease-out flex flex-col h-full overflow-hidden`}
-              >
-                {/* Ambient Hover Glow */}
+      {/* ── HIGH-END WORKSHOP SECTION ── */}
+      <section className="py-20 md:py-40 relative z-10 bg-zinc-950 overflow-hidden">
+        {/* Cinematic Spotlight Glow */}
+        <div 
+          style={{ backgroundColor: leadData.slug === "default" ? "" : leadData.primaryColor }}
+          className={`absolute top-1/2 left-1/4 -translate-y-1/2 w-[600px] md:w-[800px] h-[600px] md:h-[800px] ${leadData.slug === "default" ? "bg-amber-500/10" : "opacity-[0.05]"} rounded-full blur-[100px] md:blur-[150px] pointer-events-none z-0`} 
+        />
+
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
+          <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-12 lg:gap-20">
+            
+            {/* Left: The "Soul" of the Shop */}
+            <div className="max-w-2xl">
+              <div className="flex items-center gap-4 mb-6 md:mb-8">
+                <span 
+                  style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor }}
+                  className={`text-[9px] md:text-[10px] font-bold tracking-[0.6em] uppercase ${leadData.slug === "default" ? "text-amber-500" : ""}`}
+                >
+                  Est. Local Service
+                </span>
+                <div className="w-10 md:w-12 h-[1px] bg-zinc-800" />
+              </div>
+
+              <h2 className="text-4xl md:text-5xl lg:text-7xl font-light text-white tracking-tighter leading-[1] md:leading-[0.95] mb-8 md:mb-10">
+                Where <br/>
+                <span className="font-medium">Craftsmanship</span> <br/>
+                Meets Community.
+              </h2>
+
+              <p className="text-zinc-400 text-base md:text-lg lg:text-xl font-light leading-relaxed max-w-xl">
+                Our local workshop is the heart of our operation. It's where our master plumbers prep for every mission to ensure your home gets the elite care it deserves.
+              </p>
+            </div>
+
+            {/* Right: The "Elite Address" Card */}
+            <div className="w-full lg:max-w-md">
+              <div className="relative group">
+                {/* Border Shimmer */}
                 <div 
                   style={{ backgroundColor: leadData.slug === "default" ? "" : leadData.primaryColor }}
-                  className={`absolute top-0 right-0 w-48 h-48 ${leadData.slug === "default" ? "bg-amber-500/10" : "opacity-[0.1]"} rounded-full blur-[60px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none z-0`} 
+                  className={`absolute -inset-[1px] ${leadData.slug === "default" ? "bg-amber-500/20" : "opacity-[0.2]"} rounded-3xl blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-1000`} 
                 />
-
-                <div className="relative z-10 flex flex-col h-full">
-                  <div className="flex items-center gap-5 mb-6">
+                
+                <div className="relative bg-[#0c0e12] border border-white/5 rounded-3xl p-8 md:p-12 shadow-2xl overflow-hidden">
+                  <div className="relative z-10">
                     <div 
                       style={{ 
-                        borderColor: leadData.slug === "default" ? "" : `${leadData.primaryColor}66`,
-                        backgroundColor: leadData.slug === "default" ? "" : `${leadData.primaryColor}0d`
+                        borderColor: leadData.slug === "default" ? "" : `${leadData.primaryColor}40`,
+                        backgroundColor: leadData.slug === "default" ? "" : `${leadData.primaryColor}10`
                       }}
-                      className={`shrink-0 w-14 h-14 rounded-full border border-zinc-700/50 flex items-center justify-center bg-zinc-900/50 ${leadData.slug === "default" ? "group-hover:border-amber-500/40 group-hover:bg-amber-500/5" : ""} transition-colors duration-500`}
+                      className={`w-12 h-12 md:w-14 md:h-14 rounded-2xl border border-zinc-700/50 flex items-center justify-center mb-8 md:mb-10`}
                     >
-                      {loc.icon}
-                    </div>
-                    <div>
-                      <h3 
-                        style={{ "--hover-color": leadData.slug === "default" ? "" : leadData.primaryColor } as any}
-                        className={`text-white text-xl font-light tracking-wide ${leadData.slug === "default" ? "group-hover:text-amber-500" : "group-hover:text-[var(--hover-color)]"} transition-colors duration-300`}
-                      >
-                        {loc.name}
-                      </h3>
-                      <div 
-                        style={{ backgroundColor: leadData.slug === "default" ? "" : leadData.primaryColor }}
-                        className={`w-8 h-[2px] ${leadData.slug === "default" ? "bg-amber-500" : ""} mt-2 group-hover:w-12 transition-all duration-500`} 
+                      <MapPin 
+                        style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor }}
+                        className={`w-6 h-6 md:w-7 md:h-7 ${leadData.slug === "default" ? "text-amber-500" : ""}`} 
                       />
                     </div>
-                  </div>
-                  
-                  <p className="text-zinc-400 text-[15px] font-light leading-relaxed mb-8">
-                    {loc.desc}
-                  </p>
 
-                  <div className="mt-auto pt-6 border-t border-zinc-800/50">
-                    <div className="flex flex-wrap gap-2">
-                      {loc.features.map((feature, fIdx) => (
-                        <span 
-                          key={fIdx} 
-                          style={{ "--hover-color": leadData.slug === "default" ? "" : leadData.primaryColor } as any}
-                          className={`px-3 py-1 bg-zinc-900 border border-zinc-800 rounded-full text-[11px] font-bold tracking-widest uppercase text-zinc-400 ${leadData.slug === "default" ? "group-hover:border-amber-500/20 group-hover:text-zinc-300" : "group-hover:border-[var(--hover-color)] group-hover:text-zinc-200"} transition-colors duration-300`}
-                        >
-                          {feature}
-                        </span>
+                    <p className="text-zinc-500 text-[10px] font-bold tracking-[0.4em] uppercase mb-4">The Workshop</p>
+                    <h3 className="text-white text-xl md:text-2xl lg:text-3xl font-light tracking-wide leading-tight mb-8 md:mb-10">
+                      {leadData.address}
+                    </h3>
+
+                    <div className="flex flex-col gap-4">
+                      {["Local Dispatch", "Master Plumbers Only"].map((item, i) => (
+                        <div key={i} className="flex items-center gap-3">
+                          <div 
+                            style={{ backgroundColor: leadData.slug === "default" ? "" : leadData.primaryColor }}
+                            className={`w-1 h-1 rounded-full ${leadData.slug === "default" ? "bg-amber-500" : ""}`} 
+                          />
+                          <span className="text-zinc-500 text-[10px] md:text-[11px] font-bold tracking-widest uppercase">{item}</span>
+                        </div>
                       ))}
                     </div>
                   </div>
-
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
 
+          </div>
         </div>
       </section>
 

@@ -55,11 +55,11 @@ export default function Navbar({ leadData: passedLeadData }: { leadData?: LeadDa
           
           {/* Logo */}
           <Link href={leadData.slug === "default" ? "/" : `/${leadData.slug}`} className="flex items-center relative z-[110]" onClick={() => setIsMobileMenuOpen(false)}>
-            {leadData.logoUrl ? (
+            {leadData.logo ? (
               <div className="relative h-10 w-40 md:h-12 md:w-48">
                 <Image 
-                  src={leadData.logoUrl} 
-                  alt={leadData.name} 
+                  src={leadData.logo} 
+                  alt={leadData.title} 
                   fill 
                   sizes="(max-width: 768px) 160px, 192px"
                   className="object-contain object-left"
@@ -71,7 +71,7 @@ export default function Navbar({ leadData: passedLeadData }: { leadData?: LeadDa
                 {leadData.slug === "default" ? (
                   <>PRO<span className="text-amber-500">PLUMB</span></>
                 ) : (
-                  <span style={{ color: leadData.primaryColor }}>{leadData.name.toUpperCase()}</span>
+                  <span style={{ color: leadData.primaryColor }}>{leadData.title.toUpperCase()}</span>
                 )}
               </span>
             )}
