@@ -94,6 +94,53 @@ export const leads: Record<string, LeadData> = {
     customerCount: "200+",
     mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.297798643631!2d-104.5825375!3d50.454178999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x531ea1f2159ddf59%3A0x5e76c097745b37ba!2sRevolution%20Mechanical!5e0!3m2!1sen!2s!4v1778279805488!5m2!1sen!2s"
   },
+  "platinum-plumbing-heating": {
+    ...defaultLead,
+    slug: "platinum-plumbing-heating",
+    title: "Platinum Plumbing and Heating Ltd",
+    logo: "/platinum-plumbing-heating.png",
+    phone: "+353 86 458 2872",
+    email: "info@platinumplumbing.ie",
+    address: "Serving areas in Waterford, Ireland",
+    heroHeading: "Elite Plumbing in Waterford",
+    highlightWord: "Plumbing",
+    heroSubtext: "Providing master-level plumbing and heating craftsmanship to the Waterford community. We offer 24/7 rapid response and elite installations for your home.",
+    trustRating: "5.0",
+    customerCount: "100+",
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39084.36952226659!2d-7.11302995!3d52.24750495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4842c69c63d9e44d%3A0xc5bb81888b67b9fb!2sWaterford%2C%20Ireland!5e0!3m2!1sen!2s!4v1778281432182!5m2!1sen!2s"
+  },
+  "welldone-mechanical": {
+    ...defaultLead,
+    slug: "welldone-mechanical",
+    title: "Welldone Mechanical Services",
+    logo: "/welldone.png",
+    primaryColor: "#77b033",
+    phone: "+1 (306) 721-2744",
+    email: "regina@welldone.com",
+    address: "470 Henderson Dr, Regina, SK S4N 5W9, Canada",
+    heroHeading: "Elite Mechanical in Regina",
+    highlightWord: "Mechanical",
+    heroSubtext: "Providing master-level plumbing craftsmanship to the Regina community. We offer 24/7 rapid response and elite installations for your home.",
+    trustRating: "4.7",
+    customerCount: "200+",
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.554939417294!2d-104.56590489999999!3d50.4680119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x531c1f9ecc884317%3A0x9f79e75fc9e7286c!2sWelldone%20Mechanical%20Services!5e0!3m2!1sen!2s!4v1778282797642!5m2!1sen!2s"
+  },
+  "velocity-mechanical": {
+    ...defaultLead,
+    slug: "velocity-mechanical",
+    title: "Velocity Mechanical Solutions",
+    logo: "/velocity.png",
+    primaryColor: "#0ea5e9", // Oceanic Blue
+    phone: "+1 (306) 591-7711",
+    email: "info@velocityms.com",
+    address: "312 Quebec St, Regina, SK S4R 1K6, Canada",
+    heroHeading: "Elite Mechanical in Regina",
+    highlightWord: "Mechanical",
+    heroSubtext: "Providing master-level plumbing craftsmanship to the Regina community. We offer 24/7 rapid response and elite installations for your home.",
+    trustRating: "4.9",
+    customerCount: "200+",
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3591.1062336818172!2d-104.59715755938798!3d50.472841013860936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x531c1efb8051281d%3A0xdb813859948e4c81!2sVelocity%20Mechanical%20Solutions!5e0!3m2!1sen!2s!4v1778283174098!5m2!1sen!2s"
+  },
 };
 
 export function getLeadData(slug?: string): LeadData {
