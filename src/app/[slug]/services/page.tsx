@@ -26,6 +26,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `Premium Services | ${leadData.name}`,
     description: `Explore professional plumbing services offered by ${leadData.name}.`,
+    icons: {
+      icon: leadData.logoUrl || "/logo.png",
+    }
   };
 }
 

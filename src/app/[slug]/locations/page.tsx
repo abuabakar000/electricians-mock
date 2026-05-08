@@ -14,6 +14,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `Locations | ${leadData.name}`,
     description: `View the service areas and locations covered by ${leadData.name}.`,
+    icons: {
+      icon: leadData.logoUrl || "/logo.png",
+    }
   };
 }
 
