@@ -138,7 +138,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ slug:
   // Use lead color for icons in the grid
   const dynamicDetailedServices = detailedServices.map(service => ({
     ...service,
-    icon: React.cloneElement(service.icon as React.ReactElement, { 
+    icon: React.cloneElement(service.icon as React.ReactElement<any>, { 
       style: { color: leadData.slug === "default" ? "" : leadData.primaryColor },
       className: `w-8 h-8 ${leadData.slug === "default" ? "text-amber-500" : ""}`
     })

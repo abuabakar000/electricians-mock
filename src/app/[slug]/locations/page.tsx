@@ -54,7 +54,7 @@ export default async function LocationsPage({ params }: { params: Promise<{ slug
   // Use lead color for icons in the locations list
   const dynamicLocations = locations.map(loc => ({
     ...loc,
-    icon: React.cloneElement(loc.icon as React.ReactElement, { 
+    icon: React.cloneElement(loc.icon as React.ReactElement<any>, { 
       style: { color: leadData.slug === "default" ? "" : leadData.primaryColor },
       className: `w-6 h-6 ${leadData.slug === "default" ? "text-amber-500" : ""}`
     })
