@@ -205,6 +205,86 @@ export const leads: Record<string, LeadData> = {
     customerCount: "200+",
     mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.0181332866814!2d-104.57273909999999!3d50.440762899999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x531c1fd08ed65843%3A0x5e9c4459f911464c!2sReimche%20Excavating%20Ltd.!5e0!3m2!1sen!2s!4v1778343045080!5m2!1sen!2s"
   },
+  "neighbours-mechanical": {
+    ...defaultLead,
+    slug: "neighbours-mechanical",
+    title: "Neighbours Mechanical",
+    logo: "/neighbours-mechanical.png",
+    primaryColor: "#0ea5e9", // Oceanic Blue
+    phone: "+1 (306) 761-2905",
+    email: "neighboursmechanical@gmail.com",
+    address: "1427 Scarth St, Regina, SK S4R 2G1, Canada",
+    heroHeading: "Elite Mechanical in Regina",
+    highlightWord: "Mechanical",
+    heroSubtext: "Providing master-level plumbing and mechanical craftsmanship to the Regina community. We offer 24/7 rapid response and elite installations for your home.",
+    trustRating: "4.7",
+    customerCount: "200+",
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.191879810421!2d-104.61081860000002!3d50.4561515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x531c1e6bd6b1add7%3A0x5c1a362c2d89033e!2sNeighbours%20Mechanical!5e0!3m2!1sen!2s!4v1778344105159!5m2!1sen!2s"
+  },
+  "eh-plus-plumbing-heating": {
+    ...defaultLead,
+    slug: "eh-plus-plumbing-heating",
+    title: "Eh Plus Plumbing & Heating",
+    logo: "/eh-plus-plumbing.png",
+    primaryColor: "#EF4444",
+    phone: "+1 (306) 559-6181",
+    email: "ehplus@myaccess.ca",
+    address: "817 Campbell St, Regina, SK S4T 5P2, Canada",
+    heroHeading: "Elite Plumbing in Regina",
+    highlightWord: "Plumbing",
+    heroSubtext: "Providing master-level plumbing and heating craftsmanship to the Regina community. We offer 24/7 rapid response and elite installations for your home.",
+    trustRating: "5.0",
+    customerCount: "100+",
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.720194348703!2d-104.6636425!3d50.464934899999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x531c1f7749ee9751%3A0x2f869ff4375777a5!2sEh%20Plus%20Plumbing%20%26%20Heating%20Ltd.!5e0!3m2!1sen!2s!4v1778344640927!5m2!1sen!2s"
+  },
+  "ae-sewer-water": {
+    ...defaultLead,
+    slug: "ae-sewer-water",
+    title: "A & E Sewer & Water Service",
+    logo: "/a&e-sewer.png",
+    primaryColor: "#0ea5e9", // Oceanic Blue
+    phone: "+1 (306) 591-5665",
+    email: "aesewer@gmail.com",
+    address: "2327 McTavish St, Regina, SK S4T 3X4, Canada",
+    heroHeading: "Elite Plumbing in Regina",
+    highlightWord: "Plumbing",
+    heroSubtext: "Providing master-level plumbing and sewer craftsmanship to the Regina community. We offer 24/7 rapid response and elite installations for your home.",
+    trustRating: "4.0",
+    customerCount: "100+",
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.956307268119!2d-104.6335842!3d50.441914499999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x531c1e0d3fe74beb%3A0x2e6c6d30e1ab4fbc!2sA%20%26%20E%20Sewer%20%26%20Water%20Service!5e0!3m2!1sen!2s!4v1778345584077!5m2!1sen!2s"
+  },
+  "gr-mechanical-contracting": {
+    ...defaultLead,
+    slug: "gr-mechanical-contracting",
+    title: "G & R Mechanical Contracting",
+    logo: "/mechanical-plumbing.png",
+    primaryColor: "#EF4444",
+    phone: "+1 (306) 537-3645",
+    email: "grm@sasktel.net",
+    address: "2333 6th Ave, Regina, SK S4R 1B4, Canada",
+    heroHeading: "Elite Plumbing in Regina",
+    highlightWord: "Plumbing",
+    heroSubtext: "Providing master-level plumbing, heating & air conditioning craftsmanship to the Regina community. We offer 24/7 rapid response and elite installations for your home.",
+    trustRating: "5.0",
+    customerCount: "100+",
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3020.598766005678!2d-104.61444005210197!3d50.459525915863026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x531c1e440faaaaab%3A0x2ec636f43a4d261c!2sG%20%26%20R%20Mechanical%20Contracting!5e0!3m2!1sen!2s!4v1778346098856!5m2!1sen!2s"
+  },
+  "joules-hvac-electric": {
+    ...defaultLead,
+    slug: "joules-hvac-electric",
+    title: "Joules HVAC & Electric Ltd",
+    logo: "/joules-electrical.png",
+    primaryColor: "#f59e0b", // Amber Yellow
+    phone: "+1 (306) 537-0771",
+    email: "Jouleshvac@hotmail.com",
+    address: "210 Rose St N, Regina, SK S4R 2Y2, Canada",
+    heroHeading: "Elite HVAC & Electric in Regina",
+    highlightWord: "HVAC",
+    heroSubtext: "Providing master-level HVAC and electric craftsmanship to the Regina community. We offer 24/7 rapid response and elite installations for your home.",
+    trustRating: "5.0",
+    customerCount: "200+",
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2538.954809628566!2d-104.60793969999999!3d50.47918500000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8de3a6284738706f%3A0xfab57a89784eebe7!2sJoules%20HVAC%20%26%20Electric%20Ltd!5e0!3m2!1sen!2s!4v1778346758843!5m2!1sen!2s"
+  },
 };
 
 export function getLeadData(slug?: string): LeadData {
