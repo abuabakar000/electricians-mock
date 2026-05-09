@@ -141,6 +141,70 @@ export const leads: Record<string, LeadData> = {
     customerCount: "200+",
     mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3591.1062336818172!2d-104.59715755938798!3d50.472841013860936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x531c1efb8051281d%3A0xdb813859948e4c81!2sVelocity%20Mechanical%20Solutions!5e0!3m2!1sen!2s!4v1778283174098!5m2!1sen!2s"
   },
+  "honest-plumbing-heating": {
+    ...defaultLead,
+    slug: "honest-plumbing-heating",
+    title: "Honest Plumbing and Heating",
+    logo: "/honest-plumbing.png",
+    primaryColor: "#0ea5e9", // Oceanic Blue
+    phone: "+1 (306) 993-1800",
+    email: "honestplumbing@gmail.com",
+    address: "801 11th Ave, Regina, SK S4N 6N5, Canada",
+    heroHeading: "Elite Plumbing in Regina",
+    highlightWord: "Plumbing",
+    heroSubtext: "Providing master-level plumbing and heating craftsmanship to the Regina community. We offer 24/7 rapid response and elite installations for your home.",
+    trustRating: "4.4",
+    customerCount: "200+",
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.5082649765873!2d-104.59517302356258!3d50.4502593715921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x531c1e32ff54b27f%3A0xba374d30f29738de!2sHonest%20Plumbing%20and%20Heating!5e0!3m2!1sen!2s!4v1778338742461!5m2!1sen!2s"
+  },
+  "roto-rooter": {
+    ...defaultLead,
+    slug: "roto-rooter",
+    title: "Roto-Rooter",
+    logo: "/roto-rooter.png",
+    primaryColor: "#EF4444",
+    phone: "+1 (306) 359-3996",
+    email: "sales@rotorootorregina.com",
+    address: "1695 Dewdney Ave E, Regina, SK S4N 4N6, Canada",
+    heroHeading: "Elite Plumbing in Regina",
+    highlightWord: "Plumbing",
+    heroSubtext: "Providing master-level plumbing craftsmanship to the Regina community. We offer 24/7 rapid response and elite installations for your home.",
+    trustRating: "4.0",
+    customerCount: "200+",
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.2665898179025!2d-104.5596832!3d50.454760199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x531c1fa23548237f%3A0xe7ae36cf4ceb9240!2sRoto-Rooter!5e0!3m2!1sen!2s!4v1778339435121!5m2!1sen!2s"
+  },
+  "queen-city-plumbing-heating": {
+    ...defaultLead,
+    slug: "queen-city-plumbing-heating",
+    title: "Queen City Plumbing & Heating",
+    logo: "/queen-city-plumbing.png",
+    primaryColor: "#f59e0b", // Amber Yellow
+    phone: "+1 (306) 533-5352",
+    email: "queencityplumbing@gmail.com",
+    address: "112 6 Ave E, Regina, SK S4N 5A7, Canada",
+    heroHeading: "Elite Plumbing in Regina",
+    highlightWord: "Plumbing",
+    heroSubtext: "Providing master-level plumbing craftsmanship to the Regina community. We offer 24/7 rapid response and elite installations for your home.",
+    trustRating: "4.8",
+    customerCount: "100+",
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.9780047175823!2d-104.58575092356206!3d50.460134271594065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x531c1fb01b626b85%3A0xbe5ecff2b536af1d!2sQueen%20City%20Plumbing%20%26%20Heating!5e0!3m2!1sen!2s!4v1778342225185!5m2!1sen!2s"
+  },
+  "reimche-excavating": {
+    ...defaultLead,
+    slug: "reimche-excavating",
+    title: "Reimche Excavating Ltd.",
+    logo: "/reimche-excavating.png",
+    primaryColor: "#0ea5e9", // Oceanic Blue
+    phone: "+1 (306) 550-5516",
+    email: "reimcheexcavating@gmail.com",
+    address: "600 East Broadway Ave E, Regina, SK S4N 1A2, Canada",
+    heroHeading: "Elite Excavating in Regina",
+    highlightWord: "Excavating",
+    heroSubtext: "Providing master-level excavating and plumbing craftsmanship to the Regina community. We offer 24/7 rapid response and elite installations for your home.",
+    trustRating: "4.9",
+    customerCount: "200+",
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.0181332866814!2d-104.57273909999999!3d50.440762899999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x531c1fd08ed65843%3A0x5e9c4459f911464c!2sReimche%20Excavating%20Ltd.!5e0!3m2!1sen!2s!4v1778343045080!5m2!1sen!2s"
+  },
 };
 
 export function getLeadData(slug?: string): LeadData {
