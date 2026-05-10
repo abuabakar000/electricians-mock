@@ -325,6 +325,278 @@ export const leads: Record<string, LeadData> = {
       }
     ]
   },
+  "liquid-metal-plumbing-heating": {
+    ...defaultLead,
+    slug: "liquid-metal-plumbing-heating",
+    title: "Liquid Metal Plumbing and Heating",
+    logo: "/liquid-metal.png",
+    primaryColor: "#0ea5e9", // Oceanic Blue
+    phone: "+1 (306) 596-3622",
+    email: "LiquidMetalPlumbing@gmail.com",
+    address: "58 Mackenzie Crescent, Regina, SK S4N 5G5, Canada",
+    heroHeading: "Elite Plumbing in Regina",
+    highlightWord: "Plumbing",
+    heroSubtext: "Providing master-level plumbing and heating craftsmanship to the Regina community. We offer 24/7 rapid response and elite installations for your home.",
+    trustRating: "5.0",
+    customerCount: "100+",
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.1542225024837!2d-104.5383536045762!3d50.45685276913899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x531c1f7bcc53271d%3A0xde04890f05ecac52!2sLiquid%20Metal%20Plumbing%20and%20Heating!5e0!3m2!1sen!2s!4v1778442577249!5m2!1sen!2s",
+    services: [
+      {
+        title: "Furnace & Water Heaters",
+        desc: "Expert installation, repair, and replacement of furnaces and water heaters to keep your home comfortable year-round."
+      },
+      {
+        title: "Plumbing Installations",
+        desc: "Precision plumbing installations for new builds or renovations, ensuring long-lasting reliability and performance."
+      },
+      {
+        title: "Repair & Maintenance",
+        desc: "Fast and reliable repair services for all your plumbing and heating needs, from minor leaks to major system failures."
+      },
+      {
+        title: "System Replacements",
+        desc: "Seamless replacement of outdated plumbing and heating systems with modern, energy-efficient solutions."
+      }
+    ]
+  },
+  "queen-city-sewer": {
+    ...defaultLead,
+    slug: "queen-city-sewer",
+    title: "Queen City Sewer",
+    logo: "/queen-city.png",
+    primaryColor: "#EF4444",
+    phone: "+1 (306) 536-0125",
+    email: "info@queencitysewer.ca",
+    address: "Pasqua St, Regina, SK S4R 8R7, Canada",
+    heroHeading: "Elite Sewer Services in Regina",
+    highlightWord: "Sewer",
+    heroSubtext: "Providing master-level sewer and septic craftsmanship to the Regina community. We offer 24/7 rapid response and elite maintenance for your property.",
+    trustRating: "4.0",
+    customerCount: "100+",
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.663707168183!2d-104.640912!3d50.42873699999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x531c1de21ee733e1%3A0x114607710cf87ab8!2sQueen%20City%20Sewer!5e0!3m2!1sen!2s!4v1778444595023!5m2!1sen!2s",
+    services: [
+      {
+        title: "Vacuum Truck Services",
+        desc: "Efficient and reliable vacuum truck services for all your liquid waste removal and disposal needs."
+      },
+      {
+        title: "Shop Pit & Traps",
+        desc: "Professional cleaning and maintenance of shop pits and grease traps to keep your operations running smoothly."
+      },
+      {
+        title: "Septic Tank Care",
+        desc: "Expert septic tank cleaning and repairs, ensuring your system remains functional and environmentally safe."
+      },
+      {
+        title: "Sewer Jet & Washing",
+        desc: "High-pressure sewer jetting and hot/cold pressure washing to clear blockages and maintain clear lines."
+      }
+    ]
+  },
+  "rooter-man-drain-services": {
+    ...defaultLead,
+    slug: "rooter-man-drain-services",
+    title: "Rooter Man Drain Services",
+    logo: "/rooter-man.png",
+    primaryColor: "#EF4444",
+    phone: "+1 (306) 651-2564",
+    email: "rooterman@gmail.com",
+    address: "1527 Ontario Ave Unit 8, Saskatoon, SK S7K 1S7, Canada",
+    heroHeading: "Elite Drain Services in Saskatoon",
+    highlightWord: "Drain",
+    heroSubtext: "Providing master-level drain and plumbing craftsmanship to the Saskatoon community. We offer 24/7 rapid response and elite maintenance for your property.",
+    trustRating: "4.8",
+    customerCount: "1000+",
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2448.153792301255!2d-106.666764!3d52.149712799999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5304f0d9a6df94bb%3A0x1362f3538a76cb31!2sRooter%20Man%20Drain%20Services!5e0!3m2!1sen!2s!4v1778446130943!5m2!1sen!2s",
+    services: [
+      {
+        title: "Clogged Drain Relief",
+        desc: "Expert solutions for even the most stubborn clogged drains, using advanced techniques to restore full flow instantly."
+      },
+      {
+        title: "Camera Inspections",
+        desc: "High-definition sewer camera inspections to identify hidden issues and ensure your plumbing is in peak condition."
+      },
+      {
+        title: "Grease Trap Service",
+        desc: "Professional maintenance and cleaning of grease traps for commercial and residential properties to prevent backups."
+      },
+      {
+        title: "Water Heater Solutions",
+        desc: "Comprehensive repair, maintenance, and installation of water heaters to ensure you never run out of hot water."
+      }
+    ]
+  },
+  "courtesy-plumbing-heating": {
+    ...defaultLead,
+    slug: "courtesy-plumbing-heating",
+    title: "Courtesy Plumbing & Heating",
+    logo: "/courtesy-plumbing.png",
+    primaryColor: "#0ea5e9", // Oceanic Blue
+    phone: "+13063824122",
+    email: "admin@courtesyplumbing.ca",
+    address: "418A 50 St E #101, Saskatoon, SK S7M 5A5, Canada",
+    heroHeading: "Elite Plumbing in Saskatoon",
+    highlightWord: "Plumbing",
+    heroSubtext: "Providing master-level plumbing and heating craftsmanship to the Saskatoon community. We offer 24/7 rapid response and elite maintenance for your property.",
+    trustRating: "4.4",
+    customerCount: "500+",
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2446.9812420565263!2d-106.66297229999999!3d52.1710345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5304f9e8b57b8165%3A0x17ae720181ac3899!2sCourtesy%20Plumbing%20%26%20Heating!5e0!3m2!1sen!2s!4v1778446443994!5m2!1sen!2s",
+    services: [
+      {
+        title: "Installation & Upgrades",
+        desc: "Expert plumbing and heating installations and upgrades, ensuring your systems are modern, efficient, and reliable."
+      },
+      {
+        title: "Air Quality Specialists",
+        desc: "Dedicated indoor air quality solutions to keep your home healthy and comfortable throughout every season."
+      },
+      {
+        title: "Preventive Maintenance",
+        desc: "Comprehensive maintenance plans and service agreements designed to extend the life of your equipment and prevent costly repairs."
+      },
+      {
+        title: "Extended Warranties",
+        desc: "Peace of mind with extended warranties on our master-level craftsmanship and premium parts."
+      }
+    ]
+  },
+  "five-star-plumbing-heating-air-conditioning": {
+    ...defaultLead,
+    slug: "five-star-plumbing-heating-air-conditioning",
+    title: "Five Star Plumbing Heating & Air Conditioning",
+    logo: "/five-star.png",
+    primaryColor: "#2FA7A0",
+    phone: "+1 (306) 934-7002",
+    email: "info@FiveStarPlumbing.com",
+    address: "2270 Northridge Dr, Saskatoon, SK S7L 1B9, Canada",
+    heroHeading: "Elite HVAC & Plumbing in Saskatoon",
+    highlightWord: "Plumbing",
+    heroSubtext: "Providing master-level plumbing, heating, and air conditioning craftsmanship to the Saskatoon community. We offer 24/7 rapid response and elite installations for your property.",
+    trustRating: "4.9",
+    customerCount: "500+",
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2447.529935719325!2d-106.6684835!3d52.161057799999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5304f6fb23057755%3A0x89d59bdb0609efb1!2sFive%20Star%20Plumbing%20Heating%20%26%20Air%20Conditioning!5e0!3m2!1sen!2s!4v1778447955776!5m2!1sen!2s",
+    services: [
+      {
+        title: "Advanced Air Conditioning",
+        desc: "From residential A/C and ductless splits to commercial rooftop units and heat pumps, we keep your property cool and efficient."
+      },
+      {
+        title: "Complete Heating Solutions",
+        desc: "Expert service for boilers, furnaces, radiants, and unit heaters. We ensure your heating system is reliable through the toughest winters."
+      },
+      {
+        title: "Full-Scale Plumbing",
+        desc: "Comprehensive plumbing services including tankless water heaters, backflow testing, and expert repair for leaking or frozen pipes."
+      },
+      {
+        title: "Commercial & Retrofit",
+        desc: "Specialized service and retrofit solutions for commercial properties, ensuring modern infrastructure and peak performance."
+      }
+    ]
+  },
+  "nickel-plumbing-heating": {
+    ...defaultLead,
+    slug: "nickel-plumbing-heating",
+    title: "Nickel Plumbing & Heating",
+    logo: "/nickel-plumbing.png",
+    primaryColor: "#0ea5e9", // Oceanic Blue
+    phone: "+1 (306) 653-1899",
+    email: "info@nickelplumbing.com",
+    address: "2104 St George Ave, Saskatoon, SK S7M 0K7",
+    heroHeading: "Elite Plumbing in Saskatoon",
+    highlightWord: "Plumbing",
+    heroSubtext: "Providing master-level plumbing, heating, and sewer craftsmanship to the Saskatoon community since 1968. We offer 24/7 rapid response and elite installations for your home.",
+    trustRating: "4.0",
+    customerCount: "200+",
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9802.413627583066!2d-106.673583!3d52.105149!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5304f0c53cd96a5d%3A0x3d84057f387aa794!2sNickel%20Plumbing%20%26%20Heating%20(1985)%20Ltd!5e0!3m2!1sen!2sca!4v1778448926411!5m2!1sen!2sca",
+    services: [
+      {
+        title: "Master-Level Plumbing",
+        desc: "Comprehensive plumbing services including fixture repair, gas fitting, and backflow prevention with absolute precision."
+      },
+      {
+        title: "Elite HVAC & Heating",
+        desc: "Specialized service for furnaces, boilers, and radiant heating systems. We ensure your comfort through every season."
+      },
+      {
+        title: "Advanced Sewer & Drain",
+        desc: "High-pressure jetting, CCTV camera inspections, and expert sewer relining to keep your infrastructure flowing perfectly."
+      },
+      {
+        title: "Cooling & Refrigeration",
+        desc: "Full-service air conditioning installation and commercial refrigeration solutions designed for maximum efficiency."
+      }
+    ]
+  },
+  "accelerate-plumbing-heating": {
+    ...defaultLead,
+    slug: "accelerate-plumbing-heating",
+    title: "Accelerate Plumbing & Heating Ltd.",
+    logo: "/accelerate-plumbing.png",
+    primaryColor: "#EF4444",
+    phone: "+1 (306) 280-3663",
+    email: "accelerateplumbing@hotmail.com",
+    address: "519 Glacial Shores Way, Saskatoon, SK S7W 0R5, Canada",
+    heroHeading: "Elite Plumbing in Saskatoon",
+    highlightWord: "Plumbing",
+    heroSubtext: "Providing master-level plumbing and heating craftsmanship to the Saskatoon community. We offer 24/7 rapid response and elite installations for your property.",
+    trustRating: "4.8",
+    customerCount: "500+",
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4894.185511032629!2d-106.562127!3d52.169007!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5304f4f8573b8a97%3A0xa5d95470c3f29981!2sAccelerate%20Plumbing%20%26%20Heating%20Ltd.!5e0!3m2!1sen!2sus!4v1778449283195!5m2!1sen!2sus",
+    services: [
+      {
+        title: "Master Gas Fitting",
+        desc: "Expert gas fitting services for furnaces, garage heaters, and fireplaces, ensuring absolute safety and peak performance."
+      },
+      {
+        title: "Elite Plumbing & Reno",
+        desc: "Comprehensive plumbing services and high-end bathroom renovations tailored to your property's unique needs."
+      },
+      {
+        title: "Heating & Furnace Repair",
+        desc: "Fast and reliable furnace repair and heating system maintenance to keep your home comfortable in any weather."
+      },
+      {
+        title: "A/C & Water Heaters",
+        desc: "Professional installation and service for air conditioning units and hot water heaters for total year-round comfort."
+      }
+    ]
+  },
+  "tyrones-drain": {
+    ...defaultLead,
+    slug: "tyrones-drain",
+    title: "Tyrone's Drain Doctor Inc.",
+    logo: "/tyron-drain.png",
+    primaryColor: "#77b033",
+    phone: "+1 (306) 202-6914",
+    email: "tyronesdraincleaning@gmail.com",
+    address: "507 3 St E, Saskatoon, SK S7H 1L9, Canada",
+    heroHeading: "Elite Drain Services in Saskatoon",
+    highlightWord: "Drain",
+    heroSubtext: "Providing master-level drain and plumbing craftsmanship to the Saskatoon community. We offer 24/7 rapid response and elite maintenance for your property.",
+    trustRating: "5.0",
+    customerCount: "1000+",
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2450.3407219200035!2d-106.65887839999999!3d52.109929099999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5304f67d5849b203%3A0xf1f197a96d188bc6!2sTyrone's%20Drain%20Doctor%20Inc.!5e0!3m2!1sen!2s!4v1778451336019!5m2!1sen!2s",
+    services: [
+      {
+        title: "Master Drain Cleaning",
+        desc: "Precision drain cleaning and clearing using advanced tools to restore full functionality to your property's infrastructure."
+      },
+      {
+        title: "High Pressure Jetting",
+        desc: "Powerful high-pressure water jetting to clear even the most stubborn blockages and maintain long-term flow."
+      },
+      {
+        title: "CCTV Camera Inspections",
+        desc: "High-definition camera inspections to accurately diagnose issues within your lines and ensure absolute clarity."
+      },
+      {
+        title: "Emergency Plumbing",
+        desc: "Rapid 24/7 emergency plumbing services to handle urgent repairs and protect your property from water damage."
+      }
+    ]
+  },
 };
 
 export function getLeadData(slug?: string): LeadData {
