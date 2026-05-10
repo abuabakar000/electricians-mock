@@ -15,23 +15,23 @@ export default function ServicesSection({ leadData: passedLeadData }: { leadData
   
   const services = [
     {
-      title: "Drain Cleaning",
-      desc: "Clogged drains don't stand a chance. We clear blockages fast and keep your pipes flowing smoothly.",
+      title: leadData.services?.[0]?.title || "Drain Cleaning",
+      desc: leadData.services?.[0]?.desc || "Clogged drains don't stand a chance. We clear blockages fast and keep your pipes flowing smoothly.",
       icon: <Waves strokeWidth={1.5} style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor }} className={`w-8 h-8 ${leadData.slug === "default" ? "text-amber-500" : ""} transition-transform duration-500 group-hover:scale-110`} />
     },
     {
-      title: leadData.customService2?.title || "Leak Repair",
-      desc: leadData.customService2?.desc || "From minor leaks to major issues, we find the source and fix it right the first time.",
+      title: leadData.services?.[1]?.title || "Leak Repair",
+      desc: leadData.services?.[1]?.desc || "From minor leaks to major issues, we find the source and fix it right the first time.",
       icon: <Droplets strokeWidth={1.5} style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor }} className={`w-8 h-8 ${leadData.slug === "default" ? "text-amber-500" : ""} transition-transform duration-500 group-hover:scale-110`} />
     },
     {
-      title: "Water Heater Services",
-      desc: "Installation, repair, and maintenance for all types of water heaters. Hot water, always.",
+      title: leadData.services?.[2]?.title || "Water Heater Services",
+      desc: leadData.services?.[2]?.desc || "Installation, repair, and maintenance for all types of water heaters. Hot water, always.",
       icon: <Flame strokeWidth={1.5} style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor }} className={`w-8 h-8 ${leadData.slug === "default" ? "text-amber-500" : ""} transition-transform duration-500 group-hover:scale-110`} />
     },
     {
-      title: leadData.customService4?.title || "Pipe Repair & Replacement",
-      desc: leadData.customService4?.desc || "Old, damaged, or corroded pipes? We replace them the right way—built to last.",
+      title: leadData.services?.[3]?.title || "Pipe Repair & Replacement",
+      desc: leadData.services?.[3]?.desc || "Old, damaged, or corroded pipes? We replace them the right way—built to last.",
       icon: <Wrench strokeWidth={1.5} style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor }} className={`w-8 h-8 ${leadData.slug === "default" ? "text-amber-500" : ""} transition-transform duration-500 group-hover:scale-110`} />
     },
     {

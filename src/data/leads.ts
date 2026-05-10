@@ -1,8 +1,3 @@
-export interface ServiceOverride {
-  title: string;
-  desc: string;
-}
-
 export interface LeadData {
   slug: string;
   title: string;
@@ -28,8 +23,10 @@ export interface LeadData {
     google?: string;
   };
   mapUrl?: string; // Google Maps Embed URL
-  customService2?: ServiceOverride;
-  customService4?: ServiceOverride;
+  services?: {
+    title?: string;
+    desc?: string;
+  }[];
 }
 
 export const defaultLead: LeadData = {
@@ -84,14 +81,24 @@ export const leads: Record<string, LeadData> = {
     primaryColor: "#0ea5e9",
     address: "Regina, SK & Coastal Areas",
     heroHeading: "Regina's Premier Luxury Plumbing Experts",
-    customService2: {
-      title: "Coastal Leak Detection",
-      desc: "Specialized moisture detection for coastal properties. We find hidden water before it becomes a major problem."
-    },
-    customService4: {
-      title: "Saltwater-Resistant Piping",
-      desc: "Upgrading your home with corrosion-resistant materials designed to withstand harsh coastal environments."
-    }
+    services: [
+      {
+        title: "Coastal Drain Care",
+        desc: "Specialized drain maintenance designed for coastal properties. We ensure your flow is as clear as the ocean breeze."
+      },
+      {
+        title: "Luxury Leak Detection",
+        desc: "Advanced non-invasive technology to protect your high-end property from hidden water damage."
+      },
+      {
+        title: "Premium Marine Heating",
+        desc: "Specialized water heating solutions for luxury coastal homes, ensuring reliable hot water through every season."
+      },
+      {
+        title: "Coastal Infrastructure",
+        desc: "Expert piping and infrastructure repair using marine-grade materials built to withstand the elements."
+      }
+    ]
   },
   "revolution-mechanical": {
     ...defaultLead,
@@ -298,7 +305,25 @@ export const leads: Record<string, LeadData> = {
     heroSubtext: "Providing master-level HVAC and electric craftsmanship to the Regina community. We offer 24/7 rapid response and elite installations for your home.",
     trustRating: "5.0",
     customerCount: "200+",
-    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2538.954809628566!2d-104.60793969999999!3d50.47918500000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8de3a6284738706f%3A0xfab57a89784eebe7!2sJoules%20HVAC%20%26%20Electric%20Ltd!5e0!3m2!1sen!2s!4v1778346758843!5m2!1sen!2s"
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2538.954809628566!2d-104.60793969999999!3d50.47918500000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8de3a6284738706f%3A0xfab57a89784eebe7!2sJoules%20HVAC%20%26%20Electric%20Ltd!5e0!3m2!1sen!2s!4v1778346758843!5m2!1sen!2s",
+    services: [
+      {
+        title: "AC Repair & Maintenance",
+        desc: "Precision cooling solutions for your home. We keep your air conditioning systems running at peak efficiency all summer long."
+      },
+      {
+        title: "Furnace & Heating",
+        desc: "Expert heating services to keep your property warm. From emergency repairs to full furnace installations, we've got you covered."
+      },
+      {
+        title: "Electrical Upgrades",
+        desc: "Modernizing your property's electrical infrastructure with master-level precision and absolute safety in mind."
+      },
+      {
+        title: "Smart Home Integration",
+        desc: "Seamlessly connecting your HVAC and electrical systems for total control, comfort, and maximum energy efficiency."
+      }
+    ]
   },
 };
 

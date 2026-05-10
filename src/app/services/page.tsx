@@ -6,7 +6,6 @@ import ProcessSection from "@/components/ProcessSection";
 import MapSection from "@/components/MapSection";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { getLeadData } from "@/data/leads";
 import { 
   Waves, 
   Droplets, 
@@ -125,27 +124,6 @@ const detailedServices = [
 ];
 
 export default function ServicesPage() {
-  const leadData = getLeadData();
-  
-  const dynamicDetailedServices = detailedServices.map((service, index) => {
-    let title = service.title;
-    let desc = service.desc;
-
-    if (index === 1 && leadData.customService2) {
-      title = leadData.customService2.title;
-      desc = leadData.customService2.desc;
-    } else if (index === 3 && leadData.customService4) {
-      title = leadData.customService4.title;
-      desc = leadData.customService4.desc;
-    }
-
-    return {
-      ...service,
-      title,
-      desc
-    };
-  });
-
   return (
     <>
       <Navbar />
@@ -188,7 +166,7 @@ export default function ServicesPage() {
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12">
-            {dynamicDetailedServices.map((service, idx) => (
+            {detailedServices.map((service, idx) => (
               <div 
                 key={service.id} 
                 id={service.id}
