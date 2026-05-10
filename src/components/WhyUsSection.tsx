@@ -196,7 +196,7 @@ export default function WhyUsSection({ leadData: passedLeadData }: { leadData?: 
                 backgroundColor: leadData.slug === "default" ? "" : leadData.primaryColor,
                 boxShadow: leadData.slug === "default" ? "" : `0 0 25px ${leadData.primaryColor}4d`
               }}
-              className={`w-full sm:w-auto px-6 py-3.5 lg:px-10 lg:py-5 ${leadData.slug === "default" ? "bg-amber-500 hover:bg-amber-400 shadow-[0_0_25px_rgba(245,158,11,0.3)]" : "hover:brightness-110"} text-zinc-950 rounded-md text-[11px] lg:text-[13px] font-bold tracking-[0.2em] uppercase transition-all duration-300 flex items-center justify-center gap-3`}
+              className={`w-full sm:w-auto whitespace-nowrap px-6 py-3.5 lg:px-10 lg:py-5 ${leadData.slug === "default" ? "bg-amber-500 hover:bg-amber-400 shadow-[0_0_25px_rgba(245,158,11,0.3)]" : "hover:brightness-110"} text-zinc-950 rounded-md text-[11px] lg:text-[13px] font-bold tracking-[0.2em] uppercase transition-all duration-300 flex items-center justify-center gap-3`}
             >
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.896-1.596-5.48-4.18-7.076-7.076l1.293-.97c.362-.271.527-.733.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
@@ -205,9 +205,9 @@ export default function WhyUsSection({ leadData: passedLeadData }: { leadData?: 
             </Link>
 
             <Link
-              href="/contact"
+              href={leadData.slug === "default" ? "/contact" : `/${leadData.slug}/contact`}
               style={{ "--hover-color": leadData.slug === "default" ? "" : leadData.primaryColor } as any}
-              className={`w-full sm:w-auto px-6 py-3.5 lg:px-10 lg:py-5 bg-transparent border border-zinc-700 ${leadData.slug === "default" ? "hover:border-amber-500 hover:text-amber-500" : "hover:border-[var(--hover-color)] hover:text-[var(--hover-color)]"} text-white rounded-md text-[11px] lg:text-[13px] font-bold tracking-[0.2em] uppercase transition-all duration-300 flex items-center justify-center gap-3`}
+              className={`w-full sm:w-auto whitespace-nowrap px-6 py-3.5 lg:px-10 lg:py-5 bg-transparent border border-zinc-700 ${leadData.slug === "default" ? "hover:border-amber-500 hover:text-amber-500" : "hover:border-[var(--hover-color)] hover:text-[var(--hover-color)]"} text-white rounded-md text-[11px] lg:text-[13px] font-bold tracking-[0.2em] uppercase transition-all duration-300 flex items-center justify-center gap-3`}
             >
               Schedule Service
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">

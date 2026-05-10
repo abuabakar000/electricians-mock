@@ -1,3 +1,8 @@
+export interface ServiceOverride {
+  title: string;
+  desc: string;
+}
+
 export interface LeadData {
   slug: string;
   title: string;
@@ -23,6 +28,8 @@ export interface LeadData {
     google?: string;
   };
   mapUrl?: string; // Google Maps Embed URL
+  serviceTile2?: ServiceOverride;
+  serviceTile4?: ServiceOverride;
 }
 
 export const defaultLead: LeadData = {

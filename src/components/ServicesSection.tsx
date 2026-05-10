@@ -20,8 +20,8 @@ export default function ServicesSection({ leadData: passedLeadData }: { leadData
       icon: <Waves strokeWidth={1.5} style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor }} className={`w-8 h-8 ${leadData.slug === "default" ? "text-amber-500" : ""} transition-transform duration-500 group-hover:scale-110`} />
     },
     {
-      title: "Leak Repair",
-      desc: "From minor leaks to major issues, we find the source and fix it right the first time.",
+      title: leadData.serviceTile2?.title || "Leak Repair",
+      desc: leadData.serviceTile2?.desc || "From minor leaks to major issues, we find the source and fix it right the first time.",
       icon: <Droplets strokeWidth={1.5} style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor }} className={`w-8 h-8 ${leadData.slug === "default" ? "text-amber-500" : ""} transition-transform duration-500 group-hover:scale-110`} />
     },
     {
@@ -30,8 +30,8 @@ export default function ServicesSection({ leadData: passedLeadData }: { leadData
       icon: <Flame strokeWidth={1.5} style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor }} className={`w-8 h-8 ${leadData.slug === "default" ? "text-amber-500" : ""} transition-transform duration-500 group-hover:scale-110`} />
     },
     {
-      title: "Pipe Repair & Replacement",
-      desc: "Old, damaged, or corroded pipes? We replace them the right way—built to last.",
+      title: leadData.serviceTile4?.title || "Pipe Repair & Replacement",
+      desc: leadData.serviceTile4?.desc || "Old, damaged, or corroded pipes? We replace them the right way—built to last.",
       icon: <Wrench strokeWidth={1.5} style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor }} className={`w-8 h-8 ${leadData.slug === "default" ? "text-amber-500" : ""} transition-transform duration-500 group-hover:scale-110`} />
     },
     {
@@ -153,7 +153,7 @@ export default function ServicesSection({ leadData: passedLeadData }: { leadData
         {/* View All Button */}
         <div className="flex justify-center">
           <Link 
-            href="/services" 
+            href={leadData.slug === "default" ? "/services" : `/${leadData.slug}/services`} 
             style={{ "--hover-color": leadData.slug === "default" ? "" : leadData.primaryColor } as any}
             className={`flex items-center gap-4 px-8 py-4 border border-zinc-700/80 rounded ${leadData.slug === "default" ? "hover:border-amber-500 hover:text-amber-500" : "hover:border-[var(--hover-color)] hover:text-[var(--hover-color)] group"} text-white transition-colors duration-300`}
           >

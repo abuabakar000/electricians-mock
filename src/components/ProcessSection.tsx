@@ -175,13 +175,13 @@ export default function ProcessSection({ leadData: passedLeadData }: { leadData?
           
           {/* Right: Button */}
           <Link 
-            href="/contact"
+            href={leadData.slug === "default" ? "/contact" : `/${leadData.slug}/contact`}
             style={{ 
               borderColor: leadData.slug === "default" ? "" : leadData.primaryColor,
               color: leadData.slug === "default" ? "" : leadData.primaryColor,
               "--hover-bg": leadData.slug === "default" ? "" : leadData.primaryColor
             } as any}
-            className={`px-8 py-4 border ${leadData.slug === "default" ? "border-amber-500 text-amber-500 hover:bg-amber-500 hover:text-[#0b0c10]" : "hover:bg-[var(--hover-bg)] hover:text-[#0b0c10]"} transition-colors duration-300 rounded-sm text-[11px] font-bold tracking-[0.15em] uppercase flex items-center gap-3 shrink-0`}
+            className={`px-8 py-4 border whitespace-nowrap ${leadData.slug === "default" ? "border-amber-500 text-amber-500 hover:bg-amber-500 hover:text-[#0b0c10]" : "hover:bg-[var(--hover-bg)] hover:text-[#0b0c10]"} transition-colors duration-300 rounded-sm text-[11px] font-bold tracking-[0.15em] uppercase flex items-center gap-3 shrink-0`}
           >
             Schedule Service
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
