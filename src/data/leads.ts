@@ -28,8 +28,8 @@ export interface LeadData {
     google?: string;
   };
   mapUrl?: string; // Google Maps Embed URL
-  serviceTile2?: ServiceOverride;
-  serviceTile4?: ServiceOverride;
+  customService2?: ServiceOverride;
+  customService4?: ServiceOverride;
 }
 
 export const defaultLead: LeadData = {
@@ -84,6 +84,14 @@ export const leads: Record<string, LeadData> = {
     primaryColor: "#0ea5e9",
     address: "Regina, SK & Coastal Areas",
     heroHeading: "Regina's Premier Luxury Plumbing Experts",
+    customService2: {
+      title: "Coastal Leak Detection",
+      desc: "Specialized moisture detection for coastal properties. We find hidden water before it becomes a major problem."
+    },
+    customService4: {
+      title: "Saltwater-Resistant Piping",
+      desc: "Upgrading your home with corrosion-resistant materials designed to withstand harsh coastal environments."
+    }
   },
   "revolution-mechanical": {
     ...defaultLead,

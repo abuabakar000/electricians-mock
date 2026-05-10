@@ -20,8 +20,8 @@ export default function ServicesSection({ leadData: passedLeadData }: { leadData
       icon: <Waves strokeWidth={1.5} style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor }} className={`w-8 h-8 ${leadData.slug === "default" ? "text-amber-500" : ""} transition-transform duration-500 group-hover:scale-110`} />
     },
     {
-      title: leadData.serviceTile2?.title || "Leak Repair",
-      desc: leadData.serviceTile2?.desc || "From minor leaks to major issues, we find the source and fix it right the first time.",
+      title: leadData.customService2?.title || "Leak Repair",
+      desc: leadData.customService2?.desc || "From minor leaks to major issues, we find the source and fix it right the first time.",
       icon: <Droplets strokeWidth={1.5} style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor }} className={`w-8 h-8 ${leadData.slug === "default" ? "text-amber-500" : ""} transition-transform duration-500 group-hover:scale-110`} />
     },
     {
@@ -30,8 +30,8 @@ export default function ServicesSection({ leadData: passedLeadData }: { leadData
       icon: <Flame strokeWidth={1.5} style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor }} className={`w-8 h-8 ${leadData.slug === "default" ? "text-amber-500" : ""} transition-transform duration-500 group-hover:scale-110`} />
     },
     {
-      title: leadData.serviceTile4?.title || "Pipe Repair & Replacement",
-      desc: leadData.serviceTile4?.desc || "Old, damaged, or corroded pipes? We replace them the right way—built to last.",
+      title: leadData.customService4?.title || "Pipe Repair & Replacement",
+      desc: leadData.customService4?.desc || "Old, damaged, or corroded pipes? We replace them the right way—built to last.",
       icon: <Wrench strokeWidth={1.5} style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor }} className={`w-8 h-8 ${leadData.slug === "default" ? "text-amber-500" : ""} transition-transform duration-500 group-hover:scale-110`} />
     },
     {
