@@ -5,12 +5,12 @@ import { LeadData, getLeadData } from "@/data/leads";
 
 const faqs = [
   {
-    question: "Do you offer 24/7 emergency plumbing services?",
-    answer: "Yes, we provide 24/7 emergency plumbing services across all areas. Our team is always ready to assist you with any urgent plumbing issues."
+    question: "Do you offer 24/7 emergency services?",
+    answer: "Yes, we provide 24/7 emergency services across all areas. Our team is always ready to assist you with any urgent issues."
   },
   {
-    question: "Are your plumbers licensed and insured?",
-    answer: "Absolutely. All of our master plumbers are fully licensed, bonded, and insured to provide you with peace of mind and the highest quality service."
+    question: "Is your team licensed and insured?",
+    answer: "Absolutely. All of our master technicians are fully licensed, bonded, and insured to provide you with peace of mind and the highest quality service."
   },
   {
     question: "Do you provide upfront pricing?",
@@ -63,7 +63,7 @@ export default function FaqSection({ leadData: passedLeadData }: { leadData?: Le
             </span>
           </h2>
           <p className="text-zinc-400 text-[15px] font-light leading-relaxed max-w-sm">
-            Everything you need to know about our premium plumbing services, pricing, and emergency response times.
+            Everything you need to know about our premium professional services, pricing, and emergency response times.
           </p>
         </div>
 

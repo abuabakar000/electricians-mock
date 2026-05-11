@@ -16,7 +16,7 @@ export default function CtaSection({ leadData: passedLeadData }: { leadData?: Le
           <Image 
             src="/cta-bg-pipes.png"
             fill
-            alt="Premium Plumbing Systems"
+            alt="Premium Home Systems"
             className="object-cover object-center opacity-40 mix-blend-screen grayscale-[10%]"
           />
           {/* Gradients to keep the left text perfectly readable while revealing the image on the right */}
@@ -54,7 +54,7 @@ export default function CtaSection({ leadData: passedLeadData }: { leadData?: Le
               </div>
 
               <h2 className="text-[38px] md:text-5xl font-light text-white leading-[1.1] tracking-tight mb-6">
-                Expert Plumbing.<br />
+                Expert Service.<br />
                 Just a <span 
                   style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor }}
                   className={`${leadData.slug === "default" ? "text-amber-500" : ""} font-medium`}

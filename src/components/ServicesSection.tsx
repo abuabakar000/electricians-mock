@@ -58,7 +58,7 @@ export default function ServicesSection({ leadData: passedLeadData }: { leadData
         
         <Image 
           src="/services-hero.png" 
-          alt="Premium Plumbing Fixtures"
+          alt="Premium Home Fixtures"
           fill
           className="object-cover object-right grayscale-[15%] contrast-125"
           priority
@@ -88,13 +88,13 @@ export default function ServicesSection({ leadData: passedLeadData }: { leadData
               style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor }}
               className={`${leadData.slug === "default" ? "text-amber-500" : ""} font-medium`}
             >
-              Home's Plumbing.
+              Home's Systems.
             </span>
           </h2>
           
           <p className="text-zinc-400 text-[15px] font-light leading-relaxed max-w-lg">
             From quick fixes to full installations, we provide reliable, 
-            local plumbing solutions with unmatched attention to detail.
+            professional solutions with unmatched attention to detail.
           </p>
         </div>
 

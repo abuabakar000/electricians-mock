@@ -36,7 +36,7 @@ export default function Footer({ leadData: passedLeadData }: { leadData?: LeadDa
             </div>
             
             <p className="text-zinc-400 font-light leading-relaxed mb-8 max-w-sm">
-              Reliable plumbing solutions, whenever you need them. We're here 24/7.
+              Reliable mechanical solutions, whenever you need them. We're here 24/7.
             </p>
             
             <div className="flex flex-col gap-4">
@@ -96,7 +96,7 @@ export default function Footer({ leadData: passedLeadData }: { leadData?: LeadDa
               <span style={{ backgroundColor: leadData.slug === "default" ? "" : leadData.primaryColor }} className={`absolute -bottom-2 left-0 w-6 h-[2px] ${leadData.slug === "default" ? "bg-amber-500" : ""}`}></span>
             </h4>
             <p className="text-zinc-400 text-[14px] font-light leading-relaxed mb-6 mt-2 max-w-sm">
-              Ready to upgrade your plumbing or need emergency assistance? We are here to help.
+              Ready for professional service or need emergency assistance? We are here to help.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 w-full max-w-[380px]">
               <Link 

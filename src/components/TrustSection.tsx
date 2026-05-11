@@ -9,7 +9,7 @@ export default function TrustSection({ leadData: passedLeadData }: { leadData?: 
 
         <div className="text-center mb-16">
           <h2 className="text-[#0a1930] text-xl md:text-2xl font-medium tracking-[0.15em] uppercase mb-4">
-            Trusted local Plumbers
+            Trusted local Experts
           </h2>
           <p className="text-slate-500 text-lg font-light tracking-wide">
             Serving our community with honest work and upfront pricing.

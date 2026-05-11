@@ -142,10 +142,36 @@ export const leads: Record<string, LeadData> = {
     address: "470 Henderson Dr, Regina, SK S4N 5W9, Canada",
     heroHeading: "Elite Mechanical in Regina",
     highlightWord: "Mechanical",
-    heroSubtext: "Providing master-level plumbing craftsmanship to the Regina community. We offer 24/7 rapid response and elite installations for your home.",
+    heroSubtext: "Providing master-level mechanical craftsmanship to the Regina community. We offer 24/7 rapid response and elite installations for your home.",
     trustRating: "4.7",
     customerCount: "200+",
-    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.554939417294!2d-104.56590489999999!3d50.4680119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x531c1f9ecc884317%3A0x9f79e75fc9e7286c!2sWelldone%20Mechanical%20Services!5e0!3m2!1sen!2s!4v1778282797642!5m2!1sen!2s"
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.554939417294!2d-104.56590489999999!3d50.4680119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x531c1f9ecc884317%3A0x9f79e75fc9e7286c!2sWelldone%20Mechanical%20Services!5e0!3m2!1sen!2s!4v1778282797642!5m2!1sen!2s",
+    services: [
+      {
+        title: "HVAC Maintenance",
+        desc: "Custom-designed preventative programs to optimize efficiency, ensure comfort, and reduce long-term energy costs."
+      },
+      {
+        title: "Building Upgrades & Retrofits",
+        desc: "Expert analysis and implementation of modern, energy-efficient mechanical solutions for building modernization."
+      },
+      {
+        title: "Electrical Services",
+        desc: "Professional electrical solutions tailored for complex mechanical and HVAC systems with absolute safety."
+      },
+      {
+        title: "Plumbing Services",
+        desc: "Licensed plumbing and gas line installations for residential, commercial, and light industrial environments."
+      },
+      {
+        title: "Energy Monitoring",
+        desc: "Advanced system analysis and monitoring to optimize performance and maximize energy savings."
+      },
+      {
+        title: "Air Cleaning & Purification",
+        desc: "Dedicated indoor air quality solutions to ensure a healthy, safe, and comfortable indoor environment."
+      }
+    ]
   },
   "velocity-mechanical": {
     ...defaultLead,

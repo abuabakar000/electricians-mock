@@ -5,7 +5,7 @@ import { LeadData, getLeadData } from "@/data/leads";
 const features = [
   {
     title: "24/7 Emergency Service",
-    desc: "Plumbing problems don't wait. We're available 24/7 to handle your emergencies fast.",
+    desc: "Service emergencies don't wait. We're available 24/7 to handle your emergencies fast.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" className="w-10 h-10 text-zinc-200">
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
@@ -95,7 +95,7 @@ export default function WhyUsSection({ leadData: passedLeadData }: { leadData?: 
 
           {/* heading */}
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-white leading-[1.1] tracking-tight mb-8">
-            Real Plumbers.<br />
+            Real Experts.<br />
             Real Solutions.<br />
             <span
               style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor }}
@@ -107,7 +107,7 @@ export default function WhyUsSection({ leadData: passedLeadData }: { leadData?: 
 
           {/* body */}
           <p className="text-zinc-400 text-base md:text-lg font-light leading-relaxed max-w-sm">
-            We combine decades of experience, master craftsmanship, and unwavering reliability to deliver plumbing services you can count on—every single time.
+            We combine decades of experience, master craftsmanship, and unwavering reliability to deliver essential services you can count on—every single time.
           </p>
         </div>
 
@@ -181,7 +181,7 @@ export default function WhyUsSection({ leadData: passedLeadData }: { leadData?: 
             </div>
             <div>
               <h3 className="text-white text-xl md:text-3xl font-light tracking-tight mb-1 md:mb-2">
-                Need a plumber you can trust?
+                Need an expert you can trust?
               </h3>
               <p className="text-zinc-500 text-[13px] md:text-lg font-light max-w-md">
                 Experience reliable service and total peace of mind with our dedicated team of local master experts.

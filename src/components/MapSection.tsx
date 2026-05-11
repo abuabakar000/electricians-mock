@@ -13,7 +13,7 @@ export default function MapSection({ leadData: passedLeadData }: { leadData?: Le
             Local Experts. Regional Coverage.
           </h2>
           <p className="text-slate-500 text-base md:text-lg font-light tracking-wide max-w-2xl mx-auto leading-relaxed">
-            Providing elite plumbing solutions with rapid response times to homes and businesses across the greater metropolitan area.
+            Providing elite professional solutions with rapid response times to homes and businesses across the greater metropolitan area.
           </p>
         </div>
 

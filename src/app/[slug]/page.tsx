@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const leadData = getLeadData(slug);
   return {
-    title: `${leadData.title} | Professional Plumbing Services`,
+    title: `${leadData.title} | Professional Home Services`,
     description: leadData.heroSubtext,
     icons: {
       icon: leadData.logo || "/logo.png",
