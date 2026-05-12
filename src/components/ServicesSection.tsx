@@ -35,13 +35,13 @@ export default function ServicesSection({ leadData: passedLeadData }: { leadData
       icon: <Wrench strokeWidth={1.5} style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor }} className={`w-8 h-8 ${leadData.slug === "default" ? "text-amber-500" : ""} transition-transform duration-500 group-hover:scale-110`} />
     },
     {
-      title: "Fixture Installation",
-      desc: "Sinks, faucets, toilets, and more—installed with precision and built for performance.",
+      title: leadData.services?.[4]?.title || "Fixture Installation",
+      desc: leadData.services?.[4]?.desc || "Sinks, faucets, toilets, and more—installed with precision and built for performance.",
       icon: <Bath strokeWidth={1.5} style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor }} className={`w-8 h-8 ${leadData.slug === "default" ? "text-amber-500" : ""} transition-transform duration-500 group-hover:scale-110`} />
     },
     {
-      title: "Sump Pump Services",
-      desc: "Protect your home from water damage with reliable sump pump solutions.",
+      title: leadData.services?.[5]?.title || "Sump Pump Services",
+      desc: leadData.services?.[5]?.desc || "Protect your home from water damage with reliable sump pump solutions.",
       icon: <ArrowDownToLine strokeWidth={1.5} style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor }} className={`w-8 h-8 ${leadData.slug === "default" ? "text-amber-500" : ""} transition-transform duration-500 group-hover:scale-110`} />
     }
   ];

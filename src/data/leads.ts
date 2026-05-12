@@ -97,6 +97,14 @@ export const leads: Record<string, LeadData> = {
       {
         title: "Coastal Infrastructure",
         desc: "Expert piping and infrastructure repair using marine-grade materials built to withstand the elements."
+      },
+      {
+        title: "Marine Fixture Upgrades",
+        desc: "Designer-grade fixtures optimized for high-salinity environments, blending luxury aesthetics with industrial durability."
+      },
+      {
+        title: "Ocean-Safe Filtration",
+        desc: "Advanced water filtration systems designed to protect your luxury plumbing from coastal sediment and impurities."
       }
     ]
   },
@@ -348,6 +356,14 @@ export const leads: Record<string, LeadData> = {
       {
         title: "Smart Home Integration",
         desc: "Seamlessly connecting your HVAC and electrical systems for total control, comfort, and maximum energy efficiency."
+      },
+      {
+        title: "Indoor Air Purification",
+        desc: "High-efficiency filtration and UV purification systems to ensure your home's air is clean, safe, and free from allergens."
+      },
+      {
+        title: "EV Charging Solutions",
+        desc: "Professional installation of level 2 electric vehicle charging stations, integrated seamlessly into your home's electrical panel."
       }
     ]
   },
@@ -382,6 +398,14 @@ export const leads: Record<string, LeadData> = {
       {
         title: "System Replacements",
         desc: "Seamless replacement of outdated plumbing and heating systems with modern, energy-efficient solutions."
+      },
+      {
+        title: "Emergency Leak Response",
+        desc: "Rapid, 24/7 onsite solutions for major pipe bursts or flooding, protecting your property's value and integrity."
+      },
+      {
+        title: "Hydronic Heating Systems",
+        desc: "Energy-efficient in-floor heating installations that provide silent, consistent warmth throughout your entire home."
       }
     ]
   },
@@ -416,6 +440,14 @@ export const leads: Record<string, LeadData> = {
       {
         title: "Sewer Jet & Washing",
         desc: "High-pressure sewer jetting and hot/cold pressure washing to clear blockages and maintain clear lines."
+      },
+      {
+        title: "Hydro-Excavation",
+        desc: "Safe, non-destructive digging using pressurized water to expose underground utilities without risking pipe damage."
+      },
+      {
+        title: "Sewer Line Patching",
+        desc: "Trenchless point repair solutions to fix localized sewer damage without the need for massive excavation or lawn disruption."
       }
     ]
   },
@@ -450,6 +482,14 @@ export const leads: Record<string, LeadData> = {
       {
         title: "Water Heater Solutions",
         desc: "Comprehensive repair, maintenance, and installation of water heaters to ensure you never run out of hot water."
+      },
+      {
+        title: "Bio-Active Drain Treatment",
+        desc: "Professional-grade microbial solutions that digest organic waste, keeping your drains clear and odor-free naturally."
+      },
+      {
+        title: "Root Intrusion Removal",
+        desc: "Specialized heavy-duty cutters and hydro-jetting to eliminate invasive tree roots and prevent future sewer line collapses."
       }
     ]
   },
@@ -484,6 +524,14 @@ export const leads: Record<string, LeadData> = {
       {
         title: "Extended Warranties",
         desc: "Peace of mind with extended warranties on our master-level craftsmanship and premium parts."
+      },
+      {
+        title: "High-Efficiency Boilers",
+        desc: "Expert installation and service for modern condensing boilers, maximizing energy efficiency and reducing monthly utility bills."
+      },
+      {
+        title: "Smart Thermostat Setup",
+        desc: "Precise calibration and installation of advanced temperature control systems for optimized comfort and remote monitoring."
       }
     ]
   },
@@ -518,6 +566,14 @@ export const leads: Record<string, LeadData> = {
       {
         title: "Commercial & Retrofit",
         desc: "Specialized service and retrofit solutions for commercial properties, ensuring modern infrastructure and peak performance."
+      },
+      {
+        title: "Ductwork Optimization",
+        desc: "Professional cleaning, sealing, and design of air ducts to eliminate hotspots and improve overall system performance."
+      },
+      {
+        title: "Emergency Pump Services",
+        desc: "Reliable repair and replacement of sump pumps and ejector pumps to safeguard your basement from water damage."
       }
     ]
   },
@@ -552,6 +608,14 @@ export const leads: Record<string, LeadData> = {
       {
         title: "Cooling & Refrigeration",
         desc: "Full-service air conditioning installation and commercial refrigeration solutions designed for maximum efficiency."
+      },
+      {
+        title: "Natural Gas Line Service",
+        desc: "Certified gas line installation and leak testing for fireplaces, ranges, and outdoor BBQ setups with absolute safety."
+      },
+      {
+        title: "Water Softener Systems",
+        desc: "Targeted solutions to eliminate hard water mineral buildup, extending the lifespan of your appliances and fixtures."
       }
     ]
   },
@@ -586,6 +650,14 @@ export const leads: Record<string, LeadData> = {
       {
         title: "A/C & Water Heaters",
         desc: "Professional installation and service for air conditioning units and hot water heaters for total year-round comfort."
+      },
+      {
+        title: "Radiant Floor Heating",
+        desc: "Custom design and installation of in-floor heating systems for unrivaled comfort and modern energy efficiency."
+      },
+      {
+        title: "Backflow Prevention",
+        desc: "Certified testing and installation of backflow preventers to protect your property's potable water supply from contamination."
       }
     ]
   },
@@ -620,6 +692,14 @@ export const leads: Record<string, LeadData> = {
       {
         title: "Emergency Plumbing",
         desc: "Rapid 24/7 emergency plumbing services to handle urgent repairs and protect your property from water damage."
+      },
+      {
+        title: "Main Line Cleaning",
+        desc: "Specialized heavy-duty cleaning of your property's main sewer line to prevent catastrophic backups and structural damage."
+      },
+      {
+        title: "Toilet & Sink Restoration",
+        desc: "Professional clearing and mechanical restoration of slow-moving toilets and sinks to ensure peak bathroom functionality."
       }
     ]
   },
