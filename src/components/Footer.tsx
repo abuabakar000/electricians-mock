@@ -36,7 +36,7 @@ export default function Footer({ leadData: passedLeadData }: { leadData?: LeadDa
             </div>
             
             <p className="text-zinc-400 font-light leading-relaxed mb-8 max-w-sm">
-              Reliable mechanical solutions, whenever you need them. We're here 24/7.
+              Reliable professional solutions, whenever you need them. We're here 24/7.
             </p>
             
             <div className="flex flex-col gap-4">
@@ -64,14 +64,14 @@ export default function Footer({ leadData: passedLeadData }: { leadData?: LeadDa
               <span style={{ backgroundColor: leadData.slug === "default" ? "" : leadData.primaryColor }} className={`absolute -bottom-2 left-0 w-6 h-[2px] ${leadData.slug === "default" ? "bg-amber-500" : ""}`}></span>
             </h4>
             <div className="flex flex-col gap-3 mt-2">
-              <span className="text-zinc-400 text-[14px] font-light">Drain Cleaning</span>
-              <span className="text-zinc-400 text-[14px] font-light">Leak Repair</span>
-              <span className="text-zinc-400 text-[14px] font-light">Water Heaters</span>
-              <span className="text-zinc-400 text-[14px] font-light">Pipe Replacement</span>
-              <span className="text-zinc-400 text-[14px] font-light">Fixture Install</span>
-              <span className="text-zinc-400 text-[14px] font-light">Sump Pumps</span>
-              <span className="text-zinc-400 text-[14px] font-light">Garbage Disposals</span>
-              <span className="text-zinc-400 text-[14px] font-light">Sewer Lines</span>
+              <span className="text-zinc-400 text-[14px] font-light">Electrical Repair</span>
+              <span className="text-zinc-400 text-[14px] font-light">Panel Upgrades</span>
+              <span className="text-zinc-400 text-[14px] font-light">Lighting Design</span>
+              <span className="text-zinc-400 text-[14px] font-light">Smart Home Setup</span>
+              <span className="text-zinc-400 text-[14px] font-light">EV Charger Install</span>
+              <span className="text-zinc-400 text-[14px] font-light">Generator Service</span>
+              <span className="text-zinc-400 text-[14px] font-light">Surge Protection</span>
+              <span className="text-zinc-400 text-[14px] font-light">Commercial Service</span>
             </div>
           </div>
 

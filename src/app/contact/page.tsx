@@ -6,8 +6,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Schedule Service | ProPlumb",
-  description: "Contact us today to schedule your premium plumbing service. We offer 24/7 emergency response and expert solutions.",
+  title: "Schedule Service | ProElectric",
+  description: "Contact us today to schedule your premium electrical service. We offer 24/7 emergency response and expert solutions.",
 };
 
 export default function ContactPage() {
@@ -20,9 +20,9 @@ export default function ContactPage() {
       <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden border-b border-zinc-800/60">
         <div className="absolute inset-0 z-0 pointer-events-none">
           <Image 
-            src="/contact-hero.png"
+            src="/contact-hero-v3.png"
             fill
-            alt="Schedule Plumbing Service"
+            alt="Schedule Electrical Service"
             className="object-cover object-center opacity-20 mix-blend-overlay"
             priority
           />
@@ -43,7 +43,7 @@ export default function ContactPage() {
           </h1>
           
           <p className="text-zinc-400 text-lg md:text-xl font-light tracking-wide max-w-2xl mx-auto leading-relaxed">
-            Ready to experience the ProPlumb difference? Contact us today to secure your priority appointment with our master technicians.
+            Ready to experience the ProElectric difference? Contact us today to secure your priority appointment with our master technicians.
           </p>
         </div>
       </section>
@@ -60,7 +60,7 @@ export default function ContactPage() {
                 We're Here When <br/> You Need Us Most.
               </h2>
               <p className="text-zinc-400 font-light leading-relaxed mb-10 text-[15px]">
-                Whether you need immediate emergency assistance or want to schedule a routine installation, our team of master plumbers is ready to deliver flawless results.
+                Whether you need immediate emergency assistance or want to schedule a routine installation, our team of master technicians is ready to deliver flawless results.
               </p>
 
               <div className="space-y-8 mb-12">
@@ -84,8 +84,8 @@ export default function ContactPage() {
                   </div>
                   <div className="pt-1">
                     <p className="text-zinc-500 text-[11px] font-bold tracking-[0.15em] uppercase mb-1">Email Us</p>
-                    <a href="mailto:service@proplumb.com" className="text-white text-lg font-light tracking-wide hover:text-amber-500 transition-colors">
-                      service@proplumb.com
+                    <a href="mailto:service@proelectric.com" className="text-white text-lg font-light tracking-wide hover:text-amber-500 transition-colors">
+                      service@proelectric.com
                     </a>
                   </div>
                 </div>
@@ -98,7 +98,7 @@ export default function ContactPage() {
                   <div className="pt-1">
                     <p className="text-zinc-500 text-[11px] font-bold tracking-[0.15em] uppercase mb-1">Headquarters</p>
                     <p className="text-white text-lg font-light tracking-wide">
-                      1234 Elite Plumbing Way<br />
+                      1234 Elite Electrician Way<br />
                       Suite 100, Metropolis
                     </p>
                   </div>
@@ -185,13 +185,13 @@ export default function ContactPage() {
                           id="service"
                           className="w-full bg-zinc-950/50 border border-zinc-800 text-white rounded-xl px-5 py-4.5 focus:outline-none focus:border-amber-500/50 focus:ring-4 focus:ring-amber-500/5 transition-all font-light text-[15px] appearance-none cursor-pointer"
                         >
-                          <option value="" className="bg-zinc-900">Select a service...</option>
+                                                    <option value="" className="bg-zinc-900">Select a service...</option>
                           <option value="emergency" className="bg-zinc-900">24/7 Emergency Repair</option>
-                          <option value="drain" className="bg-zinc-900">Drain Cleaning</option>
-                          <option value="leak" className="bg-zinc-900">Leak Repair</option>
-                          <option value="water-heater" className="bg-zinc-900">Water Heater Services</option>
-                          <option value="pipes" className="bg-zinc-900">Pipe Replacement</option>
-                          <option value="fixture" className="bg-zinc-900">Fixture Installation</option>
+                          <option value="repair" className="bg-zinc-900">Electrical Repair</option>
+                          <option value="panel" className="bg-zinc-900">Panel Upgrade</option>
+                          <option value="lighting" className="bg-zinc-900">Lighting Design</option>
+                          <option value="ev" className="bg-zinc-900">EV Charger Install</option>
+                          <option value="smart" className="bg-zinc-900">Smart Home Setup</option>
                           <option value="other" className="bg-zinc-900">Other / Not Sure</option>
                         </select>
                         <div className="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-zinc-600">

@@ -7,118 +7,118 @@ import MapSection from "@/components/MapSection";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { 
-  Waves, 
-  Droplets, 
-  Flame, 
-  Wrench, 
-  Bath, 
-  ArrowDownToLine,
+  Zap, 
+  Cpu, 
+  Lightbulb, 
+  Wifi, 
+  Plug, 
+  Battery,
   CheckCircle2,
-  Trash2,
+  ShieldAlert,
   Activity,
   ArrowRight
 } from "lucide-react";
 
 export const metadata = {
-  title: "Premium Plumbing Services | ProPlumb",
-  description: "Explore our comprehensive range of high-end plumbing services, from emergency repairs to full luxury fixture installations.",
+  title: "Premium Electrical Services | ProElectric",
+  description: "Explore our comprehensive range of high-end electrical services, from emergency repairs to full smart home integrations.",
 };
 
 const detailedServices = [
   {
-    id: "drain-cleaning",
-    title: "Drain Cleaning & Clearing",
-    icon: <Waves strokeWidth={1.5} className="w-8 h-8 text-amber-500" />,
-    desc: "Stubborn clogs and slow drains are no match for our advanced clearing technology. We completely eliminate blockages to restore perfect flow.",
+    id: "electrical-repair",
+    title: "Electrical Repair & Diagnostics",
+    icon: <Zap strokeWidth={1.5} className="w-8 h-8 text-amber-500" />,
+    desc: "Faulty wiring or flickering lights? We utilize advanced diagnostic tools to pinpoint and resolve electrical issues with master-level precision.",
     features: [
-      "High-pressure hydro-jetting",
-      "Video camera line inspections",
-      "Tree root removal",
-      "Preventative maintenance plans"
+      "Troubleshooting & diagnostics",
+      "Circuit breaker repairs",
+      "Wiring inspections",
+      "Emergency power restoration"
     ]
   },
   {
-    id: "leak-repair",
-    title: "Precision Leak Repair",
-    icon: <Droplets strokeWidth={1.5} className="w-8 h-8 text-amber-500" />,
-    desc: "Hidden leaks can cause catastrophic structural damage. We utilize non-invasive acoustic and thermal imaging to pinpoint and seal leaks instantly.",
+    id: "panel-upgrades",
+    title: "Panel Upgrades & Maintenance",
+    icon: <Cpu strokeWidth={1.5} className="w-8 h-8 text-amber-500" />,
+    desc: "Modernize your home's electrical infrastructure. We upgrade outdated panels to ensure your property can handle today's high-demand appliances.",
     features: [
-      "Slab leak detection",
-      "Burst pipe emergency repair",
-      "Ceiling and wall leak tracing",
-      "Non-destructive acoustic tech"
+      "200 Amp service upgrades",
+      "Sub-panel installations",
+      "Code compliance audits",
+      "Main breaker replacement"
     ]
   },
   {
-    id: "water-heaters",
-    title: "Water Heater Systems",
-    icon: <Flame strokeWidth={1.5} className="w-8 h-8 text-amber-500" />,
-    desc: "Never run out of hot water again. We install, repair, and maintain premium conventional and tankless water heating systems.",
+    id: "lighting-design",
+    title: "Custom Lighting Design",
+    icon: <Lightbulb strokeWidth={1.5} className="w-8 h-8 text-amber-500" />,
+    desc: "Transform your living space with architectural lighting. From recessed LEDs to smart outdoor security lighting, we design for beauty and safety.",
     features: [
-      "Tankless system upgrades",
-      "Traditional tank replacements",
-      "Heating element repairs",
-      "Annual sediment flushing"
+      "Indoor LED retrofitting",
+      "Landscape & security lighting",
+      "Smart dimmer integration",
+      "Chandelier & pendant hanging"
     ]
   },
   {
-    id: "pipe-replacement",
-    title: "Pipe Repair & Replacement",
-    icon: <Wrench strokeWidth={1.5} className="w-8 h-8 text-amber-500" />,
-    desc: "Upgrade your property's plumbing infrastructure. We replace old, corroded, or dangerous piping with modern, high-grade materials.",
+    id: "smart-home",
+    title: "Smart Home Integration",
+    icon: <Wifi strokeWidth={1.5} className="w-8 h-8 text-amber-500" />,
+    desc: "Take total control of your environment. We seamlessly integrate smart switches, thermostats, and security systems for a truly modern home.",
     features: [
-      "Whole-home repiping",
-      "Copper & PEX installations",
-      "Corrosion diagnostics",
-      "Code compliance upgrades"
+      "Automated lighting control",
+      "Smart thermostat setup",
+      "Security camera wiring",
+      "Voice assistant integration"
     ]
   },
   {
-    id: "fixture-installation",
-    title: "Luxury Fixture Installation",
-    icon: <Bath strokeWidth={1.5} className="w-8 h-8 text-amber-500" />,
-    desc: "Elevate your kitchen and bathrooms. We expertly install high-end sinks, architectural faucets, spa showers, and modern toilets.",
+    id: "ev-charging",
+    title: "EV Charging Stations",
+    icon: <Plug strokeWidth={1.5} className="w-8 h-8 text-amber-500" />,
+    desc: "Professional installation of Level 2 electric vehicle charging stations. We ensure your garage is ready for the future of transportation.",
     features: [
-      "Rainfall shower systems",
-      "Touchless kitchen faucets",
-      "Freestanding tub plumbing",
-      "Smart toilet integration"
+      "Tesla Wall Connector install",
+      "Universal Level 2 chargers",
+      "Load management systems",
+      "Permitting & inspection"
     ]
   },
   {
-    id: "sump-pumps",
-    title: "Sump Pump Solutions",
-    icon: <ArrowDownToLine strokeWidth={1.5} className="w-8 h-8 text-amber-500" />,
-    desc: "Protect your basement and foundation from devastating water damage with our heavy-duty, ultra-reliable sump pump systems.",
+    id: "generator-services",
+    title: "Generator & Backup Power",
+    icon: <Battery strokeWidth={1.5} className="w-8 h-8 text-amber-500" />,
+    desc: "Never be left in the dark. We install and maintain reliable backup generator systems and UPS solutions to keep your power flowing.",
     features: [
-      "Primary pump installation",
-      "Battery backup systems",
-      "Discharge line routing",
-      "Float switch calibration"
+      "Standby generator install",
+      "Transfer switch setup",
+      "Annual load testing",
+      "UPS system integration"
     ]
   },
   {
-    id: "garbage-disposal",
-    title: "Garbage Disposal Services",
-    icon: <Trash2 strokeWidth={1.5} className="w-8 h-8 text-amber-500" />,
-    desc: "A jammed or leaking garbage disposal can disrupt your kitchen. We provide rapid repairs and install premium, quiet-operation disposal units.",
+    id: "surge-protection",
+    title: "Whole-Home Surge Protection",
+    icon: <ShieldAlert strokeWidth={1.5} className="w-8 h-8 text-amber-500" />,
+    desc: "Protect your sensitive electronics from power spikes and grid fluctuations. Our surge protection systems guard your entire electrical network.",
     features: [
-      "Jammed unit clearing",
-      "Motor replacement",
-      "Under-sink leak repair",
-      "High-HP unit installation"
+      "Main panel surge arrestors",
+      "Point-of-use protection",
+      "Grounding system audits",
+      "Equipment protection warranty"
     ]
   },
   {
-    id: "sewer-line",
-    title: "Sewer Line Diagnostics & Repair",
+    id: "commercial-electrical",
+    title: "Commercial Electrical Services",
     icon: <Activity strokeWidth={1.5} className="w-8 h-8 text-amber-500" />,
-    desc: "Avoid costly backups with our comprehensive sewer line services. We offer trenchless repairs and thorough inspections to keep your main lines clear.",
+    desc: "Providing robust electrical solutions for businesses. We handle complex wiring, commercial lighting, and industrial power distribution systems.",
     features: [
-      "Main line clearing",
-      "Trenchless pipe repair",
-      "Video camera diagnostics",
-      "Sewer gas odor detection"
+      "Commercial build-outs",
+      "Preventative maintenance",
+      "Energy efficiency audits",
+      "Data & telecom wiring"
     ]
   }
 ];
@@ -133,9 +133,9 @@ export default function ServicesPage() {
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden border-b border-zinc-800/60">
         <div className="absolute inset-0 z-0 pointer-events-none">
           <Image 
-            src="/services-page-hero.png"
+            src="/services-hero-v3.png"
             fill
-            alt="Luxury Plumbing Services"
+            alt="Luxury Electrical Services"
             className="object-cover object-center opacity-30 mix-blend-overlay"
             priority
           />
@@ -152,11 +152,11 @@ export default function ServicesPage() {
           
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-light text-white tracking-tighter leading-[1.05] mb-8">
             Superior Solutions for <br className="hidden md:block" />
-            <span className="font-medium text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-amber-500">Every System.</span>
+            <span className="font-medium text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-amber-500">Modern Power.</span>
           </h1>
           
           <p className="text-zinc-400 text-lg md:text-xl font-light tracking-wide max-w-2xl mx-auto leading-relaxed">
-            From emergency interventions to full architectural pipe replacements, we deliver unparalleled craftsmanship and reliability across every facet of plumbing.
+            From emergency repairs to full architectural lighting systems, we deliver unparalleled craftsmanship and reliability across every facet of electrical work.
           </p>
         </div>
       </section>

@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const leadData = getLeadData(slug);
   return {
     title: `Contact Us | ${leadData.title}`,
-    description: `Get in touch with ${leadData.title} for professional plumbing services.`,
+    description: `Get in touch with ${leadData.title} for professional electrical services.`,
     icons: {
       icon: leadData.logo || "/logo.png",
     }
@@ -31,9 +31,9 @@ export default async function ContactPage({ params }: { params: Promise<{ slug: 
         <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden border-b border-zinc-800/60">
           <div className="absolute inset-0 z-0 pointer-events-none">
             <Image 
-              src="/contact-hero.png"
+              src="/contact-hero-v3.png"
               fill
-              alt="Schedule Plumbing Service"
+              alt="Schedule Electrical Service"
               className="object-cover object-center opacity-20 mix-blend-overlay"
               priority
             />
@@ -93,7 +93,7 @@ export default async function ContactPage({ params }: { params: Promise<{ slug: 
                   We're Here When <br/> You Need Us Most.
                 </h2>
                 <p className="text-zinc-400 font-light leading-relaxed mb-10 text-[15px]">
-                  Whether you need immediate emergency assistance or want to schedule a routine installation, our team of master plumbers is ready to deliver flawless results.
+                  Whether you need immediate emergency assistance or want to schedule a routine installation, our team of master technicians is ready to deliver flawless results.
                 </p>
 
                 <div className="space-y-8 mb-12">
@@ -285,14 +285,14 @@ export default async function ContactPage({ params }: { params: Promise<{ slug: 
                             style={{ "--focus-border": leadData.slug === "default" ? "" : leadData.primaryColor } as any}
                             className={`w-full bg-zinc-950/50 border border-zinc-800 text-white rounded-xl px-5 py-4.5 focus:outline-none ${leadData.slug === "default" ? "focus:border-amber-500/50 focus:ring-amber-500/5" : "focus:border-[var(--focus-border)] focus:ring-white/5"} focus:ring-4 transition-all font-light text-[15px] appearance-none cursor-pointer`}
                           >
-                            <option value="" className="bg-zinc-900">Select a service...</option>
-                            <option value="emergency" className="bg-zinc-900">24/7 Emergency Repair</option>
-                            <option value="drain" className="bg-zinc-900">Drain Cleaning</option>
-                            <option value="leak" className="bg-zinc-900">Leak Repair</option>
-                            <option value="water-heater" className="bg-zinc-900">Water Heater Services</option>
-                            <option value="pipes" className="bg-zinc-900">Pipe Replacement</option>
-                            <option value="fixture" className="bg-zinc-900">Fixture Installation</option>
-                            <option value="other" className="bg-zinc-900">Other / Not Sure</option>
+                                                         <option value="" className="bg-zinc-900">Select a service...</option>
+                             <option value="emergency" className="bg-zinc-900">24/7 Emergency Repair</option>
+                             <option value="repair" className="bg-zinc-900">Electrical Repair</option>
+                             <option value="panel" className="bg-zinc-900">Panel Upgrade</option>
+                             <option value="lighting" className="bg-zinc-900">Lighting Design</option>
+                             <option value="ev" className="bg-zinc-900">EV Charger Install</option>
+                             <option value="smart" className="bg-zinc-900">Smart Home Setup</option>
+                             <option value="other" className="bg-zinc-900">Other / Not Sure</option>
                           </select>
                           <div className="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-zinc-600">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">

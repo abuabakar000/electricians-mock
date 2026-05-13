@@ -14,9 +14,9 @@ export default function CtaSection({ leadData: passedLeadData }: { leadData?: Le
         {/* Background Image & Effects */}
         <div className="absolute inset-0 z-0 pointer-events-none">
           <Image 
-            src="/cta-bg-pipes.png"
+            src="/cta-bg-new.png"
             fill
-            alt="Premium Home Systems"
+            alt="Premium Electrical Systems"
             className="object-cover object-center opacity-40 mix-blend-screen grayscale-[10%]"
           />
           {/* Gradients to keep the left text perfectly readable while revealing the image on the right */}
@@ -25,7 +25,7 @@ export default function CtaSection({ leadData: passedLeadData }: { leadData?: Le
           <div className="absolute inset-0 bg-gradient-to-b from-[#06070a]/50 via-transparent to-[#06070a]"></div>
           
           {/* Light Beam Effect */}
-          <div className="absolute -top-[50%] -right-[10%] w-[70%] h-[200%] bg-amber-500/[0.03] rotate-[35deg] blur-[100px]"></div>
+          <div className="absolute -top-[50%] -right-[10%] w-[70%] h-[200%] bg-sky-500/[0.03] rotate-[35deg] blur-[100px]"></div>
         </div>
 
         {/* Content Wrapper for Top Portion */}

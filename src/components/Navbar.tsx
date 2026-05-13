@@ -69,7 +69,7 @@ export default function Navbar({ leadData: passedLeadData }: { leadData?: LeadDa
             ) : (
               <span className="text-white text-2xl font-bold tracking-wider">
                 {leadData.slug === "default" ? (
-                  <>PRO<span className="text-amber-500">SERVICE</span></>
+                  <>PRO<span className="text-amber-500">ELECTRIC</span></>
                 ) : (
                   <span style={{ color: leadData.primaryColor }}>{leadData.title.toUpperCase()}</span>
                 )}

@@ -2,12 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { LeadData, getLeadData } from "@/data/leads";
 import { 
-  Waves, 
-  Droplets, 
-  Flame, 
-  Wrench, 
-  Bath, 
-  ArrowDownToLine 
+  Zap, 
+  Cpu, 
+  Lightbulb, 
+  Wifi, 
+  Plug, 
+  Battery 
 } from "lucide-react";
 
 export default function ServicesSection({ leadData: passedLeadData }: { leadData?: LeadData }) {
@@ -15,34 +15,34 @@ export default function ServicesSection({ leadData: passedLeadData }: { leadData
   
   const services = [
     {
-      title: leadData.services?.[0]?.title || "Drain Cleaning",
-      desc: leadData.services?.[0]?.desc || "Clogged drains don't stand a chance. We clear blockages fast and keep your pipes flowing smoothly.",
-      icon: <Waves strokeWidth={1.5} style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor }} className={`w-8 h-8 ${leadData.slug === "default" ? "text-amber-500" : ""} transition-transform duration-500 group-hover:scale-110`} />
+      title: leadData.services?.[0]?.title || "Electrical Repair",
+      desc: leadData.services?.[0]?.desc || "Faulty wiring or flickering lights? We diagnose and fix electrical issues with master-level precision.",
+      icon: <Zap strokeWidth={1.5} style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor }} className={`w-8 h-8 ${leadData.slug === "default" ? "text-amber-500" : ""} transition-transform duration-500 group-hover:scale-110`} />
     },
     {
-      title: leadData.services?.[1]?.title || "Leak Repair",
-      desc: leadData.services?.[1]?.desc || "From minor leaks to major issues, we find the source and fix it right the first time.",
-      icon: <Droplets strokeWidth={1.5} style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor }} className={`w-8 h-8 ${leadData.slug === "default" ? "text-amber-500" : ""} transition-transform duration-500 group-hover:scale-110`} />
+      title: leadData.services?.[1]?.title || "Panel Upgrades",
+      desc: leadData.services?.[1]?.desc || "Modernize your home's electrical infrastructure for increased safety and capacity.",
+      icon: <Cpu strokeWidth={1.5} style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor }} className={`w-8 h-8 ${leadData.slug === "default" ? "text-amber-500" : ""} transition-transform duration-500 group-hover:scale-110`} />
     },
     {
-      title: leadData.services?.[2]?.title || "Water Heater Services",
-      desc: leadData.services?.[2]?.desc || "Installation, repair, and maintenance for all types of water heaters. Hot water, always.",
-      icon: <Flame strokeWidth={1.5} style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor }} className={`w-8 h-8 ${leadData.slug === "default" ? "text-amber-500" : ""} transition-transform duration-500 group-hover:scale-110`} />
+      title: leadData.services?.[2]?.title || "Lighting Design",
+      desc: leadData.services?.[2]?.desc || "Custom indoor and outdoor lighting solutions to enhance your home's beauty and security.",
+      icon: <Lightbulb strokeWidth={1.5} style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor }} className={`w-8 h-8 ${leadData.slug === "default" ? "text-amber-500" : ""} transition-transform duration-500 group-hover:scale-110`} />
     },
     {
-      title: leadData.services?.[3]?.title || "Pipe Repair & Replacement",
-      desc: leadData.services?.[3]?.desc || "Old, damaged, or corroded pipes? We replace them the right way—built to last.",
-      icon: <Wrench strokeWidth={1.5} style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor }} className={`w-8 h-8 ${leadData.slug === "default" ? "text-amber-500" : ""} transition-transform duration-500 group-hover:scale-110`} />
+      title: leadData.services?.[3]?.title || "Smart Home Setup",
+      desc: leadData.services?.[3]?.desc || "Seamlessly integrate smart switches, thermostats, and security systems for total control.",
+      icon: <Wifi strokeWidth={1.5} style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor }} className={`w-8 h-8 ${leadData.slug === "default" ? "text-amber-500" : ""} transition-transform duration-500 group-hover:scale-110`} />
     },
     {
-      title: leadData.services?.[4]?.title || "Fixture Installation",
-      desc: leadData.services?.[4]?.desc || "Sinks, faucets, toilets, and more—installed with precision and built for performance.",
-      icon: <Bath strokeWidth={1.5} style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor }} className={`w-8 h-8 ${leadData.slug === "default" ? "text-amber-500" : ""} transition-transform duration-500 group-hover:scale-110`} />
+      title: leadData.services?.[4]?.title || "EV Charger Install",
+      desc: leadData.services?.[4]?.desc || "Professional installation of level 2 electric vehicle charging stations in your garage.",
+      icon: <Plug strokeWidth={1.5} style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor }} className={`w-8 h-8 ${leadData.slug === "default" ? "text-amber-500" : ""} transition-transform duration-500 group-hover:scale-110`} />
     },
     {
-      title: leadData.services?.[5]?.title || "Sump Pump Services",
-      desc: leadData.services?.[5]?.desc || "Protect your home from water damage with reliable sump pump solutions.",
-      icon: <ArrowDownToLine strokeWidth={1.5} style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor }} className={`w-8 h-8 ${leadData.slug === "default" ? "text-amber-500" : ""} transition-transform duration-500 group-hover:scale-110`} />
+      title: leadData.services?.[5]?.title || "Generator Services",
+      desc: leadData.services?.[5]?.desc || "Never be without power. We install and maintain reliable backup generator systems.",
+      icon: <Battery strokeWidth={1.5} style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor }} className={`w-8 h-8 ${leadData.slug === "default" ? "text-amber-500" : ""} transition-transform duration-500 group-hover:scale-110`} />
     }
   ];
   return (
