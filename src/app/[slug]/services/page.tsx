@@ -156,7 +156,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ slug:
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden border-b border-zinc-800/60">
         <div className="absolute inset-0 z-0 pointer-events-none">
           <Image 
-            src="/services-hero-v3.png"
+            src="/services-hero-v3.webp"
             fill
             alt="Luxury Electrical Services"
             className="object-cover object-center opacity-30 mix-blend-overlay"

@@ -31,7 +31,7 @@ export default async function ContactPage({ params }: { params: Promise<{ slug: 
         <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden border-b border-zinc-800/60">
           <div className="absolute inset-0 z-0 pointer-events-none">
             <Image 
-              src="/contact-hero-v3.png"
+              src="/contact-hero-v3.webp"
               fill
               alt="Schedule Electrical Service"
               className="object-cover object-center opacity-20 mix-blend-overlay"
