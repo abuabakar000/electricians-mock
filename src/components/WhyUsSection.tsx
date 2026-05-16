@@ -75,26 +75,26 @@ export default function WhyUsSection({ leadData: passedLeadData }: { leadData?: 
       className="bg-[#0b0c10] relative overflow-hidden"
     >
       {/* ── Main two-column row ── */}
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-20 md:py-28 flex flex-col lg:flex-row items-stretch gap-16 lg:gap-20">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-12 md:py-28 flex flex-col lg:flex-row items-stretch gap-10 lg:gap-20">
 
         {/* LEFT COLUMN - Vertically Centered */}
         <div className="lg:w-[35%] flex flex-col justify-center text-left">
           {/* eyebrow */}
-          <div className="flex items-center justify-start gap-3 mb-6">
+          <div className="flex items-center justify-start gap-3 mb-4 md:mb-6">
             <span
               style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor }}
-              className={`text-[11px] font-bold tracking-[0.2em] ${leadData.slug === "default" ? "text-amber-500" : ""} uppercase`}
+              className={`text-[10px] md:text-[11px] font-bold tracking-[0.2em] ${leadData.slug === "default" ? "text-amber-500" : ""} uppercase`}
             >
               Why Choose Us
             </span>
             <div
               style={{ backgroundColor: leadData.slug === "default" ? "" : leadData.primaryColor }}
-              className={`w-10 h-px ${leadData.slug === "default" ? "bg-amber-500/40" : "opacity-40"}`}
+              className={`w-8 md:w-10 h-px ${leadData.slug === "default" ? "bg-amber-500/40" : "opacity-40"}`}
             />
           </div>
 
           {/* heading */}
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-white leading-[1.1] tracking-tight mb-8">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-light text-white leading-[1.1] tracking-tight mb-6 md:mb-8">
             Real Experts.<br />
             Real Solutions.<br />
             <span
@@ -106,45 +106,43 @@ export default function WhyUsSection({ leadData: passedLeadData }: { leadData?: 
           </h2>
 
           {/* body */}
-          <p className="text-zinc-400 text-base md:text-lg font-light leading-relaxed max-w-sm">
+          <p className="text-zinc-400 text-sm md:text-lg font-light leading-relaxed max-w-sm">
             We combine decades of experience, master craftsmanship, and unwavering reliability to deliver essential services you can count on—every single time.
           </p>
         </div>
 
         {/* RIGHT COLUMN — feature grid */}
-        <div className="lg:w-[65%] grid grid-cols-2 md:grid-cols-3 gap-x-6 md:gap-x-12 gap-y-12 md:gap-y-16 self-center">
-          {features.map((feature, idx) => (
-            <div key={idx} className="flex flex-col group">
-              <div className="mb-6">
-                <div className="mb-4 transition-transform duration-300 group-hover:scale-110">
-                  <div
-                    style={{
-                      borderColor: leadData.slug === "default" ? "" : `${leadData.primaryColor}4d`,
-                      backgroundColor: leadData.slug === "default" ? "" : `${leadData.primaryColor}0d`
-                    }}
-                    className={`w-16 h-16 rounded-xl bg-zinc-900/50 border border-zinc-800 flex items-center justify-center mb-4 shadow-xl ${leadData.slug === "default" ? "group-hover:border-amber-500/30 group-hover:bg-amber-500/5" : "hover:brightness-110"} transition-all duration-300`}
-                  >
-                    <div className="scale-75 origin-center">
-                      {feature.icon}
-                    </div>
+        <div className="lg:w-[65%] relative">
+          {/* Vertical Divider Line */}
+          <div className="absolute left-1/2 top-0 bottom-0 w-px bg-zinc-800/40 hidden sm:block" />
+
+          <div className="grid grid-cols-2 gap-x-6 md:gap-x-12 gap-y-12 md:gap-y-16">
+            {features.map((feature, idx) => (
+              <div key={idx} className={`flex flex-col items-start text-left ${idx % 2 === 0 ? "sm:pr-6 md:pr-10" : "sm:pl-6 md:pl-10"}`}>
+                {/* Icon Box */}
+                <div
+                  style={{
+                    borderColor: leadData.slug === "default" ? "" : `${leadData.primaryColor}33`,
+                  }}
+                  className={`w-10 h-10 md:w-14 md:h-14 rounded-xl border ${leadData.slug === "default" ? "border-zinc-800" : ""} flex items-center justify-center mb-6 transition-all duration-300 group`}
+                >
+                  <div className="scale-60 md:scale-75 origin-center">
+                    {feature.icon}
                   </div>
-                  <div
-                    style={{ backgroundColor: leadData.slug === "default" ? "" : leadData.primaryColor }}
-                    className={`w-8 h-[2px] ${leadData.slug === "default" ? "bg-amber-500/40" : "opacity-40"} group-hover:w-12 transition-all duration-500`}
-                  />
                 </div>
+
                 <h3
-                  style={{ "--hover-color": leadData.slug === "default" ? "" : leadData.primaryColor } as any}
-                  className={`text-white font-bold tracking-[0.1em] text-[13px] uppercase mb-3 leading-snug ${leadData.slug === "default" ? "group-hover:text-amber-500" : "group-hover:text-[var(--hover-color)]"} transition-colors duration-300`}
+                  className="text-white font-bold tracking-[0.05em] text-[11px] md:text-[13px] uppercase mb-3 leading-snug"
                 >
                   {feature.title}
                 </h3>
-                <p className="text-zinc-400 text-[13px] font-light leading-relaxed">
+                
+                <p className="text-zinc-500 text-[11px] md:text-[13px] font-light leading-relaxed max-w-[240px]">
                   {feature.desc}
                 </p>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
 
