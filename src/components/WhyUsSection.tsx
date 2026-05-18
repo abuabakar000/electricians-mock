@@ -69,16 +69,23 @@ export default function WhyUsSection({ leadData: passedLeadData }: { leadData?: 
   const leadData = passedLeadData || getLeadData();
   const primaryColor = leadData.primaryColor || "#f59e0b";
 
+  // Group features into 3 columns for beautiful vertical divider lines
+  const columns = [
+    [features[0], features[3]], // Col 1: 24/7 Emergency Service, Quality Workmanship
+    [features[1], features[4]], // Col 2: Licensed & Insured, Fast Response Time
+    [features[2], features[5]], // Col 3: Upfront Pricing, Satisfaction Guarantee
+  ];
+
   return (
     <section
       style={{ "--primary-color": leadData.slug === "default" ? "#f59e0b" : leadData.primaryColor } as any}
       className="bg-[#0b0c10] relative overflow-hidden"
     >
       {/* ── Main two-column row ── */}
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-12 md:py-28 flex flex-col lg:flex-row items-stretch gap-10 lg:gap-20">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-12 md:py-28 flex flex-col lg:flex-row items-stretch gap-10 lg:gap-12 xl:gap-20">
 
         {/* LEFT COLUMN - Vertically Centered */}
-        <div className="lg:w-[35%] flex flex-col justify-center text-left">
+        <div className="lg:w-[33%] flex flex-col justify-center text-left shrink-0 pr-4 lg:pr-6">
           {/* eyebrow */}
           <div className="flex items-center justify-start gap-3 mb-4 md:mb-6">
             <span
@@ -94,12 +101,12 @@ export default function WhyUsSection({ leadData: passedLeadData }: { leadData?: 
           </div>
 
           {/* heading */}
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-light text-white leading-[1.1] tracking-tight mb-6 md:mb-8">
-            Real Experts.<br />
-            Real Solutions.<br />
+          <h2 className="text-3xl md:text-5xl lg:text-[40px] xl:text-[50px] 2xl:text-6xl font-light text-white leading-[1.15] xl:leading-[1.1] tracking-tight mb-6 md:mb-8">
+            <span className="block whitespace-nowrap">Real Experts.</span>
+            <span className="block whitespace-nowrap">Real Solutions.</span>
             <span
               style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor }}
-              className={`${leadData.slug === "default" ? "text-amber-500" : ""} font-medium`}
+              className={`block whitespace-nowrap ${leadData.slug === "default" ? "text-amber-500" : ""} font-medium`}
             >
               Real Results.
             </span>
@@ -112,34 +119,38 @@ export default function WhyUsSection({ leadData: passedLeadData }: { leadData?: 
         </div>
 
         {/* RIGHT COLUMN — feature grid */}
-        <div className="lg:w-[65%] relative">
-          {/* Vertical Divider Line */}
-          <div className="absolute left-1/2 top-0 bottom-0 w-px bg-zinc-800/40 hidden sm:block" />
+        <div className="lg:w-[67%] relative flex items-center">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-x-6 lg:gap-x-8 gap-y-10 md:gap-y-12 w-full">
+            {columns.map((column, colIdx) => (
+              <div 
+                key={colIdx} 
+                className="flex flex-col gap-y-10 md:gap-y-12 border-l border-zinc-800/60 pl-5 lg:pl-8"
+              >
+                {column.map((feature, featureIdx) => (
+                  <div key={featureIdx} className="flex flex-col items-start text-left">
+                    {/* Icon Box */}
+                    <div
+                      style={{
+                        borderColor: leadData.slug === "default" ? "" : `${leadData.primaryColor}33`,
+                      }}
+                      className={`w-10 h-10 md:w-12 md:h-12 rounded-xl border ${leadData.slug === "default" ? "border-zinc-800" : ""} flex items-center justify-center mb-4 transition-all duration-300 group`}
+                    >
+                      <div className="scale-60 md:scale-75 origin-center">
+                        {feature.icon}
+                      </div>
+                    </div>
 
-          <div className="grid grid-cols-2 gap-x-6 md:gap-x-12 gap-y-12 md:gap-y-16">
-            {features.map((feature, idx) => (
-              <div key={idx} className={`flex flex-col items-start text-left ${idx % 2 === 0 ? "sm:pr-6 md:pr-10" : "sm:pl-6 md:pl-10"}`}>
-                {/* Icon Box */}
-                <div
-                  style={{
-                    borderColor: leadData.slug === "default" ? "" : `${leadData.primaryColor}33`,
-                  }}
-                  className={`w-10 h-10 md:w-14 md:h-14 rounded-xl border ${leadData.slug === "default" ? "border-zinc-800" : ""} flex items-center justify-center mb-6 transition-all duration-300 group`}
-                >
-                  <div className="scale-60 md:scale-75 origin-center">
-                    {feature.icon}
+                    <h3
+                      className="text-white font-bold tracking-[0.05em] text-[10px] md:text-[12px] uppercase mb-2 leading-snug lg:whitespace-nowrap"
+                    >
+                      {feature.title}
+                    </h3>
+                    
+                    <p className="text-zinc-500 text-[11px] md:text-[12px] font-light leading-relaxed max-w-[220px]">
+                      {feature.desc}
+                    </p>
                   </div>
-                </div>
-
-                <h3
-                  className="text-white font-bold tracking-[0.05em] text-[11px] md:text-[13px] uppercase mb-3 leading-snug"
-                >
-                  {feature.title}
-                </h3>
-                
-                <p className="text-zinc-500 text-[11px] md:text-[13px] font-light leading-relaxed max-w-[240px]">
-                  {feature.desc}
-                </p>
+                ))}
               </div>
             ))}
           </div>
