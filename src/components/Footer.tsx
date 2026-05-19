@@ -5,6 +5,22 @@ import { LeadData, getLeadData } from "@/data/leads";
 
 export default function Footer({ leadData: passedLeadData }: { leadData?: LeadData }) {
   const leadData = passedLeadData || getLeadData();
+
+  const defaultServices = [
+    "Electrical Repair",
+    "Panel Upgrades",
+    "Lighting Design",
+    "Smart Home Setup",
+    "EV Charger Install",
+    "Generator Service",
+    "Surge Protection",
+    "Commercial Service"
+  ];
+
+  const displayServices = leadData.services && leadData.services.length > 0
+    ? (leadData.services.map(s => s.title).filter(Boolean) as string[]).slice(0, 8)
+    : defaultServices;
+
   return (
     <footer className="bg-[#050608] border-t border-zinc-800/60 pt-20 pb-8 mt-auto z-20 relative">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
@@ -64,14 +80,16 @@ export default function Footer({ leadData: passedLeadData }: { leadData?: LeadDa
               <span style={{ backgroundColor: leadData.slug === "default" ? "" : leadData.primaryColor }} className={`absolute -bottom-2 left-0 w-6 h-[2px] ${leadData.slug === "default" ? "bg-amber-500" : ""}`}></span>
             </h4>
             <div className="flex flex-col gap-3 mt-2">
-              <span className="text-zinc-400 text-[14px] font-light">Electrical Repair</span>
-              <span className="text-zinc-400 text-[14px] font-light">Panel Upgrades</span>
-              <span className="text-zinc-400 text-[14px] font-light">Lighting Design</span>
-              <span className="text-zinc-400 text-[14px] font-light">Smart Home Setup</span>
-              <span className="text-zinc-400 text-[14px] font-light">EV Charger Install</span>
-              <span className="text-zinc-400 text-[14px] font-light">Generator Service</span>
-              <span className="text-zinc-400 text-[14px] font-light">Surge Protection</span>
-              <span className="text-zinc-400 text-[14px] font-light">Commercial Service</span>
+              {displayServices.map((service, idx) => (
+                <Link
+                  key={idx}
+                  href={leadData.slug === "default" ? "/services" : `/${leadData.slug}/services`}
+                  className={`text-zinc-400 text-[14px] font-light ${leadData.slug === "default" ? "hover:text-amber-500" : ""} transition-colors`}
+                  style={{ "--hover-color": leadData.slug === "default" ? "" : leadData.primaryColor } as any}
+                >
+                  {service}
+                </Link>
+              ))}
             </div>
           </div>
 

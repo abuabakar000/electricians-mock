@@ -69,13 +69,6 @@ export default function WhyUsSection({ leadData: passedLeadData }: { leadData?: 
   const leadData = passedLeadData || getLeadData();
   const primaryColor = leadData.primaryColor || "#f59e0b";
 
-  // Group features into 3 columns for beautiful vertical divider lines
-  const columns = [
-    [features[0], features[3]], // Col 1: 24/7 Emergency Service, Quality Workmanship
-    [features[1], features[4]], // Col 2: Licensed & Insured, Fast Response Time
-    [features[2], features[5]], // Col 3: Upfront Pricing, Satisfaction Guarantee
-  ];
-
   return (
     <section
       style={{ "--primary-color": leadData.slug === "default" ? "#f59e0b" : leadData.primaryColor } as any}
@@ -120,37 +113,33 @@ export default function WhyUsSection({ leadData: passedLeadData }: { leadData?: 
 
         {/* RIGHT COLUMN — feature grid */}
         <div className="lg:w-[67%] relative flex items-center">
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-x-6 lg:gap-x-8 gap-y-10 md:gap-y-12 w-full">
-            {columns.map((column, colIdx) => (
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-x-6 lg:gap-x-8 w-full">
+            {features.map((feature, idx) => (
               <div 
-                key={colIdx} 
-                className="flex flex-col gap-y-10 md:gap-y-12 border-l border-zinc-800/60 pl-5 lg:pl-8"
+                key={idx} 
+                className="flex flex-col items-start text-left border-l border-zinc-800/60 pl-5 lg:pl-8 pb-10 md:pb-12"
               >
-                {column.map((feature, featureIdx) => (
-                  <div key={featureIdx} className="flex flex-col items-start text-left">
-                    {/* Icon Box */}
-                    <div
-                      style={{
-                        borderColor: leadData.slug === "default" ? "" : `${leadData.primaryColor}33`,
-                      }}
-                      className={`w-10 h-10 md:w-12 md:h-12 rounded-xl border ${leadData.slug === "default" ? "border-zinc-800" : ""} flex items-center justify-center mb-4 transition-all duration-300 group`}
-                    >
-                      <div className="scale-60 md:scale-75 origin-center">
-                        {feature.icon}
-                      </div>
-                    </div>
-
-                    <h3
-                      className="text-white font-bold tracking-[0.05em] text-[10px] md:text-[12px] uppercase mb-2 leading-snug lg:whitespace-nowrap"
-                    >
-                      {feature.title}
-                    </h3>
-                    
-                    <p className="text-zinc-500 text-[11px] md:text-[12px] font-light leading-relaxed max-w-[220px]">
-                      {feature.desc}
-                    </p>
+                {/* Icon Box */}
+                <div
+                  style={{
+                    borderColor: leadData.slug === "default" ? "" : `${leadData.primaryColor}33`,
+                  }}
+                  className={`w-10 h-10 md:w-12 md:h-12 rounded-xl border ${leadData.slug === "default" ? "border-zinc-800" : ""} flex items-center justify-center mb-4 transition-all duration-300 group`}
+                >
+                  <div className="scale-60 md:scale-75 origin-center">
+                    {feature.icon}
                   </div>
-                ))}
+                </div>
+
+                <h3
+                  className="text-white font-bold tracking-[0.05em] text-[10px] md:text-[12px] uppercase mb-2 leading-snug lg:whitespace-nowrap"
+                >
+                  {feature.title}
+                </h3>
+                
+                <p className="text-zinc-500 text-[11px] md:text-[12px] font-light leading-relaxed max-w-[220px]">
+                  {feature.desc}
+                </p>
               </div>
             ))}
           </div>

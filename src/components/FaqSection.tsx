@@ -78,35 +78,35 @@ export default function FaqSection({ leadData: passedLeadData }: { leadData?: Le
               >
                 <button 
                   onClick={() => toggleFaq(index)}
-                  className="w-full flex items-center justify-between p-5 lg:p-6 text-left focus:outline-none"
+                  className="w-full flex items-start justify-between p-4 sm:p-5 lg:p-6 text-left focus:outline-none"
                 >
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-start gap-3 sm:gap-4">
                     <div 
                       style={{ 
                         borderColor: isOpen && leadData.slug !== "default" ? leadData.primaryColor : "",
                         backgroundColor: isOpen && leadData.slug !== "default" ? `${leadData.primaryColor}1a` : "",
                         color: isOpen && leadData.slug !== "default" ? leadData.primaryColor : ""
                       }}
-                      className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 border transition-colors duration-300 ${isOpen ? (leadData.slug === "default" ? 'border-amber-500/30 bg-amber-500/10 text-amber-500' : '') : 'border-zinc-700 bg-zinc-800/50 text-zinc-400'}`}
+                      className={`w-6 h-6 sm:w-7 sm:h-7 rounded-full flex items-center justify-center shrink-0 border transition-colors duration-300 mt-0.5 ${isOpen ? (leadData.slug === "default" ? 'border-amber-500/30 bg-amber-500/10 text-amber-500' : '') : 'border-zinc-700 bg-zinc-800/50 text-zinc-400'}`}
                     >
                       {isOpen ? (
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-3.5 h-3.5">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-3 h-3 sm:w-3.5 sm:h-3.5">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14" />
                         </svg>
                       ) : (
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-3.5 h-3.5">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-3 h-3 sm:w-3.5 sm:h-3.5">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
                         </svg>
                       )}
                     </div>
-                    <span className="text-white font-medium text-[15px] tracking-wide">{faq.question}</span>
+                    <span className="text-white font-medium text-[14px] sm:text-[15px] tracking-wide pt-0.5">{faq.question}</span>
                   </div>
                   
                   <div 
                     style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor }}
-                    className={`${leadData.slug === "default" ? "text-amber-500" : ""} transition-transform duration-300 shrink-0 ml-4 ${isOpen ? 'rotate-180' : ''}`}
+                    className={`${leadData.slug === "default" ? "text-amber-500" : ""} transition-transform duration-300 shrink-0 ml-2 sm:ml-4 mt-1.5 ${isOpen ? 'rotate-180' : ''}`}
                   >
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-3.5 h-3.5 sm:w-4 sm:h-4">
                       <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                     </svg>
                   </div>
@@ -116,14 +116,14 @@ export default function FaqSection({ leadData: passedLeadData }: { leadData?: Le
                   className={`grid transition-all duration-300 ease-in-out ${isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}
                 >
                   <div className="overflow-hidden">
-                    <div className="pl-5 lg:pl-6 pb-5 lg:pb-6 pr-5 lg:pr-6 pt-0 flex gap-4">
-                      <div className="w-7 shrink-0 flex justify-center">
+                    <div className="pl-4 sm:pl-5 lg:pl-6 pb-4 sm:pb-5 lg:pb-6 pr-4 sm:pr-5 lg:pr-6 pt-0 flex gap-3 sm:gap-4">
+                      <div className="w-6 sm:w-7 shrink-0 flex justify-center">
                         <div 
                           style={{ backgroundColor: leadData.slug === "default" ? "" : leadData.primaryColor }}
                           className={`w-[2px] h-full ${leadData.slug === "default" ? "bg-amber-500" : ""} rounded-full`} 
                         />
                       </div>
-                      <p className="text-zinc-400 text-sm font-light leading-relaxed pt-0.5">
+                      <p className="text-zinc-400 text-[13px] sm:text-sm font-light leading-relaxed pt-0.5">
                         {faq.answer}
                       </p>
                     </div>

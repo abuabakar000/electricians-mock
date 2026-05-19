@@ -14,15 +14,15 @@ export default function CtaSection({ leadData: passedLeadData }: { leadData?: Le
         {/* Background Image & Effects */}
         <div className="absolute inset-0 z-0 pointer-events-none">
           <Image 
-            src="/cta-bg-new.png"
+            src="/cta.webp"
             fill
             alt="Premium Electrical Systems"
-            className="object-cover object-center opacity-40 mix-blend-screen grayscale-[10%]"
+            className="object-cover object-center opacity-70 mix-blend-screen"
           />
           {/* Gradients to keep the left text perfectly readable while revealing the image on the right */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#06070a] via-[#06070a]/90 to-[#06070a]/10"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-[#06070a] via-transparent to-[#06070a]/80"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-[#06070a]/50 via-transparent to-[#06070a]"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#06070a] via-[#06070a]/70 to-[#06070a]/10"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-[#06070a] via-transparent to-[#06070a]/60"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-[#06070a]/30 via-transparent to-[#06070a]"></div>
           
           {/* Light Beam Effect */}
           <div className="absolute -top-[50%] -right-[10%] w-[70%] h-[200%] bg-sky-500/[0.03] rotate-[35deg] blur-[100px]"></div>

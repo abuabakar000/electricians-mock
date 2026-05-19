@@ -14,12 +14,21 @@ export default function Hero({ leadData: passedLeadData }: { leadData?: LeadData
     <section className="relative w-full min-h-screen flex flex-col items-center justify-center bg-zinc-950 overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full z-0">
+        {/* Desktop Background */}
         <Image
           src="/hero-bg.webp"
           alt={leadData.title}
           fill
           priority
-          className="object-cover object-center opacity-60 mix-blend-overlay"
+          className="hidden md:block object-cover object-center opacity-60 mix-blend-overlay"
+        />
+        {/* Mobile Background */}
+        <Image
+          src="/hero-mb.webp"
+          alt={leadData.title}
+          fill
+          priority
+          className="block md:hidden object-cover object-center opacity-60 mix-blend-overlay"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/60 via-zinc-950/20 to-zinc-950/90"></div>
       </div>
