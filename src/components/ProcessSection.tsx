@@ -164,23 +164,23 @@ export default function ProcessSection({ leadData: passedLeadData }: { leadData?
               <span className="text-zinc-400 text-xs mb-1">Need help now?</span>
               <a 
                 href={`tel:${leadData.phone}`} 
-                style={{ "--hover-color": leadData.slug === "default" ? "" : leadData.primaryColor } as any}
+                style={{ "--hover-color": leadData.slug === "default" ? "" : leadData.primaryColor } as React.CSSProperties}
                 className={`text-white text-2xl font-semibold tracking-wide ${leadData.slug === "default" ? "hover:text-amber-500" : "hover:text-[var(--hover-color)]"} transition-colors`}
               >
                 {leadData.phone}
               </a>
-              <span className="text-zinc-500 text-[11px] mt-1">We're available 24/7</span>
+              <span className="text-zinc-500 text-[11px] mt-1">We&apos;re available 24/7</span>
             </div>
           </div>
           
           {/* Right: Button */}
           <Link 
-            href={leadData.slug === "default" ? "/contact" : `/${leadData.slug}/contact`}
+            href={leadData.slug === "default" ? "/schedule" : `/${leadData.slug}/schedule`}
             style={{ 
               borderColor: leadData.slug === "default" ? "" : leadData.primaryColor,
               color: leadData.slug === "default" ? "" : leadData.primaryColor,
               "--hover-bg": leadData.slug === "default" ? "" : leadData.primaryColor
-            } as any}
+            } as React.CSSProperties}
             className={`px-8 py-4 border whitespace-nowrap ${leadData.slug === "default" ? "border-amber-500 text-amber-500 hover:bg-amber-500 hover:text-[#0b0c10]" : "hover:bg-[var(--hover-bg)] hover:text-[#0b0c10]"} transition-colors duration-300 rounded-sm text-[11px] font-bold tracking-[0.15em] uppercase flex items-center gap-3 shrink-0`}
           >
             Schedule Service

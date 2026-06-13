@@ -112,7 +112,7 @@ export default function Navbar({ leadData: passedLeadData }: { leadData?: LeadDa
             <div className="flex gap-10 text-[12px] font-bold tracking-[0.25em] uppercase text-white">
               <Link 
                 href={leadData.slug === "default" ? "/services" : `/${leadData.slug}/services`} 
-                style={{ "--hover-color": leadData.slug === "default" ? "#f59e0b" : leadData.primaryColor } as any}
+                style={{ "--hover-color": leadData.slug === "default" ? "#f59e0b" : leadData.primaryColor } as React.CSSProperties}
                 className="relative group hover:text-[var(--hover-color)] transition-colors"
               >
                 Services
@@ -123,7 +123,7 @@ export default function Navbar({ leadData: passedLeadData }: { leadData?: LeadDa
               </Link>
               <Link 
                 href={leadData.slug === "default" ? "/locations" : `/${leadData.slug}/locations`} 
-                style={{ "--hover-color": leadData.slug === "default" ? "#f59e0b" : leadData.primaryColor } as any}
+                style={{ "--hover-color": leadData.slug === "default" ? "#f59e0b" : leadData.primaryColor } as React.CSSProperties}
                 className="relative group hover:text-[var(--hover-color)] transition-colors"
               >
                 Locations
@@ -133,11 +133,11 @@ export default function Navbar({ leadData: passedLeadData }: { leadData?: LeadDa
                 ></span>
               </Link>
               <Link 
-                href={leadData.slug === "default" ? "/contact" : `/${leadData.slug}/contact`} 
-                style={{ "--hover-color": leadData.slug === "default" ? "#f59e0b" : leadData.primaryColor } as any}
+                href={leadData.slug === "default" ? "/schedule" : `/${leadData.slug}/schedule`} 
+                style={{ "--hover-color": leadData.slug === "default" ? "#f59e0b" : leadData.primaryColor } as React.CSSProperties}
                 className="relative group hover:text-[var(--hover-color)] transition-colors"
               >
-                Contact
+                Schedule
                 <span 
                   style={{ backgroundColor: leadData.slug === "default" ? "" : leadData.primaryColor }}
                   className={`absolute -bottom-1 left-0 w-0 h-[1px] ${leadData.slug === "default" ? "bg-amber-500" : ""} transition-all duration-300 group-hover:w-full`}
@@ -183,7 +183,7 @@ export default function Navbar({ leadData: passedLeadData }: { leadData?: LeadDa
             {[
               { name: "Services", href: leadData.slug === "default" ? "/services" : `/${leadData.slug}/services`, num: "01" },
               { name: "Locations", href: leadData.slug === "default" ? "/locations" : `/${leadData.slug}/locations`, num: "02" },
-              { name: "Contact", href: leadData.slug === "default" ? "/contact" : `/${leadData.slug}/contact`, num: "03" },
+              { name: "Schedule", href: leadData.slug === "default" ? "/schedule" : `/${leadData.slug}/schedule`, num: "03" },
             ].map((item, index) => (
               <Link
                 key={item.name}
@@ -193,13 +193,13 @@ export default function Navbar({ leadData: passedLeadData }: { leadData?: LeadDa
               >
                 <div className="relative flex items-center justify-center">
                   <span 
-                    style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor, "--hover-color": leadData.slug === "default" ? "" : leadData.primaryColor } as any}
+                    style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor, "--hover-color": leadData.slug === "default" ? "" : leadData.primaryColor } as React.CSSProperties}
                     className={`absolute right-full mr-4 ${leadData.slug === "default" ? "text-amber-500/40 group-hover:text-amber-500" : "opacity-40 group-hover:opacity-100 group-hover:text-[var(--hover-color)]"} text-xs font-mono font-bold tracking-widest transition-colors whitespace-nowrap`}
                   >
                     [{item.num}]
                   </span>
                   <span 
-                    style={{ "--hover-color": leadData.slug === "default" ? "" : leadData.primaryColor } as any}
+                    style={{ "--hover-color": leadData.slug === "default" ? "" : leadData.primaryColor } as React.CSSProperties}
                     className={`text-4xl sm:text-5xl font-black tracking-tighter uppercase text-white ${leadData.slug === "default" ? "group-hover:text-amber-500" : "group-hover:text-[var(--hover-color)]"} transition-colors duration-300`}
                   >
                     {item.name}
@@ -226,7 +226,7 @@ export default function Navbar({ leadData: passedLeadData }: { leadData?: LeadDa
               </Link>
               <Link 
                 href={`mailto:${leadData.email}`} 
-                style={{ "--hover-color": leadData.slug === "default" ? "" : leadData.primaryColor } as any}
+                style={{ "--hover-color": leadData.slug === "default" ? "" : leadData.primaryColor } as React.CSSProperties}
                 className={`text-sm font-medium text-white/50 tracking-[0.2em] uppercase ${leadData.slug === "default" ? "hover:text-amber-500" : "hover:text-[var(--hover-color)]"} transition-colors`}
               >
                 {leadData.email}

@@ -57,7 +57,7 @@ export default function ServicesSection({ leadData: passedLeadData }: { leadData
         <div className="absolute inset-0 bg-gradient-to-b from-[#07090c] via-transparent to-[#07090c] z-10"></div>
         
         <Image 
-          src="/services-hero.png" 
+          src="/services-hero.webp" 
           alt="Premium Home Fixtures"
           fill
           className="object-cover object-right grayscale-[15%] contrast-125"
@@ -88,7 +88,7 @@ export default function ServicesSection({ leadData: passedLeadData }: { leadData
               style={{ color: leadData.slug === "default" ? "" : leadData.primaryColor }}
               className={`${leadData.slug === "default" ? "text-amber-500" : ""} font-medium`}
             >
-              Home's Systems.
+              Home&apos;s Systems.
             </span>
           </h2>
           
@@ -106,7 +106,7 @@ export default function ServicesSection({ leadData: passedLeadData }: { leadData
               style={{ 
                 "--hover-border": leadData.slug === "default" ? "" : `${leadData.primaryColor}4d`,
                 "--hover-shadow": leadData.slug === "default" ? "" : `0 20px 40px -15px ${leadData.primaryColor}26`
-              } as any}
+              } as React.CSSProperties}
               className={`group relative bg-[#0c0e12] border border-zinc-800/60 rounded-xl p-6 md:p-8 hover:bg-[#0f1116] hover:-translate-y-2 ${leadData.slug === "default" ? "hover:border-amber-500/30 hover:shadow-[0_20px_40px_-15px_rgba(245,158,11,0.15)]" : "hover:border-[var(--hover-border)] hover:shadow-[var(--hover-shadow)]"} transition-all duration-500 ease-out flex flex-col h-full overflow-hidden z-10 ${idx >= 4 ? 'hidden lg:flex' : 'flex'}`}
             >
               {/* Ambient Hover Glow inside the tile */}
@@ -118,7 +118,7 @@ export default function ServicesSection({ leadData: passedLeadData }: { leadData
               {/* Large Faint Watermark Icon */}
               <div className="absolute -bottom-6 -right-6 opacity-[0.05] group-hover:opacity-[0.15] transition-all duration-700 pointer-events-none group-hover:scale-110 group-hover:-rotate-12">
                 <div 
-                  style={{ "--hover-icon": leadData.slug === "default" ? "" : leadData.primaryColor } as any}
+                  style={{ "--hover-icon": leadData.slug === "default" ? "" : leadData.primaryColor } as React.CSSProperties}
                   className={`w-48 h-48 text-zinc-400 ${leadData.slug === "default" ? "group-hover:text-amber-500" : "group-hover:text-[var(--hover-icon)]"} transition-colors duration-700 flex items-center justify-center [&>svg]:w-full [&>svg]:h-full [&>svg]:stroke-[0.8]`}
                 >
                   {service.icon}
@@ -154,7 +154,7 @@ export default function ServicesSection({ leadData: passedLeadData }: { leadData
         <div className="flex justify-center">
           <Link 
             href={leadData.slug === "default" ? "/services" : `/${leadData.slug}/services`} 
-            style={{ "--hover-color": leadData.slug === "default" ? "" : leadData.primaryColor } as any}
+            style={{ "--hover-color": leadData.slug === "default" ? "" : leadData.primaryColor } as React.CSSProperties}
             className={`flex items-center gap-4 px-8 py-4 border border-zinc-700/80 rounded ${leadData.slug === "default" ? "hover:border-amber-500 hover:text-amber-500" : "hover:border-[var(--hover-color)] hover:text-[var(--hover-color)] group"} text-white transition-colors duration-300`}
           >
             <div 

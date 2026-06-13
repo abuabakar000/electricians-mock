@@ -67,11 +67,11 @@ const features = [
 
 export default function WhyUsSection({ leadData: passedLeadData }: { leadData?: LeadData }) {
   const leadData = passedLeadData || getLeadData();
-  const primaryColor = leadData.primaryColor || "#f59e0b";
+  const primaryColor = leadData.slug === "default" ? "#f59e0b" : leadData.primaryColor;
 
   return (
     <section
-      style={{ "--primary-color": leadData.slug === "default" ? "#f59e0b" : leadData.primaryColor } as any}
+      style={{ "--primary-color": primaryColor } as React.CSSProperties}
       className="bg-[#0b0c10] relative overflow-hidden"
     >
       {/* ── Main two-column row ── */}
@@ -203,8 +203,8 @@ export default function WhyUsSection({ leadData: passedLeadData }: { leadData?: 
             </Link>
 
             <Link
-              href={leadData.slug === "default" ? "/contact" : `/${leadData.slug}/contact`}
-              style={{ "--hover-color": leadData.slug === "default" ? "" : leadData.primaryColor } as any}
+              href={leadData.slug === "default" ? "/schedule" : `/${leadData.slug}/schedule`}
+              style={{ "--hover-color": leadData.slug === "default" ? "" : leadData.primaryColor } as React.CSSProperties}
               className={`w-full sm:w-auto whitespace-nowrap px-6 py-3.5 lg:px-10 lg:py-5 bg-transparent border border-zinc-700 ${leadData.slug === "default" ? "hover:border-amber-500 hover:text-amber-500" : "hover:border-[var(--hover-color)] hover:text-[var(--hover-color)]"} text-white rounded-md text-[11px] lg:text-[13px] font-bold tracking-[0.2em] uppercase transition-all duration-300 flex items-center justify-center gap-3`}
             >
               Schedule Service

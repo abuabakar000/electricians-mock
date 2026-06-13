@@ -6,7 +6,7 @@ import ProcessSection from "@/components/ProcessSection";
 import MapSection from "@/components/MapSection";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { getLeadData } from "@/data/leads";
+import { getLeadData, leads } from "@/data/leads";
 import { 
   Zap, 
   Cpu, 
@@ -282,7 +282,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ slug:
 
                   {/* Mobile Action Button */}
                   <Link 
-                    href={leadData.slug === "default" ? "/contact" : `/${leadData.slug}/contact`}
+                    href={leadData.slug === "default" ? "/schedule" : `/${leadData.slug}/schedule`}
                     style={{ "--hover-bg": leadData.slug === "default" ? "" : leadData.primaryColor } as any}
                     className={`flex items-center justify-center gap-2 w-full py-4 bg-zinc-900/50 border border-zinc-800 text-zinc-300 text-[10px] font-bold uppercase tracking-[0.2em] rounded-md ${leadData.slug === "default" ? "group-hover:bg-amber-500 group-hover:text-zinc-950 group-hover:border-amber-500" : "group-hover:bg-[var(--hover-bg)] group-hover:text-zinc-950 group-hover:border-[var(--hover-bg)]"} transition-all duration-300`}
                   >
@@ -311,4 +311,10 @@ export default async function ServicesPage({ params }: { params: Promise<{ slug:
       <Footer leadData={leadData} />
     </>
   );
+}
+
+export async function generateStaticParams() {
+  return Object.keys(leads).map((slug) => ({
+    slug,
+  }));
 }

@@ -64,7 +64,7 @@ export default function CtaSection({ leadData: passedLeadData }: { leadData?: Le
               </h2>
 
               <p className="text-zinc-400 text-[15px] font-light leading-relaxed max-w-sm mb-10">
-                From emergency repairs to full installations, we're here to deliver solutions you can trust.
+                From emergency repairs to full installations, we&apos;re here to deliver solutions you can trust.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -83,8 +83,8 @@ export default function CtaSection({ leadData: passedLeadData }: { leadData?: Le
                 </Link>
 
                 <Link 
-                  href={leadData.slug === "default" ? "/contact" : `/${leadData.slug}/contact`}
-                  style={{ "--hover-color": leadData.slug === "default" ? "" : leadData.primaryColor } as any}
+                  href={leadData.slug === "default" ? "/schedule" : `/${leadData.slug}/schedule`}
+                  style={{ "--hover-color": leadData.slug === "default" ? "" : leadData.primaryColor } as React.CSSProperties}
                   className={`inline-flex w-full sm:w-auto whitespace-nowrap justify-center px-8 py-4 bg-transparent border border-zinc-600 ${leadData.slug === "default" ? "hover:border-amber-500 hover:text-amber-500" : "hover:border-[var(--hover-color)] hover:text-[var(--hover-color)]"} text-white rounded text-[11px] font-bold tracking-[0.15em] uppercase transition-all duration-300 items-center gap-3`}
                 >
                   Schedule Service
@@ -123,7 +123,7 @@ export default function CtaSection({ leadData: passedLeadData }: { leadData?: Le
                   </span>
                 </div>
                 <h3 className="text-white text-[9px] md:text-[11px] font-bold tracking-[0.05em] md:tracking-[0.1em] uppercase mb-1 md:mb-2 leading-tight">24/7<br/>Emergency</h3>
-                <p className="text-zinc-500 text-[12px] font-light leading-relaxed max-w-[140px] hidden md:block">We're available anytime you need us.</p>
+                <p className="text-zinc-500 text-[12px] font-light leading-relaxed max-w-[140px] hidden md:block">We&apos;re available anytime you need us.</p>
               </div>
 
               {/* Feature 2 */}

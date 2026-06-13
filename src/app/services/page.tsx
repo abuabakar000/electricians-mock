@@ -214,7 +214,7 @@ export default function ServicesPage() {
 
                   {/* Mobile Action Button */}
                   <Link 
-                    href="/contact"
+                    href="/schedule"
                     className="flex items-center justify-center gap-2 w-full py-4 bg-zinc-900/50 border border-zinc-800 text-zinc-300 text-[10px] font-bold uppercase tracking-[0.2em] rounded-md group-hover:bg-amber-500 group-hover:text-zinc-950 group-hover:border-amber-500 transition-all duration-300"
                   >
                     Request this service

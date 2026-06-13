@@ -4,7 +4,7 @@ import MapSection from "@/components/MapSection";
 import CtaSection from "@/components/CtaSection";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { getLeadData } from "@/data/leads";
+import { getLeadData, leads } from "@/data/leads";
 import { MapPin, Navigation, Building2, Home, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
@@ -212,4 +212,10 @@ export default async function LocationsPage({ params }: { params: Promise<{ slug
       <Footer leadData={leadData} />
     </>
   );
+}
+
+export async function generateStaticParams() {
+  return Object.keys(leads).map((slug) => ({
+    slug,
+  }));
 }

@@ -70,7 +70,7 @@ export default function Hero({ leadData: passedLeadData }: { leadData?: LeadData
 
           <div className="flex flex-col sm:flex-row gap-4 justify-start">
             <Link
-              href={leadData.slug === "default" ? "/contact" : `/${leadData.slug}/contact`}
+              href={leadData.slug === "default" ? "/schedule" : `/${leadData.slug}/schedule`}
               style={{ backgroundColor: leadData.slug === "default" ? "" : leadData.primaryColor }}
               className={`px-8 py-4 ${leadData.slug === "default" ? "bg-amber-500 hover:bg-amber-400" : "hover:brightness-110"} text-zinc-950 text-sm font-semibold uppercase tracking-widest transition-all duration-300 ease-out transform hover:-translate-y-1 flex items-center justify-center gap-2`}
             >

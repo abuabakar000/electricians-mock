@@ -5,7 +5,7 @@ import MapSection from "@/components/MapSection";
 import WhyUsSection from "@/components/WhyUsSection";
 import FaqSection from "@/components/FaqSection";
 import CtaSection from "@/components/CtaSection";
-import { getLeadData } from "@/data/leads";
+import { getLeadData, leads } from "@/data/leads";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -41,4 +41,10 @@ export default async function LeadPage({ params }: { params: Promise<{ slug: str
       <Footer leadData={leadData} />
     </>
   );
+}
+
+export async function generateStaticParams() {
+  return Object.keys(leads).map((slug) => ({
+    slug,
+  }));
 }

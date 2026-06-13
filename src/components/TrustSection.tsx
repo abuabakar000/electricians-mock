@@ -75,7 +75,7 @@ export default function TrustSection({ leadData: passedLeadData }: { leadData?: 
               <h3 className="text-[#0a1930] font-semibold text-[10px] sm:text-xs uppercase tracking-[0.05em] sm:tracking-[0.15em] leading-tight mb-1">
                 24/7 Emergency <br className="hidden xl:block" />Service
               </h3>
-              <p className="text-slate-500 text-[10px] sm:text-[13px] font-light leading-relaxed">We're available<br className="hidden xl:block" />day or night</p>
+              <p className="text-slate-500 text-[10px] sm:text-[13px] font-light leading-relaxed">We&apos;re available<br className="hidden xl:block" />day or night</p>
             </div>
           </div>
 
