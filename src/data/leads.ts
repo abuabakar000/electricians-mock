@@ -810,7 +810,7 @@ export const leads: Record<string, LeadData> = {
   "patron-electric": {
     slug: "patron-electric",
     title: "Patron Electric",
-    logo: "/patron-electric.png",
+    logo: "/patron-elec.png",
     primaryColor: "#0077b6", // Oceanic Blue
     phone: "(306) 290-9148",
     address: "2711 Irvine Ave, Saskatoon, SK S7J 2B2",
@@ -860,7 +860,7 @@ export const leads: Record<string, LeadData> = {
   "legend-electric": {
     slug: "legend-electric",
     title: "Legend Electric",
-    logo: "/legend-electric.png",
+    logo: "/legend-elec.png",
     primaryColor: "#0077b6", // Oceanic Blue
     phone: "+13062505429",
     address: "217 Western Crescent, Saskatoon, SK S7H 4J5",
@@ -960,7 +960,7 @@ export const leads: Record<string, LeadData> = {
   "aim-electric": {
     slug: "aim-electric",
     title: "Aim Electric",
-    logo: "/aim-electric.png",
+    logo: "/aim-elec.png",
     primaryColor: "#0077b6", // Oceanic Blue
     phone: "+13069341922",
     address: "515 43 St E, Saskatoon, SK S7K 0V5",
@@ -1010,7 +1010,7 @@ export const leads: Record<string, LeadData> = {
   "ethical-electrical": {
     slug: "ethical-electrical",
     title: "Ethical Electrical",
-    logo: "/ethical-electrical.png",
+    logo: "/Ethical-electrical.png",
     primaryColor: "#0077b6", // Oceanic Blue
     phone: "+13063619319",
     address: "2106 St Andrews Ave, Saskatoon, SK S7M 0M1",
@@ -1060,7 +1060,7 @@ export const leads: Record<string, LeadData> = {
   "bright-north-electric": {
     slug: "bright-north-electric",
     title: "Bright North Electric",
-    logo: "/bright-north-electric.png",
+    logo: "",
     primaryColor: "#f59e0b", // Amber yellow
     phone: "306-850-5710",
     address: "829B 50th Street East, Saskatoon, SK",
@@ -1160,7 +1160,7 @@ export const leads: Record<string, LeadData> = {
   "tsi-electric": {
     slug: "tsi-electric",
     title: "TSI Electric",
-    logo: "/tsi-electric.png",
+    logo: "/tsi-elec.png",
     primaryColor: "#ef4444", // Modern premium Red
     phone: "(306) 652-1906",
     address: "1938 Saskatchewan Ave., Saskatoon, SK S7K 1R2",
@@ -1210,7 +1210,7 @@ export const leads: Record<string, LeadData> = {
   "assertive-electrical-services": {
     slug: "assertive-electrical-services",
     title: "Assertive Electrical Services",
-    logo: "/assertive-electrical-services.png",
+    logo: "/assertive-elec.png",
     primaryColor: "#0077b6", // Oceanic Blue
     phone: "+1 855-967-3827",
     address: "Site 207 RR2, Saskatoon, SK S7K 0G9",
@@ -1260,7 +1260,7 @@ export const leads: Record<string, LeadData> = {
   "assertive-electrical-services-2": {
     slug: "assertive-electrical-services-2",
     title: "Assertive Electrical Services",
-    logo: "/assertive-electrical-services-2.png",
+    logo: "/assertive-elec.png",
     primaryColor: "#0077b6", // Oceanic Blue
     phone: "+13063843866",
     address: "Site 207 RR2, Saskatoon, SK S7K 0G9",
