@@ -57,61 +57,11 @@ export const defaultLead: LeadData = {
 
 export const leads: Record<string, LeadData> = {
   "default": defaultLead,
-  "express-electric": {
-    slug: "express-electric",
-    title: "Express Electric Inc",
-    logo: "/express-elec.png",
-    primaryColor: "#0077b6", // Oceanic Blue
-    phone: "(306) 529-9111",
-    address: "1819 MacKay St, Regina, SK S4N 6E7",
-    email: "expresselectric@sasktel.net",
-    heroHeading: "Elite Electricians in Regina",
-    highlightWord: "Electricians",
-    heroSubtext: "Delivering premium electrical craftsmanship and reliable service to homes and businesses across Regina.",
-    trustRating: "4.9",
-    customerCount: "500+",
-    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.53482039142!2d-104.58020259999999!3d50.4497648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x531c1fc9d4568a3d%3A0x599dc47a4659de2a!2sExpress%20Electric%20Inc!5e0!3m2!1sen!2sca!4v1778801053462!5m2!1sen!2sca",
-    hours: {
-      monFri: "8:00 AM - 5:00 PM",
-      sat: "Closed",
-      emergency: "Available 24/7"
-    },
-    socials: {
-      facebook: "https://facebook.com",
-      google: "https://google.com"
-    },
-    services: [
-      {
-        title: "Gemstone Lights",
-        desc: "Authorized dealer for permanent, customizable LED lighting systems for homes and businesses. Never climb a ladder for holiday lights again!"
-      },
-      {
-        title: "Commercial Electrical",
-        desc: "Complete wiring, new circuits, security systems, fire alarms, and energy-saving systems for commercial facilities."
-      },
-      {
-        title: "Residential Services",
-        desc: "Expert electrical setup, panel upgrades, surge protection, outlet repair, and all residential maintenance."
-      },
-      {
-        title: "Lighting Solutions",
-        desc: "Custom indoor and outdoor lighting requirements—fixture installation, replacement, and repair for optimal ambiance."
-      },
-      {
-        title: "EV Charging",
-        desc: "Professional installation of electric vehicle charging stations for both residential and commercial properties."
-      },
-      {
-        title: "Safety Inspections",
-        desc: "Comprehensive electrical safety inspections, smoke and carbon monoxide detector installations, and routine maintenance."
-      }
-    ]
-  },
   "caron-electrical-contractors": {
     slug: "caron-electrical-contractors",
     title: "Caron Electrical Contractors",
     logo: "/caron-elec.png",
-    primaryColor: "#0077b6", // Oceanic Blue
+    primaryColor: "#0ea5e9", // Oceanic Blue
     phone: "(306) 737-9953",
     address: "12100 Ewing Ave B26, Regina, SK S4M 0A2",
     email: "caronelectricalcontractors@gmail.com",
@@ -161,7 +111,7 @@ export const leads: Record<string, LeadData> = {
     slug: "kress-electric",
     title: "Kress Electric",
     logo: "/kress-elec.png",
-    primaryColor: "#0077b6", // Oceanic Blue
+    primaryColor: "#EF4444", // RED
     phone: "(306) 545-4810",
     address: "1423 Lorne St, Regina, SK S4R 2K3",
     email: "kresselectric@gmail.com",
@@ -261,7 +211,7 @@ export const leads: Record<string, LeadData> = {
     slug: "voltz-electric-2020",
     title: "Voltz Electric 2020 Inc",
     logo: "/Voltz Electric 2020.png",
-    primaryColor: "#0077b6", // Oceanic Blue
+    primaryColor: "#84cc16", // Green
     phone: "(306) 731-7972",
     address: "1114 Atkinson St, Regina, SK S4N 3V4",
     email: "voltzelectric.joshua@sasktel.net",
@@ -361,7 +311,7 @@ export const leads: Record<string, LeadData> = {
     slug: "walters-electric",
     title: "Walters Electric Contractors",
     logo: "/walter-electric.png",
-    primaryColor: "#0077b6", // Oceanic Blue
+    primaryColor: "#0ea5e9", // Oceanic Blue
     phone: "(306) 737-0773",
     address: "1360 Bay A, Broder St, Regina, SK S4V 1K3",
     email: "dwalters@walterselectric.ca",
@@ -461,7 +411,7 @@ export const leads: Record<string, LeadData> = {
     slug: "joes-electric",
     title: "Joe’s Electric Ltd.",
     logo: "/joe-elec.png",
-    primaryColor: "#0077b6", // Oceanic Blue
+    primaryColor: "#EF4444", // RED
     phone: "(306) 789-6066",
     address: "1555J McDonald St, Regina, SK S4N 6H7",
     email: "joeselectric@sasktel.net",
@@ -561,7 +511,7 @@ export const leads: Record<string, LeadData> = {
     slug: "rankins-electric",
     title: "Rankins Electric",
     logo: "/rankins-elec.png",
-    primaryColor: "#0077b6", // Oceanic Blue
+    primaryColor: "#f59e0b", // Amber Yellow
     phone: "(306) 352-0303",
     address: "1070 McDonald St, Regina, SK S4N 2X8",
     email: "rankinselectric@gmail.com",
@@ -611,7 +561,7 @@ export const leads: Record<string, LeadData> = {
     slug: "electric-effects",
     title: "Electric Effects Inc.",
     logo: "/electric-effects.png",
-    primaryColor: "#0077b6", // Oceanic Blue
+    primaryColor: "#0ea5e9", // Oceanic Blue
     phone: "(306) 525-3884",
     address: "406 Dewdney Ave, Regina, SK S4N 0E9",
     email: "electriceffects@gmail.com",
@@ -661,7 +611,7 @@ export const leads: Record<string, LeadData> = {
     slug: "colt-electric",
     title: "Colt Electric",
     logo: "/colt-elec.png",
-    primaryColor: "#0077b6", // Oceanic Blue
+    primaryColor: "#0ea5e9", // Oceanic Blue
     phone: "(306) 551-3773",
     address: "708 Dalgliesh Dr, Regina, SK S4R 6G2",
     email: "coltelectric@gmail.com",
@@ -757,111 +707,11 @@ export const leads: Record<string, LeadData> = {
       }
     ]
   },
-  "expert-electric": {
-    slug: "expert-electric",
-    title: "Expert Electric",
-    logo: "/expert-electric.png",
-    primaryColor: "#0077b6", // Oceanic Blue
-    phone: "306-952-4514",
-    address: "902 Kingsmere Blvd., Saskatoon, SK",
-    email: "expertelectricsk@gmail.com",
-    heroHeading: "Elite Electricians in Regina",
-    highlightWord: "Electricians",
-    heroSubtext: "Delivering premium electrical craftsmanship and reliable service to homes and businesses across Regina.....",
-    trustRating: "4.7",
-    customerCount: "300+",
-    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2451.225489833645!2d-106.5884570243865!3d52.093827667695926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5304f9e8fb3b9293%3A0x35b434776d9448a5!2sExpert%20Electric%20Saskatoon!5e0!3m2!1sen!2sca!4v1779063040863!5m2!1sen!2sca",
-    hours: {
-      monFri: "8:00 AM - 5:00 PM",
-      sat: "Closed",
-      emergency: "Available 24/7"
-    },
-    socials: {
-      facebook: "https://facebook.com",
-      google: "https://google.com"
-    },
-    services: [
-      {
-        title: "Residential Electrical",
-        desc: "Expert wiring, installations, and modern upgrades for your home. Specialized in kitchen renovations, garages, ceiling fans, and comprehensive new construction setups."
-      },
-      {
-        title: "Troubleshooting & Repair",
-        desc: "Flickering lights, faulty outlets, or mysterious power outages? Our certified electricians diagnose and resolve complex electrical issues quickly and safely."
-      },
-      {
-        title: "New Construction",
-        desc: "Full-service electrical system planning and execution for new builds, additions, and complete property developments built to current safety standards."
-      },
-      {
-        title: "Specialized Wiring",
-        desc: "Professional, safe electrical hookups for hot tubs, spas, pools, and advanced home climate systems including HRV (Heat Recovery Ventilator) installations."
-      },
-      {
-        title: "Custom Lighting Design",
-        desc: "Transform your living spaces with modern custom lighting solutions. Experts in energy-efficient pot lights, recessed illumination, and ambient styling."
-      },
-      {
-        title: "Commercial Contracts",
-        desc: "Reliable electrical contracting for commercial spaces: office upgrades, storefront lighting, maintenance, and expert building power solutions."
-      }
-    ]
-  },
-  "patron-electric": {
-    slug: "patron-electric",
-    title: "Patron Electric",
-    logo: "/patron-elec.png",
-    primaryColor: "#0077b6", // Oceanic Blue
-    phone: "(306) 290-9148",
-    address: "2711 Irvine Ave, Saskatoon, SK S7J 2B2",
-    email: "patronelectricltd@gmail.com",
-    heroHeading: "Elite Electricians in Regina",
-    highlightWord: "Electricians",
-    heroSubtext: "Delivering premium electrical craftsmanship and reliable service to homes and businesses across Regina.....",
-    trustRating: "4.8",
-    customerCount: "300+",
-    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2451.1280553461925!2d-106.6321809!3d52.09560099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5304f101adb23497%3A0xccaf01ef00faeb44!2sPatron%20Electric!5e0!3m2!1sen!2sca!4v1779063425081!5m2!1sen!2sca",
-    hours: {
-      monFri: "8:00 AM - 5:00 PM",
-      sat: "Closed",
-      emergency: "Available 24/7"
-    },
-    socials: {
-      facebook: "https://facebook.com",
-      google: "https://google.com"
-    },
-    services: [
-      {
-        title: "New Home & Renovations",
-        desc: "Elite electrical planning and installation for custom new builds, complete renovations, basements, and garages. We bring modern, high-quality power to your spaces."
-      },
-      {
-        title: "Service & Panel Upgrades",
-        desc: "Increase your home's electrical capacity with master-level panel and service upgrades. Perfect for supporting modern appliances, in-floor heating, and high-power setups."
-      },
-      {
-        title: "Specialized Wiring",
-        desc: "Safe and certified hookups for hot tubs, air conditioners, HRV systems, low-voltage systems, and custom built-in speakers & data networks."
-      },
-      {
-        title: "Commercial & Agriculture",
-        desc: "Full-service electrical contracting for commercial facilities and agricultural operations, including reliable service calls, troubleshooting, and system upgrades."
-      },
-      {
-        title: "Emergency Generators",
-        desc: "Ensure your home or business is never left in the dark. Professional installation and maintenance of reliable standby and emergency backup generator systems."
-      },
-      {
-        title: "Solar Panel Systems",
-        desc: "Harness sustainable energy with our advanced solar panel installations. Custom-designed systems optimized to reduce your bills and footprint."
-      }
-    ]
-  },
   "legend-electric": {
     slug: "legend-electric",
     title: "Legend Electric",
     logo: "/legend-elec.png",
-    primaryColor: "#0077b6", // Oceanic Blue
+    primaryColor: "#f59e0b", // Amber Yellow
     phone: "+13062505429",
     address: "217 Western Crescent, Saskatoon, SK S7H 4J5",
     email: "legendElectricSK@gmail.com",
@@ -907,61 +757,11 @@ export const leads: Record<string, LeadData> = {
       }
     ]
   },
-  "kadco-electric": {
-    slug: "kadco-electric",
-    title: "Kadco Electric",
-    logo: "/kadco-electric.png",
-    primaryColor: "#0077b6", // Oceanic Blue
-    phone: "+13063430006",
-    address: "221 44 St E, Saskatoon, SK S7K 8E4",
-    email: "admin@kadcoelectric.ca",
-    heroHeading: "Elite Electricians in Regina",
-    highlightWord: "Electricians",
-    heroSubtext: "Delivering premium electrical craftsmanship and reliable service to homes and businesses across Regina.....",
-    trustRating: "4.8",
-    customerCount: "300+",
-    mapUrl: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2447.5314480483125!2d-106.6712447!3d52.1610303!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5304f6f5c49f40f9%3A0xb36e704492b84b93!2sKadco%20Electric%20Inc!5e0!3m2!1sen!2sca!4v1779063851633!5m2!1sen!2sca",
-    hours: {
-      monFri: "8:00 AM - 5:00 PM",
-      sat: "Closed",
-      emergency: "Available 24/7"
-    },
-    socials: {
-      facebook: "https://facebook.com",
-      google: "https://google.com"
-    },
-    services: [
-      {
-        title: "Residential Renovations",
-        desc: "Expert electrical systems for new homes, garages, whole-house renovations, basements, and secondary suites built to elite modern standards."
-      },
-      {
-        title: "Commercial & Data",
-        desc: "Complete commercial electrical construction, structured computer & network cabling, and robust preventative maintenance for existing commercial buildings."
-      },
-      {
-        title: "Service & Panel Upgrades",
-        desc: "Comprehensive panel replacements and service upgrades for both underground and overhead power lines, increasing capacity and safety."
-      },
-      {
-        title: "LED Lighting & Controls",
-        desc: "Modern, energy-saving LED lighting retrofits, automated lighting control systems, emergency exit lighting, and commercial lighting repairs."
-      },
-      {
-        title: "Safety & Protection",
-        desc: "Keep your property safe with whole-home surge protection, fire and carbon monoxide (CO2) alarms, and complete commercial fire alarm systems."
-      },
-      {
-        title: "Generators & Solar",
-        desc: "Advanced power solutions including backup generator setups, custom solar panel installations, and complex HVAC control system wiring."
-      }
-    ]
-  },
   "aim-electric": {
     slug: "aim-electric",
     title: "Aim Electric",
     logo: "/aim-elec.png",
-    primaryColor: "#0077b6", // Oceanic Blue
+    primaryColor: "#0ea5e9", // Oceanic Blue
     phone: "+13069341922",
     address: "515 43 St E, Saskatoon, SK S7K 0V5",
     email: "aimelectric@gmail.com",
@@ -1011,7 +811,7 @@ export const leads: Record<string, LeadData> = {
     slug: "ethical-electrical",
     title: "Ethical Electrical",
     logo: "/Ethical-electrical.png",
-    primaryColor: "#0077b6", // Oceanic Blue
+    primaryColor: "#84cc16", // Green
     phone: "+13063619319",
     address: "2106 St Andrews Ave, Saskatoon, SK S7M 0M1",
     email: "ethical.electrical.sk@gmail.com",
@@ -1057,61 +857,11 @@ export const leads: Record<string, LeadData> = {
       }
     ]
   },
-  "bright-north-electric": {
-    slug: "bright-north-electric",
-    title: "Bright North Electric",
-    logo: "",
-    primaryColor: "#f59e0b", // Amber yellow
-    phone: "306-850-5710",
-    address: "829B 50th Street East, Saskatoon, SK",
-    email: "info@brightnorthelectric.ca",
-    heroHeading: "Elite Electricians in Regina",
-    highlightWord: "Electricians",
-    heroSubtext: "Delivering premium electrical craftsmanship and reliable service to homes and businesses across Regina.....",
-    trustRating: "5.0",
-    customerCount: "100+",
-    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2447.016464690755!2d-106.64861700000002!3d52.170394099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5304f1617d50e3b3%3A0x9c09a9e765a25e5b!2sBright%20North%20Electric!5e0!3m2!1sen!2sca!4v1779064695984!5m2!1sen!2sca",
-    hours: {
-      monFri: "8:00 AM - 5:00 PM",
-      sat: "Closed",
-      emergency: "Available 24/7"
-    },
-    socials: {
-      facebook: "https://facebook.com",
-      google: "https://google.com"
-    },
-    services: [
-      {
-        title: "Commercial Builds",
-        desc: "Comprehensive commercial installations and renovations for offices, restaurants, retail shops, and warehouses, including fire alarm system setups."
-      },
-      {
-        title: "Industrial Services",
-        desc: "Specialized industrial servicing featuring motor controls (PLC and VFD), industrial equipment repairs, troubleshooting, and 24/7 breakdown support."
-      },
-      {
-        title: "Bucket Truck Services",
-        desc: "In-house bucket truck services for high-reach outdoor projects, including parking lot pole lights, signage, and exterior building lighting."
-      },
-      {
-        title: "Infrared Thermography",
-        desc: "Preventative maintenance using thermal imaging cameras to locate and resolve critical electrical faults before they cause system downtime."
-      },
-      {
-        title: "Lighting Upgrades",
-        desc: "High-efficiency commercial and industrial LED lighting retrofits, architectural lighting designs, and energy-saving lighting control systems."
-      },
-      {
-        title: "Equipment Maintenance",
-        desc: "Routine electrical maintenance plans, safety compliance auditing, and emergency on-call repairs to keep your operations running smoothly."
-      }
-    ]
-  },
   "jd-electric": {
     slug: "jd-electric",
     title: "JD Electric",
     logo: "/jd-electric.png",
-    primaryColor: "#ef4444", // Modern premium Red
+    primaryColor: "#EF4444", // RED
     phone: "+13062204594",
     address: "819 60 St E, Saskatoon, SK S7K 5Z7",
     email: "jdelectric@gmail.com",
@@ -1161,7 +911,7 @@ export const leads: Record<string, LeadData> = {
     slug: "tsi-electric",
     title: "TSI Electric",
     logo: "/tsi-elec.png",
-    primaryColor: "#ef4444", // Modern premium Red
+    primaryColor: "#EF4444", // RED
     phone: "(306) 652-1906",
     address: "1938 Saskatchewan Ave., Saskatoon, SK S7K 1R2",
     email: "info@tsielectric.ca",
@@ -1211,7 +961,7 @@ export const leads: Record<string, LeadData> = {
     slug: "assertive-electrical-services",
     title: "Assertive Electrical Services",
     logo: "/assertive-elec.png",
-    primaryColor: "#0077b6", // Oceanic Blue
+    primaryColor: "#EF4444", // RED
     phone: "+1 855-967-3827",
     address: "Site 207 RR2, Saskatoon, SK S7K 0G9",
     email: "Assertiveelectric@hotmail.com",
@@ -1261,7 +1011,7 @@ export const leads: Record<string, LeadData> = {
     slug: "assertive-electrical-services-2",
     title: "Assertive Electrical Services",
     logo: "/assertive-elec.png",
-    primaryColor: "#0077b6", // Oceanic Blue
+    primaryColor: "#EF4444", // RED
     phone: "+13063843866",
     address: "Site 207 RR2, Saskatoon, SK S7K 0G9",
     email: "assertiveelectricltd@gmail.com",
@@ -1311,7 +1061,7 @@ export const leads: Record<string, LeadData> = {
     slug: "aj-electric",
     title: "AJ Electric",
     logo: "/aj-electric.png",
-    primaryColor: "#0077b6", // Oceanic Blue
+    primaryColor: "#0ea5e9", // Oceanic Blue
     phone: "+12045200990",
     address: "63 Winter Bay, Brandon, MB R7B 3H9",
     email: "ajelectric@gmail.com",
@@ -1361,7 +1111,7 @@ export const leads: Record<string, LeadData> = {
     slug: "current-electric",
     title: "Current Electric",
     logo: "/current-electric.png",
-    primaryColor: "#0077b6", // Oceanic Blue
+    primaryColor: "#84cc16", // Green
     phone: "+12047202530",
     address: "11 Oak Bluff Rd, Brandon, MB R7C 1A2",
     email: "current_electric@hotmail.com",
@@ -1411,7 +1161,7 @@ export const leads: Record<string, LeadData> = {
     slug: "figol-electric",
     title: "Figol Electric",
     logo: "/figol-electric.png",
-    primaryColor: "#0077b6", // Oceanic Blue
+    primaryColor: "#84cc16", // Green
     phone: "+12047276556",
     address: "264 10th St, Brandon, MB R7A 4E8",
     email: "bhfigol@hotmail.com",
