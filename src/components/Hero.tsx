@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Calendar, ArrowRight } from "lucide-react";
 import { LeadData, getLeadData } from "@/data/leads";
 
 export default function Hero({ leadData: passedLeadData }: { leadData?: LeadData }) {
@@ -68,19 +69,24 @@ export default function Hero({ leadData: passedLeadData }: { leadData?: LeadData
             {subtext}
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-start">
+          <div className="flex flex-col sm:flex-row gap-4 justify-start w-full sm:w-auto">
             <Link
               href={leadData.slug === "default" ? "/schedule" : `/${leadData.slug}/schedule`}
-              style={{ backgroundColor: leadData.slug === "default" ? "" : leadData.primaryColor }}
-              className={`px-8 py-4 ${leadData.slug === "default" ? "bg-amber-500 hover:bg-amber-400" : "hover:brightness-110"} text-zinc-950 text-sm font-semibold uppercase tracking-widest transition-all duration-300 ease-out transform hover:-translate-y-1 flex items-center justify-center gap-2`}
+              style={{ 
+                backgroundColor: leadData.primaryColor,
+                boxShadow: `0 10px 20px -5px ${leadData.primaryColor}33`
+              }}
+              className="px-8 py-4 text-zinc-950 text-base font-semibold rounded-2xl transition-all duration-300 ease-out transform hover:-translate-y-0.5 hover:brightness-110 active:scale-[0.98] flex items-center justify-center gap-2.5 w-full sm:w-auto"
             >
-              Request Consultation
+              <span>Schedule Now</span>
+              <Calendar className="w-5 h-5 stroke-[2]" />
             </Link>
             <Link
               href={leadData.slug === "default" ? "/services" : `/${leadData.slug}/services`}
-              className="px-8 py-4 bg-transparent border border-zinc-600 text-white hover:border-white hover:bg-white/5 text-sm font-semibold uppercase tracking-widest transition-all duration-300 ease-out flex items-center justify-center gap-2"
+              className="px-8 py-4 bg-zinc-900/60 border border-zinc-800 text-white hover:bg-zinc-850 hover:border-zinc-700 text-base font-semibold rounded-2xl transition-all duration-300 ease-out transform hover:-translate-y-0.5 active:scale-[0.98] flex items-center justify-center gap-2.5 w-full sm:w-auto"
             >
-              Explore Services
+              <span>Explore</span>
+              <ArrowRight className="w-5 h-5 stroke-[2]" />
             </Link>
           </div>
         </div>

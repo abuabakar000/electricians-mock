@@ -135,7 +135,7 @@ export default function ServicesSection({ leadData: passedLeadData }: { leadData
                 >
                   {service.icon}
                 </div>
-                <h3 className="text-white font-bold tracking-widest text-[13px] uppercase mb-3">
+                <h3 className="text-white font-bold tracking-widest text-[11px] sm:text-[13px] uppercase mb-3">
                   {service.title}
                 </h3>
                 <div 
