@@ -33,7 +33,7 @@ export const defaultLead: LeadData = {
   slug: "default",
   title: "ProElectric",
   logo: "/logo.png",
-  primaryColor: "#0ea5e9", // Electric Blue
+  primaryColor: "#f59e0b", // Amber Yellow
   phone: "(306) 555-0123",
   address: "Your City, State & Surrounding Areas",
   email: "service@proelectric.com",
